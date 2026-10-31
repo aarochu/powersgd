@@ -1,0 +1,21 @@
+{
+ "run_id": "gpt_r2_6000_1node",
+ "source_copies": [
+  "results_2node"
+ ],
+ "source_dir": "/Users/aaronc/Desktop/powersgd/powersgd_results/results_2node/runs/gpt_r2_6000_1node",
+ "file_md5": {
+  "config.json": "a21a77191e560d511298473856265fd5",
+  "metrics.jsonl": "57d1d634a2b3373811466221a3096b46"
+ },
+ "runs_jsonl_records": [],
+ "validity": "partial",
+ "notes": [
+  "no runs.jsonl record (run unfinished or record not yet copied)",
+  "job 60623330 attributed from gpt_1n_long_60623330.out: its eval lines for this run_id begin with the same 2 val_loss values",
+  "no `done` line in metrics.jsonl",
+  "no step_times.csv (written only when a run ends)",
+  "2/12 evals",
+  "stated job 60623330; confirmed by the .out log"
+ ]
+}
