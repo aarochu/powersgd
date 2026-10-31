@@ -7,6 +7,8 @@
 - CPU smoke tests (2 procs, synthetic data) passed for ddp/powersgd x fp32/fp16/fp8_e4m3/fp8_e5m2 on NanoGPT, and ddp/powersgd fp32 on ResNet-18. bf16 comm hook fails on CPU by design (needs CUDA+NCCL) - unverified on GPU.
 - `paper-code/` untouched.
 
+**Run order (agreed):** (1) smoke + epoch timing on 1 node (`scripts/interactive_smoke.sh`, `scripts/time_epoch_1node.sh`); (2) 1-node sweep DDP + R1/R2/R4 ~30 epochs (`scripts/tier1_resnet18_1node.sbatch`); (3) one 2-node run, DDP vs R2 (`scripts/tier3_resnet18_2node.sbatch`). No paper-code launcher (decided against).
+
 **Next (needs you on Perlmutter):**
 1. Clone/copy repo to `$SCRATCH/powersgd`; `module avail pytorch`; check torch version has float8 + NCCL; `python tools/prepare_data.py` on a login node.
 2. `salloc` 1 node, run `bash scripts/interactive_smoke.sh`; paste output back so I can cost Tier 1.
