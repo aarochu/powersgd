@@ -324,6 +324,10 @@ def main():
 
     global_batch = task.bs * ws if a.model == "resnet18" else task.bs * ws
     lr_eff = task.base_lr() * global_batch / a.lr_ref_batch if a.model == "resnet18" else task.base_lr()
+    if is0:  # config.json holds CLI args (lr/batch_size may be None = default); record what was actually used
+        (run_dir / "config.json").write_text(json.dumps(
+            vars(a) | {"world_size": ws, "run_id": run_id,
+                       "resolved": {"batch_size_per_gpu": task.bs, "global_batch": global_batch, "lr_eff": lr_eff}}, indent=1))
     warm_ignore = a.timing_warmup if a.timing_warmup is not None else max(20, a.start_iter + 10)
     if is0:
         emit({"type": "start", "run_id": run_id, "params": nparams, "world_size": ws, "total_steps": task.total_steps,
@@ -336,7 +340,7 @@ def main():
 
     step_times, data_times, bytes_per_step = [], [], []
     run_loss, run_n = 0.0, 0
-    best, last_ev = None, None
+    best, best_step, last_ev = None, None, None
     status = "ok"
     dist.barrier()
     sync()
@@ -389,7 +393,7 @@ def main():
                     last_ev = ev
                     key = "test_acc" if "test_acc" in ev else "val_loss"
                     if best is None or (ev[key] > best[key] if key == "test_acc" else ev[key] < best[key]):
-                        best = ev
+                        best, best_step = ev, step + 1
                     steady = step_times[warm_ignore:] or step_times
                     emit({"type": "eval", "step": step + 1, "epoch": (step + 1) / task.steps_per_epoch if a.model == "resnet18" else None,
                           "train_loss": run_loss / run_n, "train_time_s": train_time, "elapsed_s": time.perf_counter() - t_start,
@@ -417,7 +421,7 @@ def main():
                 "seed": a.seed, "batch_size_per_gpu": task.bs, "global_batch": global_batch,
                 "steps": len(step_times), "planned_steps": task.total_steps, "epochs": a.epochs if a.model == "resnet18" else None,
                 "start_powerSGD_iter": a.start_iter if a.mode == "powersgd" else None,
-                "final_metric": task.final_metric(last_ev) if last_ev else None, "best_metric": best,
+                "final_metric": task.final_metric(last_ev) if last_ev else None, "best_metric": best, "best_step": best_step, "lr_eff": lr_eff,
                 "wall_time_s": wall, "train_time_s": train_time,
                 "median_step_time_s": float(np.median(steady)) if len(steady) else None,
                 "mean_step_time_s": float(np.mean(steady)) if len(steady) else None,
