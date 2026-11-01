@@ -362,6 +362,36 @@ bullets(slide, 0.6, bottom + 0.1, 12.2, 2.0, [
     "nodes, so there communication dominated.",
 ], size=15)
 
+# GPU usage
+slide = new_slide(
+    "GPU usage: these models are small for an A100",
+    "ResNet18 keeps the GPUs busy less than half the time; both models use under 11% of GPU memory.",
+    "From Slurm accounting for each job. Utilization is the share of time any GPU kernel was "
+    "running, including NCCL communication kernels, so it is not the same as useful compute. "
+    "ResNet18 on 32x32 images with 128 images per GPU is too little work to keep an A100 busy. "
+    "Both models fit in a few GB, which is why larger models such as nanoGPT are the next test.",
+)
+table(slide, 0.6, 1.8, 12.1, [
+    ["Method", "ResNet18: GPU busy", "ResNet18: memory", "LSTM: GPU busy", "LSTM: memory"],
+    ["SGD", "43-48%", "2.6 GB", "96%*", "4.2 GB*"],
+    ["Rank 1", "44-45%", "2.5 GB", "96%", "4.1 GB"],
+    ["Rank 2", "46%", "2.5 GB", "96%", "4.2 GB"],
+    ["Rank 4", "46-48%", "2.5 GB", "95%", "4.1 GB"],
+], col_widths=[1.9, 2.6, 2.4, 2.6, 2.6], size=16, row_height=0.5)
+bullets(slide, 0.6, 4.55, 12.2, 2.4, [
+    "**GPU busy **= average share of time a kernel was running (Slurm/NVML), over all 16 GPUs "
+    "and the whole run. Communication kernels count as busy, so this is not useful-compute "
+    "efficiency.",
+    "**ResNet18 leaves the A100s idle more than half the time: **128 small images per GPU per "
+    "step is too little work, so launch overhead, data loading and synchronization dominate.",
+    "**Memory: **2.5-4.2 GB of 40 GB per GPU. Larger models are where gradient compression "
+    "should matter.",
+], size=15)
+text_box(slide, 0.6, 6.6, 12.1, 0.4,
+         "* 2 of 3 seeds; Slurm has no GPU record for LSTM SGD seed 3. Per-job values: "
+         "results/paper_reproduction/gpu_usage.txt",
+         size=12, color=GRAY, italic=True)
+
 # 13. Scorecard
 slide = new_slide(
     "Scorecard",

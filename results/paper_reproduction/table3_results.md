@@ -8,7 +8,9 @@ Generated with `./perlmutter/submit_paper.sh table3` and `paper-code/analyze_res
 
     mkdir -p raw && tar xzf powersgd_raw_runs.tgz -C raw && python ../../paper-code/analyze_results.py raw
 
-All runs used 36.9 GPU-hours in total (24 jobs x 16 A100s, from `sacct`).
+All runs used 36.9 GPU-hours in total (24 jobs x 16 A100s, from `sacct`). Slurm's average GPU
+utilization was 43-48% for ResNet18 and 95-96% for the LSTM, with 2.5-4.2 GB of GPU memory in use
+(per-job values in `gpu_usage.txt`).
 
 ## Image classification: ResNet18 on CIFAR-10 (300 epochs)
 
