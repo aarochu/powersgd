@@ -5,4 +5,4 @@ __pycache__
 .AppleDouble/
 test*.py
 *.egg-info
-dist/
+dist/powersgd_results/
