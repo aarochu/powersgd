@@ -5,4 +5,6 @@ __pycache__
 .AppleDouble/
 test*.py
 *.egg-info
-dist/powersgd_results/
+dist/
+# raw scp copies of Perlmutter results (organized copies live in results/organized/)
+powersgd_results/
