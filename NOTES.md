@@ -1,5 +1,12 @@
 # NOTES (running log; newest first)
 
+## 2026-10-31 (Sat)
+**First real GPU results (1 node, NanoGPT):** see `results/RESULTS.md`, `docs/RUNS.md`, `figures/`. Job 60622124, 4x A100, DDP vs PowerSGD r1/r2/r4, 2000 steps, seed 1.
+Headline: use *best* val loss, not final (DDP overfits after step 750; PowerSGD runs were still improving); PowerSGD costs 4-13% step time on one node and sends 59-156x fewer logical bytes. 96.7% GPU util while active, 38.7% over the allocation.
+**Trainer (`train_ddp.py`) logging-only patch:** `best_step` and `lr_eff` in `runs.jsonl`; resolved batch size / lr in `config.json`. No training logic changed. NOT yet tested on a GPU node: do not copy to Perlmutter until the queued jobs (60623329, 60623330) finish and a smoke test passes on a compute node.
+**Queued, no results yet:** `scripts/nanogpt_2node.sbatch` (60623329), `scripts/nanogpt_1node_long.sbatch` (60623330).
+**Not run:** ResNet-18 with `train_ddp.py`, FP8, TP (design only), LSTM in `train_ddp.py`.
+
 ## 2026-10-29 (Thu)
 **Done (all local, CPU/gloo only; nothing has run on Perlmutter, no GPU results exist):**
 - `train_ddp.py`: torchrun, ResNet-18/CIFAR-10 and NanoGPT/Shakespeare-char, `--mode {ddp,powersgd} --rank R --precision {fp32,fp16,bf16,fp8_e4m3,fp8_e5m2}`, built-in PowerSGD hook (error feedback + warm start ON), per-run `results/runs.jsonl` line, `results/runs/<id>/{config.json,metrics.jsonl,step_times.csv}`, optional `--profile-step`.
