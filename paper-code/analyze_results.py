@@ -171,7 +171,9 @@ def accuracy_table(runs, group):
                         + f"/{group_runs[0]['target_epochs']}",
                         spread([r["final"] for r in group_runs]),
                         fmt(paper[0]),
-                        spread([r["runavg_final"] for r in group_runs]),
+                        # LanguageModelingTask.test evaluates the live model in training mode,
+                        # so its "running-average" perplexity is not meaningful.
+                        "n/a" if task == "lm" else spread([r["runavg_final"] for r in group_runs]),
                         fmt(mean_or_none([r["mb_per_epoch"] for r in group_runs]), 0),
                         fmt(paper[1], 0),
                         fmt(batch_ms),
@@ -211,6 +213,38 @@ def scaling_table(runs, group):
             f"| {fmt(mean_or_none([r['reduce_ms'] for r in cell]))} | {speedup} |"
         )
     lines.append("")
+    return lines
+
+
+def per_run_table(runs, results_dir):
+    """One row per run (every seed), with unrounded results and absolute timings."""
+    lines = [
+        "| Group | Task | Algorithm | Seed | GPUs | Epochs | Final test metric | MB/epoch "
+        "| ms/batch | forward | backward | reduce | Run directory |",
+        "|" + "---|" * 13,
+    ]
+    for run in sorted(runs, key=lambda r: (r["dir"], r["seed"])):
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    os.path.relpath(run["dir"], results_dir).split(os.sep)[0],
+                    run["task"],
+                    run["preset"],
+                    str(run["seed"]),
+                    f"{run['workers']} ({run['backend']})",
+                    f"{fmt(run['epochs'], 0)}/{run['target_epochs']}",
+                    fmt(run["final"], 2),
+                    fmt(run["mb_per_epoch"], 1),
+                    fmt(run["batch_ms"], 2),
+                    fmt(run["forward_ms"], 2),
+                    fmt(run["backward_ms"], 2),
+                    fmt(run["reduce_ms"], 2),
+                    os.path.relpath(run["dir"], results_dir),
+                ]
+            )
+            + " |"
+        )
     return lines
 
 
@@ -284,6 +318,9 @@ def main():
     print(text)
     with open(os.path.join(args.results_dir, "summary.md"), "w") as fp:
         fp.write(text + "\n")
+    with open(os.path.join(args.results_dir, "per_run.md"), "w") as fp:
+        fp.write("\n".join(per_run_table(runs, args.results_dir)) + "\n")
+    print(f"wrote {os.path.join(args.results_dir, 'per_run.md')}")
 
 
 if __name__ == "__main__":
