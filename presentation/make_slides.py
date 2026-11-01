@@ -252,8 +252,9 @@ table(slide, 0.6, 1.8, 12.1, [
     ["Tasks", "ResNet18 / CIFAR-10 (300 epochs), LSTM / WikiText-2 (90 epochs)", "Same"],
     ["Hyperparameters", "Tuned for SGD, reused unchanged for PowerSGD", "Identical"],
     ["Repetitions", "3 seeds", "3 seeds per method: 24 runs"],
+    ["Compute used", "Not reported", "36.9 GPU-hours (from Slurm accounting)"],
 ], col_widths=[2.2, 4.9, 5.0], size=15, row_height=0.5)
-bullets(slide, 0.6, 5.55, 12.0, 1.4, [
+bullets(slide, 0.6, 5.85, 12.0, 1.1, [
     "**Porting only: **one GPU per process under Slurm; replaced two libraries that no longer exist "
     "(a CUDA bit-packing extension and the old torchtext/spaCy text pipeline); fixed the dataset "
     "download.",
