@@ -2,7 +2,13 @@
 
 16 GPUs (4 nodes x 4 A100, NCCL), paper hyperparameters, 3 seeds each, mean [min, max].
 Generated with `./perlmutter/submit_paper.sh table3` and `paper-code/analyze_results.py`
-(raw output in `summary.md`).
+(raw output in `summary.md`). Every individual run (seed, unrounded result, timings) is listed in
+`per_run.md`. The raw per-run files (config, metric log, timers, Slurm log) are in
+`powersgd_raw_runs.tgz`; to recompute the tables:
+
+    mkdir -p raw && tar xzf powersgd_raw_runs.tgz -C raw && python ../../paper-code/analyze_results.py raw
+
+All runs used 36.9 GPU-hours in total (24 jobs x 16 A100s, from `sacct`).
 
 ## Image classification: ResNet18 on CIFAR-10 (300 epochs)
 

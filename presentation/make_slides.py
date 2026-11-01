@@ -423,8 +423,8 @@ table(slide, 0.6, 1.75, 12.1, [
     ["", "Rank 4", "98.9 [98.3, 99.3]", "91", "65", "64", "28.1", "134"],
 ], col_widths=[2.0, 1.1, 2.4, 1.1, 1.6, 1.2, 1.6, 1.1], size=14, row_height=0.5)
 text_box(slide, 0.6, 6.45, 12.1, 0.5,
-         "Raw ms/batch is not comparable across hardware (A100 vs Titan X); compare the change "
-         "relative to SGD instead.",
+         "CIFAR-10 SGD seeds: 94.075, 94.075, 94.083 (different training runs that happen to end "
+         "equal). Raw ms/batch is not comparable across hardware; compare the change vs SGD.",
          size=14, color=GRAY, italic=True)
 
 prs.save(OUT)

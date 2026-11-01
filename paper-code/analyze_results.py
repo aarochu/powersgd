@@ -233,7 +233,7 @@ def per_run_table(runs, results_dir):
                     run["preset"],
                     str(run["seed"]),
                     f"{run['workers']} ({run['backend']})",
-                    f"{run['epochs']}/{run['target_epochs']}",
+                    f"{fmt(run['epochs'], 0)}/{run['target_epochs']}",
                     fmt(run["final"], 2),
                     fmt(run["mb_per_epoch"], 1),
                     fmt(run["batch_ms"], 2),
