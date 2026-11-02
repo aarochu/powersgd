@@ -9,3 +9,38 @@ dist/
 # raw scp copies of Perlmutter results (organized copies live in results/organized/)
 powersgd_results/
 results/paper_reproduction/raw/
+
+# --- secrets and credentials: never commit these ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.netrc
+.pypirc
+.aws/
+.ssh/
+.gnupg/
+secrets.*
+credentials*.json
+service-account*.json
+*.token
+
+# --- local machine and cluster state (usernames, hostnames, allocation details) ---
+.DS_Store
+.claude/settings.local.json
+slurm-*.out
+slurm-logs/
+*.local
+local_notes*
+
+# --- large local artifacts (model weights, caches) ---
+*.pt
+*.pth
+*.ckpt
+.venv/
+venv/
