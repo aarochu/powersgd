@@ -1,7 +1,7 @@
 #!/bin/bash
 # Step 1b: measure seconds/epoch on REAL CIFAR-10 (the smoke test uses synthetic data, so it can't tell you this).
 # Run inside an interactive allocation, after tools/prepare_data.py and scripts/interactive_smoke.sh:
-#   salloc -N 1 -C gpu -G 4 -q interactive -t 00:20:00 -A m4431_g
+#   salloc -N 1 -C gpu -G 4 -q interactive -t 00:20:00 -A <account>
 #   bash scripts/time_epoch_1node.sh
 # 2 epochs each for plain DDP and PowerSGD R=2 (~a few minutes). Results are tagged timing_* in results/runs.jsonl.
 # Epoch 1 includes dataloader/cudnn warmup; the median step time ignores the first steps.
