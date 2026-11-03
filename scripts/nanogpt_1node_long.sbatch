@@ -1,7 +1,7 @@
 #!/bin/bash
 # NanoGPT, 1 node: do PowerSGD ranks 2/4 catch up to DDP's best loss given more steps?
 # Cost: about 20 min on 1 node, roughly 0.35 node-hours.
-#SBATCH -A m4431_g
+# Allocation is not hard-coded: export SBATCH_ACCOUNT=<your project> before sbatch (or pass -A <project>).
 #SBATCH -C gpu
 #SBATCH -q regular
 #SBATCH -N 1

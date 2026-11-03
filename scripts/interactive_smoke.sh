@@ -1,6 +1,6 @@
 #!/bin/bash
 # First thing to run on Perlmutter. Inside an interactive allocation, e.g.:
-#   salloc -N 1 -C gpu -G 4 -q interactive -t 00:30:00 -A m4431_g     # (or -q debug; check `sacctmgr show assoc`)
+#   salloc -N 1 -C gpu -G 4 -q interactive -t 00:30:00 -A <account>     # (or -q debug; check `sacctmgr show assoc`)
 #   bash scripts/interactive_smoke.sh
 # Verifies: torch/NCCL/float8 versions, DDP + PowerSGD + fp16/bf16/fp8 hooks on 4 GPUs, and measures real
 # step times so the Tier 1 job can be costed. Uses --synthetic (no dataset needed), ~5 minutes.

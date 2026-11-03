@@ -84,9 +84,10 @@ bash perlmutter/setup.sh                # login node: checks the stack, download
 Runs already finished are skipped, so the script is safe to re-run. Tables are rebuilt with `paper-code/analyze_results.py` (see
 `results/paper_reproduction/table3_results.md`).
 
-**NanoGPT** (inside a Slurm allocation; the `#SBATCH -A` line in `scripts/*.sbatch` holds the course allocation, so change it to yours):
+**NanoGPT** (inside a Slurm allocation; the scripts do not hard-code one, so set yours first):
 
 ```bash
+export SBATCH_ACCOUNT=<your project>    # read by sbatch; for salloc use SALLOC_ACCOUNT or -A
 python tools/prepare_data.py            # login node: downloads tiny Shakespeare
 source scripts/common.sh
 start_gpu_monitor
