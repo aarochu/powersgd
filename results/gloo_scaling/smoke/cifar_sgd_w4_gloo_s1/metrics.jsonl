@@ -1,0 +1,66 @@
+{"name": "effective_lr", "time": 1794030354.8884099, "epoch": 0.0, "value": 10000000.0, "weight": "bn1.bias"}
+{"name": "grad_norm", "time": 1794030354.8899276, "epoch": 0.0, "value": 0.06626208871603012, "weight": "bn1.bias"}
+{"name": "timer", "time": 1794030355.607234, "epoch": 1.0, "value": 0.004357576370239258, "event": "batch.forward"}
+{"name": "timer", "time": 1794030355.633245, "epoch": 1.0, "value": 0.025931119918823242, "event": "batch.backward"}
+{"name": "timer", "time": 1794030355.6338353, "epoch": 1.0, "value": 0.0005254745483398438, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030355.6576173, "epoch": -1.0, "value": 0.0003306865692138672, "event": "reduce.mean.pack"}
+{"name": "timer", "time": 1794030356.1789935, "epoch": -1.0, "value": 0.5213203430175781, "event": "reduce.mean.allreduce"}
+{"name": "timer", "time": 1794030356.179821, "epoch": 0.010309278350515464, "value": 0.5228595733642578, "event": "batch.reduce"}
+{"name": "timer", "time": 1794030356.1845994, "epoch": 0.010309278350515464, "value": 0.5818803310394287, "event": "batch"}
+{"name": "timer", "time": 1794030356.1997035, "epoch": 1.0, "value": 0.000308990478515625, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030356.2013679, "epoch": -1.0, "value": 0.0003139972686767578, "event": "reduce.mean.pack"}
+{"name": "timer", "time": 1794030356.2322953, "epoch": -1.0, "value": 0.030876874923706055, "event": "reduce.mean.allreduce"}
+{"name": "effective_lr", "time": 1794030356.253197, "epoch": 0.030927835051546393, "value": 2442.8318029006487, "weight": "layer4.0.bn1.bias"}
+{"name": "grad_norm", "time": 1794030356.2533178, "epoch": 0.030927835051546393, "value": 0.03728443756699562, "weight": "layer4.0.bn1.bias"}
+{"name": "timer", "time": 1794030356.2544472, "epoch": -1.0, "value": 0.00031495094299316406, "event": "reduce.mean.pack"}
+{"name": "timer", "time": 1794030356.4024646, "epoch": -1.0, "value": 0.03198528289794922, "event": "reduce.mean.allreduce"}
+{"name": "timer", "time": 1794030356.4736366, "epoch": 1.0, "value": 0.009730815887451172, "event": "batch.backward"}
+{"name": "timer", "time": 1794030356.5100648, "epoch": 0.061855670103092786, "value": 0.050611019134521484, "event": "batch"}
+{"name": "timer", "time": 1794030356.5250177, "epoch": 1.0, "value": 0.0002887248992919922, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030356.5620894, "epoch": 0.07216494845360824, "value": 0.05155062675476074, "event": "batch"}
+{"name": "timer", "time": 1794030356.5669875, "epoch": 1.0, "value": 0.00428009033203125, "event": "batch.forward"}
+{"name": "timer", "time": 1794030356.8122776, "epoch": -1.0, "value": 0.02933955192565918, "event": "reduce.mean.allreduce"}
+{"name": "timer", "time": 1794030356.9143462, "epoch": -1.0, "value": 0.029866456985473633, "event": "reduce.mean.allreduce"}
+{"name": "timer", "time": 1794030356.934397, "epoch": 1.0, "value": 0.0002903938293457031, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030356.970317, "epoch": 0.15463917525773196, "value": 0.050412654876708984, "event": "batch"}
+{"name": "effective_lr", "time": 1794030357.152182, "epoch": 0.18556701030927836, "value": 0.0017612634278398138, "weight": "bn1.weight"}
+{"name": "grad_norm", "time": 1794030357.1523178, "epoch": 0.18556701030927836, "value": 0.02834297902882099, "weight": "bn1.weight"}
+{"name": "timer", "time": 1794030357.2547498, "epoch": 1.0, "value": 0.009720563888549805, "event": "batch.backward"}
+{"name": "timer", "time": 1794030357.7204149, "epoch": 1.0, "value": 0.00429224967956543, "event": "batch.forward"}
+{"name": "timer", "time": 1794030357.8336496, "epoch": 1.0, "value": 0.00028896331787109375, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030357.8756268, "epoch": 1.0, "value": 0.004313945770263672, "event": "batch.forward"}
+{"name": "timer", "time": 1794030357.9727867, "epoch": 0.32989690721649484, "value": 0.050658464431762695, "event": "batch"}
+{"name": "timer", "time": 1794030358.2973893, "epoch": 1.0, "value": 0.00029349327087402344, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030358.3997414, "epoch": 1.0, "value": 0.0002942085266113281, "event": "batch.evaluate"}
+{"name": "timer", "time": 1794030358.6432104, "epoch": 0.4639175257731959, "value": 0.03308415412902832, "event": "batch.reduce"}
+{"name": "timer", "time": 1794030358.7507234, "epoch": 0.4845360824742268, "value": 0.05045938491821289, "event": "batch"}
+{"name": "effective_lr", "time": 1794030358.7663922, "epoch": 0.4948453608247423, "value": 0.05701914023462248, "weight": "layer4.0.shortcut.1.bias"}
+{"name": "grad_norm", "time": 1794030358.7665126, "epoch": 0.4948453608247423, "value": 0.04599541053175926, "weight": "layer4.0.shortcut.1.bias"}
+{"name": "timer", "time": 1794030358.7976317, "epoch": -1.0, "value": 0.029976606369018555, "event": "reduce.mean.allreduce"}
+{"name": "effective_lr", "time": 1794030358.972939, "epoch": 0.5360824742268041, "value": 0.0012368077148541881, "weight": "layer2.0.conv1.weight"}
+{"name": "grad_norm", "time": 1794030358.9730802, "epoch": 0.5360824742268041, "value": 0.1969958394765854, "weight": "layer2.0.conv1.weight"}
+{"name": "timer", "time": 1794030358.9742086, "epoch": -1.0, "value": 0.0003123283386230469, "event": "reduce.mean.pack"}
+{"name": "effective_lr", "time": 1794030359.2347484, "epoch": 0.5876288659793815, "value": 0.001209985848243728, "weight": "layer3.0.conv2.weight"}
+{"name": "grad_norm", "time": 1794030359.234896, "epoch": 0.5876288659793815, "value": 0.0838036835193634, "weight": "layer3.0.conv2.weight"}
+{"name": "effective_lr", "time": 1794030359.8625655, "epoch": 0.711340206185567, "value": 0.8862348719517289, "weight": "linear.bias"}
+{"name": "grad_norm", "time": 1794030359.862701, "epoch": 0.711340206185567, "value": 0.052132051438093185, "weight": "linear.bias"}
+{"name": "effective_lr", "time": 1794030359.9674892, "epoch": 0.7319587628865979, "value": 0.000744419847312493, "weight": "layer4.0.shortcut.0.weight"}
+{"name": "grad_norm", "time": 1794030359.9676485, "epoch": 0.7319587628865979, "value": 0.32260429859161377, "weight": "layer4.0.shortcut.0.weight"}
+{"name": "effective_lr", "time": 1794030360.0187755, "epoch": 0.7422680412371134, "value": 0.002128817182187747, "weight": "layer1.0.conv2.weight"}
+{"name": "grad_norm", "time": 1794030360.0189002, "epoch": 0.7422680412371134, "value": 0.205003023147583, "weight": "layer1.0.conv2.weight"}
+{"name": "timer", "time": 1794030360.1090481, "epoch": 0.7525773195876289, "value": 0.05083942413330078, "event": "batch"}
+{"name": "timer", "time": 1794030360.3164675, "epoch": 0.7938144329896907, "value": 0.05045461654663086, "event": "batch"}
+{"name": "timer", "time": 1794030360.8975568, "epoch": 0.9072164948453608, "value": 0.05244922637939453, "event": "batch"}
+{"name": "timer", "time": 1794030360.9442787, "epoch": -1.0, "value": 0.029960155487060547, "event": "reduce.mean.allreduce"}
+{"name": "cross_entropy", "time": 1794030361.3334696, "value": 2.314270257949829, "epoch": 1.0, "bits": 34683978048, "split": "train"}
+{"name": "last_cross_entropy", "time": 1794030361.3335543, "value": 2.314270257949829, "epoch": 1.0, "bits": 34683978048, "split": "train"}
+{"name": "accuracy", "time": 1794030361.3335962, "value": 0.2384222149848938, "epoch": 1.0, "bits": 34683978048, "split": "train"}
+{"name": "last_accuracy", "time": 1794030361.3336332, "value": 0.2384222149848938, "epoch": 1.0, "bits": 34683978048, "split": "train"}
+{"name": "top5_accuracy", "time": 1794030361.3336694, "value": 0.7600876092910767, "epoch": 1.0, "bits": 34683978048, "split": "train"}
+{"name": "last_top5_accuracy", "time": 1794030361.3337042, "value": 0.7600876092910767, "epoch": 1.0, "bits": 34683978048, "split": "train"}
+{"name": "last_cross_entropy", "time": 1794030361.8015943, "value": 1.6896671056747437, "epoch": 1.0, "bits": 34683978048, "split": "test"}
+{"name": "last_accuracy", "time": 1794030361.8017244, "value": 0.36730000376701355, "epoch": 1.0, "bits": 34683978048, "split": "test"}
+{"name": "last_top5_accuracy", "time": 1794030361.8017747, "value": 0.8738000988960266, "epoch": 1.0, "bits": 34683978048, "split": "test"}
+{"name": "runavg_cross_entropy", "time": 1794030362.2630694, "value": 2.0262057781219482, "epoch": 1.0, "bits": 34683978048, "split": "test"}
+{"name": "runavg_accuracy", "time": 1794030362.263287, "value": 0.2523000240325928, "epoch": 1.0, "bits": 34683978048, "split": "test"}
+{"name": "runavg_top5_accuracy", "time": 1794030362.2633317, "value": 0.803600013256073, "epoch": 1.0, "bits": 34683978048, "split": "test"}
