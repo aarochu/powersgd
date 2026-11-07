@@ -1,0 +1,23 @@
+# GPU usage per job from Slurm accounting (TRESUsageInAve). gpuutil = avg % of time a GPU kernel ran; gpumem = avg GPU memory used.
+# Only the srun step (.0) runs on the GPUs; the .batch step is the launcher and reports 0. No nvidia-smi samples exist for these jobs.
+# Command: sacct -j 60949651,60951117,60951118,60951119,60951120 -P -n --format=JobID,JobName%60,TRESUsageInAve%500
+60949651|smoke_gloo_w4|
+60949651.batch|batch|cpu=00:00:00,energy=13780,fs/disk=3927475,gres/gpumem=0,gres/gpuutil=0,mem=29732K,pages=12,vmem=0
+60949651.extern|extern|energy=12880
+60949651.0|python|cpu=00:00:20,energy=3548,fs/disk=1219089279,gres/gpumem=2470M,gres/gpuutil=15,mem=1970650K,pages=397,vmem=0
+60951117|scaling_cifar_sgd_w8_gloo_s1|
+60951117.batch|batch|cpu=00:00:00,energy=37132,fs/disk=3929367,gres/gpumem=0,gres/gpuutil=0,mem=29508K,pages=12,vmem=0
+60951117.extern|extern|energy=35710
+60951117.0|python|cpu=00:00:56,energy=9190,fs/disk=1111516984,gres/gpumem=2470M,gres/gpuutil=28,mem=1970185K,pages=463,vmem=0
+60951118|scaling_cifar_sgd_w16_gloo_s1|
+60951118.batch|batch|cpu=00:00:00,energy=14833,fs/disk=3933782,gres/gpumem=0,gres/gpuutil=0,mem=32176K,pages=12,vmem=0
+60951118.extern|extern|energy=13855
+60951118.0|python|cpu=00:00:09,energy=3576,fs/disk=1043331011,gres/gpumem=1230080K,gres/gpuutil=0,mem=1855997696,pages=409,vmem=0
+60951119|scaling_cifar_rank-2_w8_gloo_s1|
+60951119.batch|batch|cpu=00:00:00,energy=14917,fs/disk=3929382,gres/gpumem=0,gres/gpuutil=0,mem=31104K,pages=12,vmem=0
+60951119.extern|extern|energy=14228
+60951119.0|python|cpu=00:00:11,energy=3704,fs/disk=1102142710,gres/gpumem=2468M,gres/gpuutil=7,mem=1968932.50K,pages=458,vmem=0
+60951120|scaling_cifar_rank-2_w16_gloo_s1|
+60951120.batch|batch|cpu=00:00:00,energy=15197,fs/disk=3933665,gres/gpumem=0,gres/gpuutil=0,mem=29748K,pages=12,vmem=0
+60951120.extern|extern|energy=13629
+60951120.0|python|cpu=00:00:15,energy=3717,fs/disk=1045305386,gres/gpumem=2470M,gres/gpuutil=12,mem=1968378.50K,pages=523,vmem=0

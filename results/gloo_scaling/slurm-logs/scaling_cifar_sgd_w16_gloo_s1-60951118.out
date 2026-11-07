@@ -1,0 +1,2251 @@
+job 60951118 on nid[002560,002808,003084,003188]: cifar / SGD / seed 1 / 16 GPUs (gloo)
+Distributed init: rank 7/16 - env://
+Distributed init: rank 14/16 - env://
+Distributed init: rank 12/16 - env://
+Distributed init: rank 13/16 - env://
+Distributed init: rank 15/16 - env://
+Distributed init: rank 5/16 - env://
+Distributed init: rank 6/16 - env://
+Distributed init: rank 4/16 - env://
+Distributed init: rank 9/16 - env://
+Distributed init: rank 10/16 - env://
+Distributed init: rank 11/16 - env://
+Distributed init: rank 8/16 - env://
+Distributed init: rank 3/16 - env://
+Distributed init: rank 1/16 - env://
+Distributed init: rank 0/16 - env://
+Distributed init: rank 2/16 - env://
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+effective_lr                   - epoch:  0.000, value:10000000.000 (weight:bn1.bias)
+grad_norm                      - epoch:  0.000, value:  0.070 (weight:bn1.bias)
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+effective_lr                   - epoch:  0.125, value:2053.615 (weight:layer4.0.bn1.bias)
+grad_norm                      - epoch:  0.125, value:  0.027 (weight:layer4.0.bn1.bias)
+effective_lr                   - epoch:  0.750, value:  0.005 (weight:bn1.weight)
+grad_norm                      - epoch:  0.750, value:  0.114 (weight:bn1.weight)
+cross_entropy                  - bits:8581602816.000, epoch:  1.000, value:  3.762 (split:train)
+last_cross_entropy             - bits:8581602816.000, epoch:  1.000, value:  3.762 (split:train)
+accuracy                       - bits:8581602816.000, epoch:  1.000, value:  0.121 (split:train)
+last_accuracy                  - bits:8581602816.000, epoch:  1.000, value:  0.121 (split:train)
+top5_accuracy                  - bits:8581602816.000, epoch:  1.000, value:  0.540 (split:train)
+last_top5_accuracy             - bits:8581602816.000, epoch:  1.000, value:  0.540 (split:train)
+last_cross_entropy             - bits:8581602816.000, epoch:  1.000, value:512.931 (split:test)
+last_accuracy                  - bits:8581602816.000, epoch:  1.000, value:  0.101 (split:test)
+last_top5_accuracy             - bits:8581602816.000, epoch:  1.000, value:  0.510 (split:test)
+runavg_cross_entropy           - bits:8581602816.000, epoch:  1.000, value:225.881 (split:test)
+runavg_accuracy                - bits:8581602816.000, epoch:  1.000, value:  0.104 (split:test)
+runavg_top5_accuracy           - bits:8581602816.000, epoch:  1.000, value:  0.517 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.11638s |  99.6%
+- batch.backward                 |     23 |     0.01288s |  11.3%
+- batch.evaluate                 |     23 |     0.00032s |   0.3%
+- batch.forward                  |     23 |     0.00433s |   3.8%
+- batch.reduce                   |     23 |     0.09236s |  82.5%
+- reduce.mean.allreduce          |     23 |     0.09089s |  81.2%
+- reduce.mean.pack               |     23 |     0.00032s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09355s |  99.5%
+- batch.backward                 |     23 |     0.00967s |  10.6%
+- batch.evaluate                 |     23 |     0.00026s |   0.3%
+- batch.forward                  |     23 |     0.00427s |   4.7%
+- batch.reduce                   |     23 |     0.07104s |  76.5%
+- reduce.mean.allreduce          |     23 |     0.06970s |  75.1%
+- reduce.mean.pack               |     23 |     0.00030s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09317s |  99.4%
+- batch.backward                 |     23 |     0.00977s |  10.7%
+- batch.evaluate                 |     23 |     0.00033s |   0.4%
+- batch.forward                  |     23 |     0.00437s |   4.8%
+- batch.reduce                   |     23 |     0.07285s |  78.7%
+- reduce.mean.allreduce          |     23 |     0.07137s |  77.1%
+- reduce.mean.pack               |     23 |     0.00032s |   0.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09267s |  99.5%
+- batch.backward                 |     23 |     0.00972s |  10.7%
+- batch.evaluate                 |     23 |     0.00035s |   0.4%
+- batch.forward                  |     23 |     0.00464s |   5.1%
+- batch.reduce                   |     23 |     0.06742s |  77.0%
+- reduce.mean.allreduce          |     23 |     0.06587s |  75.3%
+- reduce.mean.pack               |     23 |     0.00035s |   0.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.11523s |  99.6%
+- batch.backward                 |     23 |     0.01175s |  10.4%
+- batch.evaluate                 |     23 |     0.00032s |   0.3%
+- batch.forward                  |     23 |     0.00434s |   3.8%
+- batch.reduce                   |     23 |     0.09270s |  82.6%
+- reduce.mean.allreduce          |     23 |     0.09127s |  81.4%
+- reduce.mean.pack               |     23 |     0.00032s |   0.3%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09344s |  99.5%
+- batch.backward                 |     23 |     0.00967s |  10.6%
+- batch.evaluate                 |     23 |     0.00028s |   0.3%
+- batch.forward                  |     23 |     0.00427s |   4.7%
+- batch.reduce                   |     23 |     0.07083s |  76.4%
+- reduce.mean.allreduce          |     23 |     0.06948s |  74.9%
+- reduce.mean.pack               |     23 |     0.00031s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09305s |  99.5%
+- batch.backward                 |     23 |     0.00977s |  10.7%
+- batch.evaluate                 |     23 |     0.00029s |   0.3%
+- batch.forward                  |     23 |     0.00428s |   4.7%
+- batch.reduce                   |     23 |     0.07016s |  76.0%
+- reduce.mean.allreduce          |     23 |     0.06878s |  74.5%
+- reduce.mean.pack               |     23 |     0.00031s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09321s |  99.5%
+- batch.backward                 |     23 |     0.00968s |  10.6%
+- batch.evaluate                 |     23 |     0.00027s |   0.3%
+- batch.forward                  |     23 |     0.00435s |   4.8%
+- batch.reduce                   |     23 |     0.07047s |  76.2%
+- reduce.mean.allreduce          |     23 |     0.06911s |  74.8%
+- reduce.mean.pack               |     23 |     0.00030s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09351s |  99.5%
+- batch.backward                 |     23 |     0.00978s |  10.7%
+- batch.evaluate                 |     23 |     0.00029s |   0.3%
+- batch.forward                  |     23 |     0.00427s |   4.7%
+- batch.reduce                   |     23 |     0.07349s |  79.2%
+- reduce.mean.allreduce          |     23 |     0.07211s |  77.8%
+- reduce.mean.pack               |     23 |     0.00031s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09285s |  99.5%
+- batch.backward                 |     23 |     0.00968s |  10.7%
+- batch.evaluate                 |     23 |     0.00028s |   0.3%
+- batch.forward                  |     23 |     0.00426s |   4.7%
+- batch.reduce                   |     23 |     0.07019s |  76.2%
+- reduce.mean.allreduce          |     23 |     0.06883s |  74.7%
+- reduce.mean.pack               |     23 |     0.00031s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.11628s |  99.6%
+- batch.backward                 |     23 |     0.01171s |  10.2%
+- batch.evaluate                 |     23 |     0.00031s |   0.3%
+- batch.forward                  |     23 |     0.00432s |   3.8%
+- batch.reduce                   |     23 |     0.09053s |  80.1%
+- reduce.mean.allreduce          |     23 |     0.08911s |  78.9%
+- reduce.mean.pack               |     23 |     0.00032s |   0.3%
+-----------------------------------------------------------------
+
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.11608s |  99.6%
+- batch.backward                 |     23 |     0.01305s |  11.4%
+- batch.evaluate                 |     23 |     0.00028s |   0.3%
+- batch.forward                  |     23 |     0.00425s |   3.7%
+- batch.reduce                   |     23 |     0.08821s |  79.1%
+- reduce.mean.allreduce          |     23 |     0.08685s |  77.9%
+- reduce.mean.pack               |     23 |     0.00031s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09284s |  99.5%
+- batch.backward                 |     23 |     0.00966s |  10.6%
+- batch.evaluate                 |     23 |     0.00028s |   0.3%
+- batch.forward                  |     23 |     0.00428s |   4.7%
+- batch.reduce                   |     23 |     0.07017s |  76.2%
+- reduce.mean.allreduce          |     23 |     0.06878s |  74.7%
+- reduce.mean.pack               |     23 |     0.00030s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09275s |  99.5%
+- batch.backward                 |     23 |     0.00968s |  10.7%
+- batch.evaluate                 |     23 |     0.00028s |   0.3%
+- batch.forward                  |     23 |     0.00430s |   4.8%
+- batch.reduce                   |     23 |     0.07002s |  76.1%
+- reduce.mean.allreduce          |     23 |     0.06866s |  74.6%
+- reduce.mean.pack               |     23 |     0.00030s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09344s |  99.6%
+- batch.backward                 |     23 |     0.00968s |  10.6%
+- batch.evaluate                 |     23 |     0.00027s |   0.3%
+- batch.forward                  |     23 |     0.00428s |   4.7%
+- batch.reduce                   |     23 |     0.07087s |  76.4%
+- reduce.mean.allreduce          |     23 |     0.06951s |  75.0%
+- reduce.mean.pack               |     23 |     0.00030s |   0.3%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     23 |     0.09322s |  99.5%
+- batch.backward                 |     23 |     0.00966s |  10.6%
+- batch.evaluate                 |     23 |     0.00026s |   0.3%
+- batch.forward                  |     23 |     0.00426s |   4.7%
+- batch.reduce                   |     23 |     0.07357s |  79.5%
+- reduce.mean.allreduce          |     23 |     0.07223s |  78.1%
+- reduce.mean.pack               |     23 |     0.00030s |   0.3%
+-----------------------------------------------------------------
+
+cross_entropy                  - bits:17163205632.000, epoch:  2.000, value:  2.171 (split:train)
+last_cross_entropy             - bits:17163205632.000, epoch:  2.000, value:  2.171 (split:train)
+accuracy                       - bits:17163205632.000, epoch:  2.000, value:  0.208 (split:train)
+last_accuracy                  - bits:17163205632.000, epoch:  2.000, value:  0.208 (split:train)
+top5_accuracy                  - bits:17163205632.000, epoch:  2.000, value:  0.731 (split:train)
+last_top5_accuracy             - bits:17163205632.000, epoch:  2.000, value:  0.731 (split:train)
+last_cross_entropy             - bits:17163205632.000, epoch:  2.000, value:  2.265 (split:test)
+last_accuracy                  - bits:17163205632.000, epoch:  2.000, value:  0.244 (split:test)
+last_top5_accuracy             - bits:17163205632.000, epoch:  2.000, value:  0.798 (split:test)
+runavg_cross_entropy           - bits:17163205632.000, epoch:  2.000, value:  5.425 (split:test)
+runavg_accuracy                - bits:17163205632.000, epoch:  2.000, value:  0.192 (split:test)
+runavg_top5_accuracy           - bits:17163205632.000, epoch:  2.000, value:  0.713 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08282s |  88.9%
+- batch.backward                 |     47 |     0.00968s |  10.5%
+- batch.evaluate                 |     47 |     0.00027s |   0.3%
+- batch.forward                  |     47 |     0.00431s |   4.7%
+- batch.reduce                   |     47 |     0.06178s |  66.7%
+- reduce.mean.allreduce          |     47 |     0.06044s |  65.3%
+- reduce.mean.pack               |     47 |     0.00030s |   0.3%
+- test.last                      |      1 |     0.17135s | 100.0%
+- test.runavg                    |      1 |     0.18300s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.09397s |  90.0%
+- batch.backward                 |     47 |     0.01132s |  11.0%
+- batch.evaluate                 |     47 |     0.00033s |   0.3%
+- batch.forward                  |     47 |     0.00435s |   4.2%
+- batch.reduce                   |     47 |     0.07193s |  70.6%
+- reduce.mean.allreduce          |     47 |     0.07045s |  69.1%
+- reduce.mean.pack               |     47 |     0.00032s |   0.3%
+- test.last                      |      1 |     0.17133s | 100.0%
+- test.runavg                    |      1 |     0.18293s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08254s |  88.7%
+- batch.backward                 |     47 |     0.00976s |  10.6%
+- batch.evaluate                 |     47 |     0.00032s |   0.3%
+- batch.forward                  |     47 |     0.00437s |   4.8%
+- batch.reduce                   |     47 |     0.06245s |  67.6%
+- reduce.mean.allreduce          |     47 |     0.06100s |  66.0%
+- reduce.mean.pack               |     47 |     0.00031s |   0.3%
+- test.last                      |      1 |     0.17141s | 100.0%
+- test.runavg                    |      1 |     0.18300s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08230s |  88.7%
+- batch.backward                 |     47 |     0.00972s |  10.6%
+- batch.evaluate                 |     47 |     0.00031s |   0.3%
+- batch.forward                  |     47 |     0.00446s |   4.9%
+- batch.reduce                   |     47 |     0.05990s |  66.5%
+- reduce.mean.allreduce          |     47 |     0.05843s |  64.9%
+- reduce.mean.pack               |     47 |     0.00033s |   0.4%
+- test.last                      |      1 |     0.17146s | 100.0%
+- test.runavg                    |      1 |     0.18294s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.09342s |  90.0%
+- batch.backward                 |     47 |     0.01072s |  10.5%
+- batch.evaluate                 |     47 |     0.00032s |   0.3%
+- batch.forward                  |     47 |     0.00439s |   4.3%
+- batch.reduce                   |     47 |     0.07213s |  70.7%
+- reduce.mean.allreduce          |     47 |     0.07069s |  69.3%
+- reduce.mean.pack               |     47 |     0.00032s |   0.3%
+- test.last                      |      1 |     0.17139s | 100.0%
+- test.runavg                    |      1 |     0.18302s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08274s |  88.9%
+- batch.backward                 |     47 |     0.00969s |  10.5%
+- batch.evaluate                 |     47 |     0.00027s |   0.3%
+- batch.forward                  |     47 |     0.00430s |   4.7%
+- batch.reduce                   |     47 |     0.06175s |  66.7%
+- reduce.mean.allreduce          |     47 |     0.06040s |  65.3%
+- reduce.mean.pack               |     47 |     0.00030s |   0.3%
+- test.last                      |      1 |     0.17141s | 100.0%
+- test.runavg                    |      1 |     0.18293s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08254s |  88.8%
+- batch.backward                 |     47 |     0.00978s |  10.7%
+- batch.evaluate                 |     47 |     0.00029s |   0.3%
+- batch.forward                  |     47 |     0.00431s |   4.7%
+- batch.reduce                   |     47 |     0.06116s |  66.2%
+- reduce.mean.allreduce          |     47 |     0.05975s |  64.7%
+- reduce.mean.pack               |     47 |     0.00031s |   0.3%
+- test.last                      |      1 |     0.17146s | 100.0%
+- test.runavg                    |      1 |     0.18294s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08268s |  88.9%
+- batch.backward                 |     47 |     0.00969s |  10.6%
+- batch.evaluate                 |     47 |     0.00027s |   0.3%
+- batch.forward                  |     47 |     0.00435s |   4.7%
+- batch.reduce                   |     47 |     0.06152s |  66.6%
+- reduce.mean.allreduce          |     47 |     0.06016s |  65.1%
+- reduce.mean.pack               |     47 |     0.00030s |   0.3%
+- test.last                      |      1 |     0.17147s | 100.0%
+- test.runavg                    |      1 |     0.18297s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08275s |  88.9%
+- batch.backward                 |     47 |     0.00972s |  10.6%
+- batch.evaluate                 |     47 |     0.00028s |   0.3%
+- batch.forward                  |     47 |     0.00429s |   4.7%
+- batch.reduce                   |     47 |     0.06154s |  66.5%
+- reduce.mean.allreduce          |     47 |     0.06017s |  65.0%
+- reduce.mean.pack               |     47 |     0.00031s |   0.3%
+- test.last                      |      1 |     0.17145s | 100.0%
+- test.runavg                    |      1 |     0.18293s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08250s |  88.9%
+- batch.backward                 |     47 |     0.00971s |  10.6%
+- batch.evaluate                 |     47 |     0.00028s |   0.3%
+- batch.forward                  |     47 |     0.00428s |   4.7%
+- batch.reduce                   |     47 |     0.06136s |  66.5%
+- reduce.mean.allreduce          |     47 |     0.06000s |  65.0%
+- reduce.mean.pack               |     47 |     0.00031s |   0.3%
+- test.last                      |      1 |     0.17143s | 100.0%
+- test.runavg                    |      1 |     0.18289s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.09402s |  90.1%
+- batch.backward                 |     47 |     0.01072s |  10.4%
+- batch.evaluate                 |     47 |     0.00031s |   0.3%
+- batch.forward                  |     47 |     0.00435s |   4.2%
+- batch.reduce                   |     47 |     0.07111s |  69.4%
+- reduce.mean.allreduce          |     47 |     0.06967s |  68.0%
+- reduce.mean.pack               |     47 |     0.00032s |   0.3%
+- test.last                      |      1 |     0.17149s | 100.0%
+- test.runavg                    |      1 |     0.18284s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08275s |  88.9%
+- batch.backward                 |     47 |     0.00980s |  10.7%
+- batch.evaluate                 |     47 |     0.00028s |   0.3%
+- batch.forward                  |     47 |     0.00430s |   4.7%
+- batch.reduce                   |     47 |     0.06150s |  66.5%
+- reduce.mean.allreduce          |     47 |     0.06014s |  65.0%
+- reduce.mean.pack               |     47 |     0.00031s |   0.3%
+- test.last                      |      1 |     0.17145s | 100.0%
+- test.runavg                    |      1 |     0.18296s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08267s |  88.9%
+- batch.backward                 |     47 |     0.00968s |  10.5%
+- batch.evaluate                 |     47 |     0.00027s |   0.3%
+- batch.forward                  |     47 |     0.00428s |   4.7%
+- batch.reduce                   |     47 |     0.06162s |  66.6%
+- reduce.mean.allreduce          |     47 |     0.06027s |  65.2%
+- reduce.mean.pack               |     47 |     0.00030s |   0.3%
+- test.last                      |      1 |     0.17146s | 100.0%
+- test.runavg                    |      1 |     0.18289s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08243s |  88.8%
+- batch.backward                 |     47 |     0.00967s |  10.6%
+- batch.evaluate                 |     47 |     0.00028s |   0.3%
+- batch.forward                  |     47 |     0.00431s |   4.7%
+- batch.reduce                   |     47 |     0.06129s |  66.4%
+- reduce.mean.allreduce          |     47 |     0.05993s |  65.0%
+- reduce.mean.pack               |     47 |     0.00030s |   0.3%
+- test.last                      |      1 |     0.17146s | 100.0%
+- test.runavg                    |      1 |     0.18293s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.09381s |  90.0%
+- batch.backward                 |     47 |     0.01138s |  11.0%
+- batch.evaluate                 |     47 |     0.00030s |   0.3%
+- batch.forward                  |     47 |     0.00432s |   4.2%
+- batch.reduce                   |     47 |     0.06996s |  68.7%
+- reduce.mean.allreduce          |     47 |     0.06856s |  67.4%
+- reduce.mean.pack               |     47 |     0.00031s |   0.3%
+- test.last                      |      1 |     0.17143s | 100.0%
+- test.runavg                    |      1 |     0.18289s | 100.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     47 |     0.08247s |  88.8%
+- batch.backward                 |     47 |     0.00968s |  10.6%
+- batch.evaluate                 |     47 |     0.00029s |   0.3%
+- batch.forward                  |     47 |     0.00431s |   4.7%
+- batch.reduce                   |     47 |     0.06121s |  66.3%
+- reduce.mean.allreduce          |     47 |     0.05981s |  64.8%
+- reduce.mean.pack               |     47 |     0.00030s |   0.3%
+- test.last                      |      1 |     0.17144s | 100.0%
+- test.runavg                    |      1 |     0.18296s | 100.0%
+-----------------------------------------------------------------
+
+effective_lr                   - epoch:  2.000, value:  0.002 (weight:layer4.0.shortcut.0.weight)
+grad_norm                      - epoch:  2.000, value:  0.176 (weight:layer4.0.shortcut.0.weight)
+effective_lr                   - epoch:  2.167, value:  0.011 (weight:layer1.1.bn2.weight)
+grad_norm                      - epoch:  2.167, value:  0.016 (weight:layer1.1.bn2.weight)
+effective_lr                   - epoch:  2.167, value:  0.003 (weight:linear.weight)
+grad_norm                      - epoch:  2.167, value:  0.334 (weight:linear.weight)
+effective_lr                   - epoch:  2.375, value:  0.003 (weight:layer3.0.bn1.weight)
+grad_norm                      - epoch:  2.375, value:  0.027 (weight:layer3.0.bn1.weight)
+effective_lr                   - epoch:  2.875, value:  0.016 (weight:layer4.1.bn2.bias)
+grad_norm                      - epoch:  2.875, value:  0.152 (weight:layer4.1.bn2.bias)
+effective_lr                   - epoch:  2.958, value:  0.002 (weight:layer4.0.bn2.weight)
+grad_norm                      - epoch:  2.958, value:  0.029 (weight:layer4.0.bn2.weight)
+cross_entropy                  - bits:25744808448.000, epoch:  3.000, value:  1.923 (split:train)
+last_cross_entropy             - bits:25744808448.000, epoch:  3.000, value:  1.923 (split:train)
+accuracy                       - bits:25744808448.000, epoch:  3.000, value:  0.271 (split:train)
+last_accuracy                  - bits:25744808448.000, epoch:  3.000, value:  0.271 (split:train)
+top5_accuracy                  - bits:25744808448.000, epoch:  3.000, value:  0.817 (split:train)
+last_top5_accuracy             - bits:25744808448.000, epoch:  3.000, value:  0.817 (split:train)
+last_cross_entropy             - bits:25744808448.000, epoch:  3.000, value:  1.928 (split:test)
+last_accuracy                  - bits:25744808448.000, epoch:  3.000, value:  0.296 (split:test)
+last_top5_accuracy             - bits:25744808448.000, epoch:  3.000, value:  0.819 (split:test)
+runavg_cross_entropy           - bits:25744808448.000, epoch:  3.000, value:  2.343 (split:test)
+runavg_accuracy                - bits:25744808448.000, epoch:  3.000, value:  0.215 (split:test)
+runavg_top5_accuracy           - bits:25744808448.000, epoch:  3.000, value:  0.723 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.08587s |  86.3%
+- batch.backward                 |     71 |     0.01082s |  11.0%
+- batch.evaluate                 |     71 |     0.00033s |   0.3%
+- batch.forward                  |     71 |     0.00436s |   4.4%
+- batch.reduce                   |     71 |     0.06442s |  65.8%
+- reduce.mean.allreduce          |     71 |     0.06295s |  64.3%
+- reduce.mean.pack               |     71 |     0.00032s |   0.3%
+- test.last                      |      2 |     0.17265s |  14.8%
+- test.runavg                    |      2 |     0.18190s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07820s |  85.0%
+- batch.backward                 |     71 |     0.00979s |  10.7%
+- batch.evaluate                 |     71 |     0.00031s |   0.3%
+- batch.forward                  |     71 |     0.00436s |   4.8%
+- batch.reduce                   |     71 |     0.05722s |  62.5%
+- reduce.mean.allreduce          |     71 |     0.05578s |  60.9%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17279s |  14.8%
+- test.runavg                    |      2 |     0.18190s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07837s |  85.1%
+- batch.backward                 |     71 |     0.00972s |  10.6%
+- batch.evaluate                 |     71 |     0.00028s |   0.3%
+- batch.forward                  |     71 |     0.00432s |   4.7%
+- batch.reduce                   |     71 |     0.05772s |  63.0%
+- reduce.mean.allreduce          |     71 |     0.05637s |  61.5%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17269s |  14.8%
+- test.runavg                    |      2 |     0.18199s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07848s |  85.3%
+- batch.backward                 |     71 |     0.00980s |  10.7%
+- batch.evaluate                 |     71 |     0.00028s |   0.3%
+- batch.forward                  |     71 |     0.00431s |   4.7%
+- batch.reduce                   |     71 |     0.05776s |  63.0%
+- reduce.mean.allreduce          |     71 |     0.05640s |  61.5%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17278s |  14.8%
+- test.runavg                    |      2 |     0.18191s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07828s |  85.1%
+- batch.backward                 |     71 |     0.00975s |  10.7%
+- batch.evaluate                 |     71 |     0.00028s |   0.3%
+- batch.forward                  |     71 |     0.00431s |   4.7%
+- batch.reduce                   |     71 |     0.05750s |  62.8%
+- reduce.mean.allreduce          |     71 |     0.05611s |  61.3%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17284s |  14.8%
+- test.runavg                    |      2 |     0.18187s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.08557s |  86.3%
+- batch.backward                 |     71 |     0.01039s |  10.6%
+- batch.evaluate                 |     71 |     0.00032s |   0.3%
+- batch.forward                  |     71 |     0.00440s |   4.5%
+- batch.reduce                   |     71 |     0.06471s |  66.0%
+- reduce.mean.allreduce          |     71 |     0.06326s |  64.6%
+- reduce.mean.pack               |     71 |     0.00032s |   0.3%
+- test.last                      |      2 |     0.17276s |  14.8%
+- test.runavg                    |      2 |     0.18192s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07851s |  85.3%
+- batch.backward                 |     71 |     0.00969s |  10.6%
+- batch.evaluate                 |     71 |     0.00027s |   0.3%
+- batch.forward                  |     71 |     0.00431s |   4.7%
+- batch.reduce                   |     71 |     0.05801s |  63.3%
+- reduce.mean.allreduce          |     71 |     0.05666s |  61.8%
+- reduce.mean.pack               |     71 |     0.00030s |   0.3%
+- test.last                      |      2 |     0.17279s |  14.8%
+- test.runavg                    |      2 |     0.18187s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07832s |  85.3%
+- batch.backward                 |     71 |     0.00973s |  10.7%
+- batch.evaluate                 |     71 |     0.00029s |   0.3%
+- batch.forward                  |     71 |     0.00430s |   4.7%
+- batch.reduce                   |     71 |     0.05760s |  63.0%
+- reduce.mean.allreduce          |     71 |     0.05622s |  61.5%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17281s |  14.8%
+- test.runavg                    |      2 |     0.18183s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07811s |  85.1%
+- batch.backward                 |     71 |     0.00976s |  10.7%
+- batch.evaluate                 |     71 |     0.00031s |   0.3%
+- batch.forward                  |     71 |     0.00442s |   4.9%
+- batch.reduce                   |     71 |     0.05656s |  62.8%
+- reduce.mean.allreduce          |     71 |     0.05511s |  61.2%
+- reduce.mean.pack               |     71 |     0.00032s |   0.4%
+- test.last                      |      2 |     0.17284s |  14.8%
+- test.runavg                    |      2 |     0.18188s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07830s |  85.2%
+- batch.backward                 |     71 |     0.00974s |  10.7%
+- batch.evaluate                 |     71 |     0.00029s |   0.3%
+- batch.forward                  |     71 |     0.00437s |   4.8%
+- batch.reduce                   |     71 |     0.05742s |  62.7%
+- reduce.mean.allreduce          |     71 |     0.05602s |  61.2%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17280s |  14.8%
+- test.runavg                    |      2 |     0.18193s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07851s |  85.3%
+- batch.backward                 |     71 |     0.00974s |  10.7%
+- batch.evaluate                 |     71 |     0.00028s |   0.3%
+- batch.forward                  |     71 |     0.00431s |   4.7%
+- batch.reduce                   |     71 |     0.05775s |  63.0%
+- reduce.mean.allreduce          |     71 |     0.05638s |  61.5%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17280s |  14.8%
+- test.runavg                    |      2 |     0.18191s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07844s |  85.3%
+- batch.backward                 |     71 |     0.00969s |  10.6%
+- batch.evaluate                 |     71 |     0.00027s |   0.3%
+- batch.forward                  |     71 |     0.00430s |   4.7%
+- batch.reduce                   |     71 |     0.05787s |  63.2%
+- reduce.mean.allreduce          |     71 |     0.05652s |  61.7%
+- reduce.mean.pack               |     71 |     0.00030s |   0.3%
+- test.last                      |      2 |     0.17285s |  14.8%
+- test.runavg                    |      2 |     0.18184s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07819s |  85.1%
+- batch.backward                 |     71 |     0.00969s |  10.6%
+- batch.evaluate                 |     71 |     0.00028s |   0.3%
+- batch.forward                  |     71 |     0.00431s |   4.7%
+- batch.reduce                   |     71 |     0.05751s |  62.9%
+- reduce.mean.allreduce          |     71 |     0.05615s |  61.4%
+- reduce.mean.pack               |     71 |     0.00030s |   0.3%
+- test.last                      |      2 |     0.17286s |  14.8%
+- test.runavg                    |      2 |     0.18186s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.08587s |  86.4%
+- batch.backward                 |     71 |     0.01080s |  10.9%
+- batch.evaluate                 |     71 |     0.00029s |   0.3%
+- batch.forward                  |     71 |     0.00431s |   4.4%
+- batch.reduce                   |     71 |     0.06348s |  64.9%
+- reduce.mean.allreduce          |     71 |     0.06210s |  63.5%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17280s |  14.8%
+- test.runavg                    |      2 |     0.18186s |  15.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.07827s |  85.2%
+- batch.backward                 |     71 |     0.00967s |  10.6%
+- batch.evaluate                 |     71 |     0.00029s |   0.3%
+- batch.forward                  |     71 |     0.00432s |   4.7%
+- batch.reduce                   |     71 |     0.05754s |  62.9%
+- reduce.mean.allreduce          |     71 |     0.05614s |  61.4%
+- reduce.mean.pack               |     71 |     0.00031s |   0.3%
+- test.last                      |      2 |     0.17282s |  14.8%
+- test.runavg                    |      2 |     0.18191s |  15.6%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     71 |     0.08586s |  86.3%
+- batch.backward                 |     71 |     0.01040s |  10.5%
+- batch.evaluate                 |     71 |     0.00031s |   0.3%
+- batch.forward                  |     71 |     0.00435s |   4.4%
+- batch.reduce                   |     71 |     0.06388s |  65.0%
+- reduce.mean.allreduce          |     71 |     0.06244s |  63.6%
+- reduce.mean.pack               |     71 |     0.00032s |   0.3%
+- test.last                      |      2 |     0.17285s |  14.8%
+- test.runavg                    |      2 |     0.18184s |  15.5%
+-----------------------------------------------------------------
+
+effective_lr                   - epoch:  3.000, value:  0.279 (weight:bn1.bias)
+grad_norm                      - epoch:  3.000, value:  0.049 (weight:bn1.bias)
+effective_lr                   - epoch:  3.042, value:  0.462 (weight:linear.bias)
+grad_norm                      - epoch:  3.042, value:  0.086 (weight:linear.bias)
+cross_entropy                  - bits:34326411264.000, epoch:  4.000, value:  1.812 (split:train)
+last_cross_entropy             - bits:34326411264.000, epoch:  4.000, value:  1.812 (split:train)
+accuracy                       - bits:34326411264.000, epoch:  4.000, value:  0.317 (split:train)
+last_accuracy                  - bits:34326411264.000, epoch:  4.000, value:  0.317 (split:train)
+top5_accuracy                  - bits:34326411264.000, epoch:  4.000, value:  0.851 (split:train)
+last_top5_accuracy             - bits:34326411264.000, epoch:  4.000, value:  0.851 (split:train)
+last_cross_entropy             - bits:34326411264.000, epoch:  4.000, value:  2.040 (split:test)
+last_accuracy                  - bits:34326411264.000, epoch:  4.000, value:  0.298 (split:test)
+last_top5_accuracy             - bits:34326411264.000, epoch:  4.000, value:  0.813 (split:test)
+runavg_cross_entropy           - bits:34326411264.000, epoch:  4.000, value:  2.111 (split:test)
+runavg_accuracy                - bits:34326411264.000, epoch:  4.000, value:  0.222 (split:test)
+runavg_top5_accuracy           - bits:34326411264.000, epoch:  4.000, value:  0.744 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.08091s |  84.3%
+- batch.backward                 |     95 |     0.01053s |  11.0%
+- batch.evaluate                 |     95 |     0.00032s |   0.3%
+- batch.forward                  |     95 |     0.00435s |   4.6%
+- batch.reduce                   |     95 |     0.05996s |  63.2%
+- reduce.mean.allreduce          |     95 |     0.05851s |  61.7%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17230s |  11.8%
+- test.runavg                    |      3 |     0.18349s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07528s |  83.2%
+- batch.backward                 |     95 |     0.00974s |  10.8%
+- batch.evaluate                 |     95 |     0.00028s |   0.3%
+- batch.forward                  |     95 |     0.00432s |   4.8%
+- batch.reduce                   |     95 |     0.05480s |  60.7%
+- reduce.mean.allreduce          |     95 |     0.05343s |  59.2%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17239s |  11.8%
+- test.runavg                    |      3 |     0.18355s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07536s |  83.3%
+- batch.backward                 |     95 |     0.00977s |  10.9%
+- batch.evaluate                 |     95 |     0.00028s |   0.3%
+- batch.forward                  |     95 |     0.00432s |   4.8%
+- batch.reduce                   |     95 |     0.05492s |  60.9%
+- reduce.mean.allreduce          |     95 |     0.05356s |  59.4%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17248s |  11.8%
+- test.runavg                    |      3 |     0.18348s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07515s |  83.1%
+- batch.backward                 |     95 |     0.00981s |  10.9%
+- batch.evaluate                 |     95 |     0.00031s |   0.4%
+- batch.forward                  |     95 |     0.00436s |   4.9%
+- batch.reduce                   |     95 |     0.05441s |  60.4%
+- reduce.mean.allreduce          |     95 |     0.05297s |  58.8%
+- reduce.mean.pack               |     95 |     0.00031s |   0.4%
+- test.last                      |      3 |     0.17247s |  11.8%
+- test.runavg                    |      3 |     0.18348s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07535s |  83.3%
+- batch.backward                 |     95 |     0.00972s |  10.8%
+- batch.evaluate                 |     95 |     0.00028s |   0.3%
+- batch.forward                  |     95 |     0.00431s |   4.8%
+- batch.reduce                   |     95 |     0.05490s |  60.9%
+- reduce.mean.allreduce          |     95 |     0.05354s |  59.4%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17248s |  11.8%
+- test.runavg                    |      3 |     0.18350s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07511s |  83.2%
+- batch.backward                 |     95 |     0.00971s |  10.8%
+- batch.evaluate                 |     95 |     0.00028s |   0.3%
+- batch.forward                  |     95 |     0.00431s |   4.8%
+- batch.reduce                   |     95 |     0.05464s |  60.7%
+- reduce.mean.allreduce          |     95 |     0.05328s |  59.2%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17254s |  11.8%
+- test.runavg                    |      3 |     0.18345s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.08065s |  84.2%
+- batch.backward                 |     95 |     0.01022s |  10.7%
+- batch.evaluate                 |     95 |     0.00032s |   0.3%
+- batch.forward                  |     95 |     0.00440s |   4.6%
+- batch.reduce                   |     95 |     0.06000s |  63.2%
+- reduce.mean.allreduce          |     95 |     0.05855s |  61.7%
+- reduce.mean.pack               |     95 |     0.00032s |   0.3%
+- test.last                      |      3 |     0.17244s |  11.8%
+- test.runavg                    |      3 |     0.18349s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.08089s |  84.3%
+- batch.backward                 |     95 |     0.01051s |  11.0%
+- batch.evaluate                 |     95 |     0.00028s |   0.3%
+- batch.forward                  |     95 |     0.00431s |   4.5%
+- batch.reduce                   |     95 |     0.05923s |  62.5%
+- reduce.mean.allreduce          |     95 |     0.05786s |  61.1%
+- reduce.mean.pack               |     95 |     0.00030s |   0.3%
+- test.last                      |      3 |     0.17249s |  11.8%
+- test.runavg                    |      3 |     0.18347s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07514s |  83.2%
+- batch.backward                 |     95 |     0.00973s |  10.8%
+- batch.evaluate                 |     95 |     0.00029s |   0.3%
+- batch.forward                  |     95 |     0.00430s |   4.8%
+- batch.reduce                   |     95 |     0.05466s |  60.7%
+- reduce.mean.allreduce          |     95 |     0.05328s |  59.2%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17251s |  11.8%
+- test.runavg                    |      3 |     0.18344s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07505s |  83.1%
+- batch.backward                 |     95 |     0.00975s |  10.9%
+- batch.evaluate                 |     95 |     0.00031s |   0.3%
+- batch.forward                  |     95 |     0.00440s |   4.9%
+- batch.reduce                   |     95 |     0.05391s |  60.6%
+- reduce.mean.allreduce          |     95 |     0.05247s |  59.0%
+- reduce.mean.pack               |     95 |     0.00032s |   0.4%
+- test.last                      |      3 |     0.17251s |  11.8%
+- test.runavg                    |      3 |     0.18348s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07521s |  83.2%
+- batch.backward                 |     95 |     0.00980s |  10.9%
+- batch.evaluate                 |     95 |     0.00029s |   0.3%
+- batch.forward                  |     95 |     0.00436s |   4.9%
+- batch.reduce                   |     95 |     0.05449s |  60.5%
+- reduce.mean.allreduce          |     95 |     0.05309s |  58.9%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17246s |  11.8%
+- test.runavg                    |      3 |     0.18352s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07537s |  83.3%
+- batch.backward                 |     95 |     0.00969s |  10.8%
+- batch.evaluate                 |     95 |     0.00027s |   0.3%
+- batch.forward                  |     95 |     0.00432s |   4.8%
+- batch.reduce                   |     95 |     0.05512s |  61.1%
+- reduce.mean.allreduce          |     95 |     0.05377s |  59.6%
+- reduce.mean.pack               |     95 |     0.00030s |   0.3%
+- test.last                      |      3 |     0.17248s |  11.8%
+- test.runavg                    |      3 |     0.18349s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07532s |  83.3%
+- batch.backward                 |     95 |     0.00969s |  10.8%
+- batch.evaluate                 |     95 |     0.00027s |   0.3%
+- batch.forward                  |     95 |     0.00429s |   4.8%
+- batch.reduce                   |     95 |     0.05499s |  61.0%
+- reduce.mean.allreduce          |     95 |     0.05364s |  59.5%
+- reduce.mean.pack               |     95 |     0.00030s |   0.3%
+- test.last                      |      3 |     0.17255s |  11.8%
+- test.runavg                    |      3 |     0.18345s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.08085s |  84.2%
+- batch.backward                 |     95 |     0.01026s |  10.8%
+- batch.evaluate                 |     95 |     0.00031s |   0.3%
+- batch.forward                  |     95 |     0.00435s |   4.6%
+- batch.reduce                   |     95 |     0.05937s |  62.4%
+- reduce.mean.allreduce          |     95 |     0.05794s |  60.9%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17254s |  11.8%
+- test.runavg                    |      3 |     0.18343s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07519s |  83.2%
+- batch.backward                 |     95 |     0.00973s |  10.8%
+- batch.evaluate                 |     95 |     0.00029s |   0.3%
+- batch.forward                  |     95 |     0.00431s |   4.8%
+- batch.reduce                   |     95 |     0.05463s |  60.7%
+- reduce.mean.allreduce          |     95 |     0.05324s |  59.1%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17253s |  11.8%
+- test.runavg                    |      3 |     0.18352s |  12.5%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |     95 |     0.07519s |  83.2%
+- batch.backward                 |     95 |     0.00973s |  10.8%
+- batch.evaluate                 |     95 |     0.00028s |   0.3%
+- batch.forward                  |     95 |     0.00431s |   4.8%
+- batch.reduce                   |     95 |     0.05472s |  60.7%
+- reduce.mean.allreduce          |     95 |     0.05334s |  59.2%
+- reduce.mean.pack               |     95 |     0.00031s |   0.3%
+- test.last                      |      3 |     0.17254s |  11.8%
+- test.runavg                    |      3 |     0.18346s |  12.5%
+-----------------------------------------------------------------
+
+cross_entropy                  - bits:42908014080.000, epoch:  5.000, value:  1.711 (split:train)
+last_cross_entropy             - bits:42908014080.000, epoch:  5.000, value:  1.711 (split:train)
+accuracy                       - bits:42908014080.000, epoch:  5.000, value:  0.359 (split:train)
+last_accuracy                  - bits:42908014080.000, epoch:  5.000, value:  0.359 (split:train)
+top5_accuracy                  - bits:42908014080.000, epoch:  5.000, value:  0.878 (split:train)
+last_top5_accuracy             - bits:42908014080.000, epoch:  5.000, value:  0.878 (split:train)
+last_cross_entropy             - bits:42908014080.000, epoch:  5.000, value:  1.632 (split:test)
+last_accuracy                  - bits:42908014080.000, epoch:  5.000, value:  0.392 (split:test)
+last_top5_accuracy             - bits:42908014080.000, epoch:  5.000, value:  0.899 (split:test)
+runavg_cross_entropy           - bits:42908014080.000, epoch:  5.000, value:  2.059 (split:test)
+runavg_accuracy                - bits:42908014080.000, epoch:  5.000, value:  0.238 (split:test)
+runavg_top5_accuracy           - bits:42908014080.000, epoch:  5.000, value:  0.754 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07798s |  82.9%
+- batch.backward                 |    119 |     0.01036s |  11.1%
+- batch.evaluate                 |    119 |     0.00032s |   0.3%
+- batch.forward                  |    119 |     0.00436s |   4.7%
+- batch.reduce                   |    119 |     0.05723s |  61.4%
+- reduce.mean.allreduce          |    119 |     0.05578s |  59.9%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17213s |  10.6%
+- test.runavg                    |      4 |     0.21464s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07354s |  82.0%
+- batch.backward                 |    119 |     0.00973s |  10.9%
+- batch.evaluate                 |    119 |     0.00028s |   0.3%
+- batch.forward                  |    119 |     0.00433s |   4.9%
+- batch.reduce                   |    119 |     0.05325s |  59.5%
+- reduce.mean.allreduce          |    119 |     0.05189s |  58.0%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17221s |  10.6%
+- test.runavg                    |      4 |     0.21468s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07344s |  81.9%
+- batch.backward                 |    119 |     0.00987s |  11.1%
+- batch.evaluate                 |    119 |     0.00031s |   0.4%
+- batch.forward                  |    119 |     0.00436s |   4.9%
+- batch.reduce                   |    119 |     0.05279s |  59.0%
+- reduce.mean.allreduce          |    119 |     0.05135s |  57.4%
+- reduce.mean.pack               |    119 |     0.00031s |   0.4%
+- test.last                      |      4 |     0.17229s |  10.7%
+- test.runavg                    |      4 |     0.21462s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07364s |  82.1%
+- batch.backward                 |    119 |     0.00976s |  10.9%
+- batch.evaluate                 |    119 |     0.00028s |   0.3%
+- batch.forward                  |    119 |     0.00433s |   4.9%
+- batch.reduce                   |    119 |     0.05337s |  59.6%
+- reduce.mean.allreduce          |    119 |     0.05201s |  58.1%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17230s |  10.7%
+- test.runavg                    |      4 |     0.21463s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07349s |  82.0%
+- batch.backward                 |    119 |     0.00975s |  10.9%
+- batch.evaluate                 |    119 |     0.00028s |   0.3%
+- batch.forward                  |    119 |     0.00431s |   4.8%
+- batch.reduce                   |    119 |     0.05314s |  59.4%
+- reduce.mean.allreduce          |    119 |     0.05176s |  57.9%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17234s |  10.7%
+- test.runavg                    |      4 |     0.21462s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07785s |  82.9%
+- batch.backward                 |    119 |     0.01012s |  10.8%
+- batch.evaluate                 |    119 |     0.00033s |   0.4%
+- batch.forward                  |    119 |     0.00443s |   4.7%
+- batch.reduce                   |    119 |     0.05728s |  61.4%
+- reduce.mean.allreduce          |    119 |     0.05582s |  59.9%
+- reduce.mean.pack               |    119 |     0.00032s |   0.3%
+- test.last                      |      4 |     0.17225s |  10.6%
+- test.runavg                    |      4 |     0.21464s |  13.0%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07362s |  82.1%
+- batch.backward                 |    119 |     0.00971s |  10.9%
+- batch.evaluate                 |    119 |     0.00028s |   0.3%
+- batch.forward                  |    119 |     0.00431s |   4.8%
+- batch.reduce                   |    119 |     0.05336s |  59.6%
+- reduce.mean.allreduce          |    119 |     0.05199s |  58.1%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17228s |  10.7%
+- test.runavg                    |      4 |     0.21466s |  13.0%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07339s |  81.9%
+- batch.backward                 |    119 |     0.00975s |  10.9%
+- batch.evaluate                 |    119 |     0.00031s |   0.4%
+- batch.forward                  |    119 |     0.00439s |   4.9%
+- batch.reduce                   |    119 |     0.05251s |  59.3%
+- reduce.mean.allreduce          |    119 |     0.05108s |  57.7%
+- reduce.mean.pack               |    119 |     0.00032s |   0.4%
+- test.last                      |      4 |     0.17231s |  10.7%
+- test.runavg                    |      4 |     0.21465s |  13.0%
+-----------------------------------------------------------------
+
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07365s |  82.1%
+- batch.backward                 |    119 |     0.00972s |  10.9%
+- batch.evaluate                 |    119 |     0.00027s |   0.3%
+- batch.forward                  |    119 |     0.00432s |   4.9%
+- batch.reduce                   |    119 |     0.05352s |  59.8%
+- reduce.mean.allreduce          |    119 |     0.05216s |  58.3%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17228s |  10.7%
+- test.runavg                    |      4 |     0.21464s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07339s |  81.9%
+- batch.backward                 |    119 |     0.00974s |  10.9%
+- batch.evaluate                 |    119 |     0.00029s |   0.3%
+- batch.forward                  |    119 |     0.00431s |   4.8%
+- batch.reduce                   |    119 |     0.05304s |  59.3%
+- reduce.mean.allreduce          |    119 |     0.05165s |  57.8%
+- reduce.mean.pack               |    119 |     0.00031s |   0.4%
+- test.last                      |      4 |     0.17232s |  10.7%
+- test.runavg                    |      4 |     0.21461s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07803s |  82.9%
+- batch.backward                 |    119 |     0.01016s |  10.9%
+- batch.evaluate                 |    119 |     0.00031s |   0.3%
+- batch.forward                  |    119 |     0.00436s |   4.7%
+- batch.reduce                   |    119 |     0.05682s |  60.8%
+- reduce.mean.allreduce          |    119 |     0.05538s |  59.3%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17234s |  10.7%
+- test.runavg                    |      4 |     0.21461s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07350s |  82.0%
+- batch.backward                 |    119 |     0.00978s |  11.0%
+- batch.evaluate                 |    119 |     0.00029s |   0.3%
+- batch.forward                  |    119 |     0.00436s |   4.9%
+- batch.reduce                   |    119 |     0.05299s |  59.3%
+- reduce.mean.allreduce          |    119 |     0.05160s |  57.7%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17227s |  10.7%
+- test.runavg                    |      4 |     0.21466s |  13.0%
+-----------------------------------------------------------------
+
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07347s |  82.0%
+- batch.backward                 |    119 |     0.00968s |  10.9%
+- batch.evaluate                 |    119 |     0.00027s |   0.3%
+- batch.forward                  |    119 |     0.00430s |   4.8%
+- batch.reduce                   |    119 |     0.05329s |  59.6%
+- reduce.mean.allreduce          |    119 |     0.05194s |  58.1%
+- reduce.mean.pack               |    119 |     0.00030s |   0.3%
+- test.last                      |      4 |     0.17236s |  10.7%
+- test.runavg                    |      4 |     0.21464s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07339s |  81.9%
+- batch.backward                 |    119 |     0.00975s |  11.0%
+- batch.evaluate                 |    119 |     0.00028s |   0.3%
+- batch.forward                  |    119 |     0.00431s |   4.8%
+- batch.reduce                   |    119 |     0.05302s |  59.3%
+- reduce.mean.allreduce          |    119 |     0.05165s |  57.8%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17235s |  10.7%
+- test.runavg                    |      4 |     0.21462s |  13.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07807s |  83.0%
+- batch.backward                 |    119 |     0.01034s |  11.1%
+- batch.evaluate                 |    119 |     0.00028s |   0.3%
+- batch.forward                  |    119 |     0.00431s |   4.6%
+- batch.reduce                   |    119 |     0.05685s |  61.0%
+- reduce.mean.allreduce          |    119 |     0.05547s |  59.6%
+- reduce.mean.pack               |    119 |     0.00030s |   0.3%
+- test.last                      |      4 |     0.17228s |  10.7%
+- test.runavg                    |      4 |     0.21463s |  13.0%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    119 |     0.07343s |  82.0%
+- batch.backward                 |    119 |     0.00977s |  11.0%
+- batch.evaluate                 |    119 |     0.00029s |   0.3%
+- batch.forward                  |    119 |     0.00431s |   4.8%
+- batch.reduce                   |    119 |     0.05297s |  59.3%
+- reduce.mean.allreduce          |    119 |     0.05157s |  57.7%
+- reduce.mean.pack               |    119 |     0.00031s |   0.3%
+- test.last                      |      4 |     0.17234s |  10.7%
+- test.runavg                    |      4 |     0.21471s |  13.0%
+-----------------------------------------------------------------
+
+
+effective_lr                   - epoch:  5.917, value:  0.008 (weight:linear.weight)
+grad_norm                      - epoch:  5.917, value:  0.218 (weight:linear.weight)
+cross_entropy                  - bits:51489616896.000, epoch:  6.000, value:  1.583 (split:train)
+last_cross_entropy             - bits:51489616896.000, epoch:  6.000, value:  1.583 (split:train)
+accuracy                       - bits:51489616896.000, epoch:  6.000, value:  0.412 (split:train)
+last_accuracy                  - bits:51489616896.000, epoch:  6.000, value:  0.412 (split:train)
+top5_accuracy                  - bits:51489616896.000, epoch:  6.000, value:  0.901 (split:train)
+last_top5_accuracy             - bits:51489616896.000, epoch:  6.000, value:  0.901 (split:train)
+last_cross_entropy             - bits:51489616896.000, epoch:  6.000, value:  1.559 (split:test)
+last_accuracy                  - bits:51489616896.000, epoch:  6.000, value:  0.431 (split:test)
+last_top5_accuracy             - bits:51489616896.000, epoch:  6.000, value:  0.905 (split:test)
+runavg_cross_entropy           - bits:51489616896.000, epoch:  6.000, value:  2.033 (split:test)
+runavg_accuracy                - bits:51489616896.000, epoch:  6.000, value:  0.254 (split:test)
+runavg_top5_accuracy           - bits:51489616896.000, epoch:  6.000, value:  0.761 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07237s |  80.4%
+- batch.backward                 |    143 |     0.00975s |  10.9%
+- batch.evaluate                 |    143 |     0.00028s |   0.3%
+- batch.forward                  |    143 |     0.00433s |   4.8%
+- batch.reduce                   |    143 |     0.05218s |  58.1%
+- reduce.mean.allreduce          |    143 |     0.05082s |  56.6%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17189s |   9.9%
+- test.runavg                    |      5 |     0.20817s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07228s |  80.3%
+- batch.backward                 |    143 |     0.00987s |  11.0%
+- batch.evaluate                 |    143 |     0.00031s |   0.3%
+- batch.forward                  |    143 |     0.00436s |   4.9%
+- batch.reduce                   |    143 |     0.05172s |  57.6%
+- reduce.mean.allreduce          |    143 |     0.05029s |  56.0%
+- reduce.mean.pack               |    143 |     0.00032s |   0.4%
+- test.last                      |      5 |     0.17195s |   9.9%
+- test.runavg                    |      5 |     0.20812s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07607s |  81.2%
+- batch.backward                 |    143 |     0.01024s |  11.0%
+- batch.evaluate                 |    143 |     0.00032s |   0.3%
+- batch.forward                  |    143 |     0.00436s |   4.7%
+- batch.reduce                   |    143 |     0.05549s |  59.7%
+- reduce.mean.allreduce          |    143 |     0.05405s |  58.2%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17184s |   9.9%
+- test.runavg                    |      5 |     0.20810s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07588s |  81.1%
+- batch.backward                 |    143 |     0.01007s |  10.8%
+- batch.evaluate                 |    143 |     0.00032s |   0.3%
+- batch.forward                  |    143 |     0.00442s |   4.8%
+- batch.reduce                   |    143 |     0.05540s |  59.6%
+- reduce.mean.allreduce          |    143 |     0.05395s |  58.0%
+- reduce.mean.pack               |    143 |     0.00032s |   0.3%
+- test.last                      |      5 |     0.17193s |   9.9%
+- test.runavg                    |      5 |     0.20812s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07227s |  80.4%
+- batch.backward                 |    143 |     0.00975s |  10.9%
+- batch.evaluate                 |    143 |     0.00031s |   0.3%
+- batch.forward                  |    143 |     0.00437s |   4.9%
+- batch.reduce                   |    143 |     0.05156s |  57.9%
+- reduce.mean.allreduce          |    143 |     0.05014s |  56.3%
+- reduce.mean.pack               |    143 |     0.00032s |   0.4%
+- test.last                      |      5 |     0.17197s |   9.9%
+- test.runavg                    |      5 |     0.20814s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07235s |  80.4%
+- batch.backward                 |    143 |     0.00976s |  10.9%
+- batch.evaluate                 |    143 |     0.00029s |   0.3%
+- batch.forward                  |    143 |     0.00436s |   4.9%
+- batch.reduce                   |    143 |     0.05199s |  57.9%
+- reduce.mean.allreduce          |    143 |     0.05061s |  56.4%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17195s |   9.9%
+- test.runavg                    |      5 |     0.20815s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07245s |  80.5%
+- batch.backward                 |    143 |     0.00972s |  10.8%
+- batch.evaluate                 |    143 |     0.00028s |   0.3%
+- batch.forward                  |    143 |     0.00432s |   4.8%
+- batch.reduce                   |    143 |     0.05227s |  58.2%
+- reduce.mean.allreduce          |    143 |     0.05090s |  56.6%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17194s |   9.9%
+- test.runavg                    |      5 |     0.20816s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07226s |  80.3%
+- batch.backward                 |    143 |     0.00978s |  10.9%
+- batch.evaluate                 |    143 |     0.00028s |   0.3%
+- batch.forward                  |    143 |     0.00431s |   4.8%
+- batch.reduce                   |    143 |     0.05195s |  57.9%
+- reduce.mean.allreduce          |    143 |     0.05058s |  56.4%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17200s |   9.9%
+- test.runavg                    |      5 |     0.20812s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07247s |  80.5%
+- batch.backward                 |    143 |     0.00974s |  10.9%
+- batch.evaluate                 |    143 |     0.00028s |   0.3%
+- batch.forward                  |    143 |     0.00433s |   4.8%
+- batch.reduce                   |    143 |     0.05232s |  58.2%
+- reduce.mean.allreduce          |    143 |     0.05096s |  56.7%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17196s |   9.9%
+- test.runavg                    |      5 |     0.20813s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07222s |  80.3%
+- batch.backward                 |    143 |     0.00975s |  10.9%
+- batch.evaluate                 |    143 |     0.00029s |   0.3%
+- batch.forward                  |    143 |     0.00431s |   4.8%
+- batch.reduce                   |    143 |     0.05195s |  57.9%
+- reduce.mean.allreduce          |    143 |     0.05057s |  56.3%
+- reduce.mean.pack               |    143 |     0.00031s |   0.4%
+- test.last                      |      5 |     0.17198s |   9.9%
+- test.runavg                    |      5 |     0.20812s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07235s |  80.4%
+- batch.backward                 |    143 |     0.00975s |  10.9%
+- batch.evaluate                 |    143 |     0.00028s |   0.3%
+- batch.forward                  |    143 |     0.00431s |   4.8%
+- batch.reduce                   |    143 |     0.05208s |  58.0%
+- reduce.mean.allreduce          |    143 |     0.05070s |  56.5%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17200s |   9.9%
+- test.runavg                    |      5 |     0.20811s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07618s |  81.3%
+- batch.backward                 |    143 |     0.01022s |  11.0%
+- batch.evaluate                 |    143 |     0.00028s |   0.3%
+- batch.forward                  |    143 |     0.00431s |   4.6%
+- batch.reduce                   |    143 |     0.05524s |  59.5%
+- reduce.mean.allreduce          |    143 |     0.05387s |  58.0%
+- reduce.mean.pack               |    143 |     0.00030s |   0.3%
+- test.last                      |      5 |     0.17195s |   9.9%
+- test.runavg                    |      5 |     0.20812s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07232s |  80.4%
+- batch.backward                 |    143 |     0.00967s |  10.8%
+- batch.evaluate                 |    143 |     0.00027s |   0.3%
+- batch.forward                  |    143 |     0.00430s |   4.8%
+- batch.reduce                   |    143 |     0.05225s |  58.2%
+- reduce.mean.allreduce          |    143 |     0.05090s |  56.7%
+- reduce.mean.pack               |    143 |     0.00030s |   0.3%
+- test.last                      |      5 |     0.17200s |   9.9%
+- test.runavg                    |      5 |     0.20815s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07615s |  81.2%
+- batch.backward                 |    143 |     0.01010s |  10.8%
+- batch.evaluate                 |    143 |     0.00031s |   0.3%
+- batch.forward                  |    143 |     0.00436s |   4.7%
+- batch.reduce                   |    143 |     0.05513s |  59.2%
+- reduce.mean.allreduce          |    143 |     0.05369s |  57.7%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17199s |   9.9%
+- test.runavg                    |      5 |     0.20812s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07250s |  80.5%
+- batch.backward                 |    143 |     0.00972s |  10.8%
+- batch.evaluate                 |    143 |     0.00027s |   0.3%
+- batch.forward                  |    143 |     0.00432s |   4.8%
+- batch.reduce                   |    143 |     0.05248s |  58.4%
+- reduce.mean.allreduce          |    143 |     0.05113s |  56.9%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17196s |   9.9%
+- test.runavg                    |      5 |     0.20813s |  12.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    143 |     0.07227s |  80.4%
+- batch.backward                 |    143 |     0.00978s |  10.9%
+- batch.evaluate                 |    143 |     0.00029s |   0.3%
+- batch.forward                  |    143 |     0.00431s |   4.8%
+- batch.reduce                   |    143 |     0.05192s |  57.8%
+- reduce.mean.allreduce          |    143 |     0.05052s |  56.3%
+- reduce.mean.pack               |    143 |     0.00031s |   0.3%
+- test.last                      |      5 |     0.17200s |   9.9%
+- test.runavg                    |      5 |     0.20821s |  12.0%
+-----------------------------------------------------------------
+
+effective_lr                   - epoch:  6.667, value:  1.897 (weight:layer2.0.bn1.bias)
+grad_norm                      - epoch:  6.667, value:  0.012 (weight:layer2.0.bn1.bias)
+cross_entropy                  - bits:60071219712.000, epoch:  7.000, value:  1.482 (split:train)
+last_cross_entropy             - bits:60071219712.000, epoch:  7.000, value:  1.482 (split:train)
+accuracy                       - bits:60071219712.000, epoch:  7.000, value:  0.454 (split:train)
+last_accuracy                  - bits:60071219712.000, epoch:  7.000, value:  0.454 (split:train)
+top5_accuracy                  - bits:60071219712.000, epoch:  7.000, value:  0.918 (split:train)
+last_top5_accuracy             - bits:60071219712.000, epoch:  7.000, value:  0.918 (split:train)
+last_cross_entropy             - bits:60071219712.000, epoch:  7.000, value:  1.381 (split:test)
+last_accuracy                  - bits:60071219712.000, epoch:  7.000, value:  0.491 (split:test)
+last_top5_accuracy             - bits:60071219712.000, epoch:  7.000, value:  0.935 (split:test)
+runavg_cross_entropy           - bits:60071219712.000, epoch:  7.000, value:  2.010 (split:test)
+runavg_accuracy                - bits:60071219712.000, epoch:  7.000, value:  0.262 (split:test)
+runavg_top5_accuracy           - bits:60071219712.000, epoch:  7.000, value:  0.775 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07461s |  80.6%
+- batch.backward                 |    167 |     0.01015s |  11.0%
+- batch.evaluate                 |    167 |     0.00031s |   0.3%
+- batch.forward                  |    167 |     0.00435s |   4.7%
+- batch.reduce                   |    167 |     0.05418s |  58.9%
+- reduce.mean.allreduce          |    167 |     0.05275s |  57.4%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17168s |   9.6%
+- test.runavg                    |      6 |     0.20356s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07147s |  79.9%
+- batch.backward                 |    167 |     0.00975s |  11.0%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00435s |   4.9%
+- batch.reduce                   |    167 |     0.05120s |  57.4%
+- reduce.mean.allreduce          |    167 |     0.04982s |  55.8%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17180s |   9.6%
+- test.runavg                    |      6 |     0.20359s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07158s |  80.0%
+- batch.backward                 |    167 |     0.00973s |  10.9%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00433s |   4.9%
+- batch.reduce                   |    167 |     0.05151s |  57.7%
+- reduce.mean.allreduce          |    167 |     0.05016s |  56.2%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17180s |   9.6%
+- test.runavg                    |      6 |     0.20359s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07139s |  79.9%
+- batch.backward                 |    167 |     0.00986s |  11.1%
+- batch.evaluate                 |    167 |     0.00031s |   0.4%
+- batch.forward                  |    167 |     0.00437s |   4.9%
+- batch.reduce                   |    167 |     0.05093s |  57.1%
+- reduce.mean.allreduce          |    167 |     0.04949s |  55.5%
+- reduce.mean.pack               |    167 |     0.00031s |   0.4%
+- test.last                      |      6 |     0.17178s |   9.6%
+- test.runavg                    |      6 |     0.20358s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07155s |  80.0%
+- batch.backward                 |    167 |     0.00971s |  10.9%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00432s |   4.8%
+- batch.reduce                   |    167 |     0.05146s |  57.6%
+- reduce.mean.allreduce          |    167 |     0.05009s |  56.1%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17179s |   9.6%
+- test.runavg                    |      6 |     0.20362s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07133s |  79.8%
+- batch.backward                 |    167 |     0.00977s |  11.0%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00432s |   4.9%
+- batch.reduce                   |    167 |     0.05109s |  57.3%
+- reduce.mean.allreduce          |    167 |     0.04972s |  55.7%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17184s |   9.6%
+- test.runavg                    |      6 |     0.20358s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07140s |  79.8%
+- batch.backward                 |    167 |     0.00974s |  10.9%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00433s |   4.9%
+- batch.reduce                   |    167 |     0.05129s |  57.4%
+- reduce.mean.allreduce          |    167 |     0.04993s |  55.9%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17173s |   9.6%
+- test.runavg                    |      6 |     0.20363s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07476s |  80.8%
+- batch.backward                 |    167 |     0.01015s |  11.0%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00431s |   4.7%
+- batch.reduce                   |    167 |     0.05397s |  58.7%
+- reduce.mean.allreduce          |    167 |     0.05260s |  57.3%
+- reduce.mean.pack               |    167 |     0.00030s |   0.3%
+- test.last                      |      6 |     0.17179s |   9.6%
+- test.runavg                    |      6 |     0.20360s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07131s |  79.8%
+- batch.backward                 |    167 |     0.00974s |  10.9%
+- batch.evaluate                 |    167 |     0.00029s |   0.3%
+- batch.forward                  |    167 |     0.00431s |   4.8%
+- batch.reduce                   |    167 |     0.05112s |  57.3%
+- reduce.mean.allreduce          |    167 |     0.04974s |  55.8%
+- reduce.mean.pack               |    167 |     0.00031s |   0.4%
+- test.last                      |      6 |     0.17183s |   9.6%
+- test.runavg                    |      6 |     0.20359s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07139s |  79.9%
+- batch.backward                 |    167 |     0.00975s |  11.0%
+- batch.evaluate                 |    167 |     0.00031s |   0.3%
+- batch.forward                  |    167 |     0.00436s |   4.9%
+- batch.reduce                   |    167 |     0.05082s |  57.4%
+- reduce.mean.allreduce          |    167 |     0.04940s |  55.8%
+- reduce.mean.pack               |    167 |     0.00032s |   0.4%
+- test.last                      |      6 |     0.17181s |   9.6%
+- test.runavg                    |      6 |     0.20360s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07450s |  80.6%
+- batch.backward                 |    167 |     0.01004s |  10.9%
+- batch.evaluate                 |    167 |     0.00032s |   0.3%
+- batch.forward                  |    167 |     0.00441s |   4.8%
+- batch.reduce                   |    167 |     0.05412s |  58.9%
+- reduce.mean.allreduce          |    167 |     0.05268s |  57.3%
+- reduce.mean.pack               |    167 |     0.00032s |   0.3%
+- test.last                      |      6 |     0.17177s |   9.6%
+- test.runavg                    |      6 |     0.20358s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07161s |  80.1%
+- batch.backward                 |    167 |     0.00973s |  10.9%
+- batch.evaluate                 |    167 |     0.00027s |   0.3%
+- batch.forward                  |    167 |     0.00432s |   4.9%
+- batch.reduce                   |    167 |     0.05164s |  57.8%
+- reduce.mean.allreduce          |    167 |     0.05029s |  56.3%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17180s |   9.6%
+- test.runavg                    |      6 |     0.20360s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07140s |  79.9%
+- batch.backward                 |    167 |     0.00966s |  10.8%
+- batch.evaluate                 |    167 |     0.00027s |   0.3%
+- batch.forward                  |    167 |     0.00430s |   4.8%
+- batch.reduce                   |    167 |     0.05140s |  57.6%
+- reduce.mean.allreduce          |    167 |     0.05004s |  56.1%
+- reduce.mean.pack               |    167 |     0.00030s |   0.3%
+- test.last                      |      6 |     0.17184s |   9.6%
+- test.runavg                    |      6 |     0.20362s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07145s |  79.9%
+- batch.backward                 |    167 |     0.00976s |  11.0%
+- batch.evaluate                 |    167 |     0.00028s |   0.3%
+- batch.forward                  |    167 |     0.00431s |   4.8%
+- batch.reduce                   |    167 |     0.05124s |  57.4%
+- reduce.mean.allreduce          |    167 |     0.04986s |  55.9%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17185s |   9.6%
+- test.runavg                    |      6 |     0.20358s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07135s |  79.9%
+- batch.backward                 |    167 |     0.00977s |  11.0%
+- batch.evaluate                 |    167 |     0.00029s |   0.3%
+- batch.forward                  |    167 |     0.00431s |   4.8%
+- batch.reduce                   |    167 |     0.05108s |  57.3%
+- reduce.mean.allreduce          |    167 |     0.04968s |  55.7%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17184s |   9.6%
+- test.runavg                    |      6 |     0.20366s |  11.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    167 |     0.07472s |  80.7%
+- batch.backward                 |    167 |     0.01005s |  10.9%
+- batch.evaluate                 |    167 |     0.00031s |   0.3%
+- batch.forward                  |    167 |     0.00437s |   4.7%
+- batch.reduce                   |    167 |     0.05384s |  58.5%
+- reduce.mean.allreduce          |    167 |     0.05241s |  56.9%
+- reduce.mean.pack               |    167 |     0.00031s |   0.3%
+- test.last                      |      6 |     0.17183s |   9.6%
+- test.runavg                    |      6 |     0.20360s |  11.4%
+-----------------------------------------------------------------
+
+effective_lr                   - epoch:  7.125, value:  0.005 (weight:layer3.1.conv1.weight)
+grad_norm                      - epoch:  7.125, value:  0.110 (weight:layer3.1.conv1.weight)
+cross_entropy                  - bits:68652822528.000, epoch:  8.000, value:  1.386 (split:train)
+last_cross_entropy             - bits:68652822528.000, epoch:  8.000, value:  1.386 (split:train)
+accuracy                       - bits:68652822528.000, epoch:  8.000, value:  0.492 (split:train)
+last_accuracy                  - bits:68652822528.000, epoch:  8.000, value:  0.492 (split:train)
+top5_accuracy                  - bits:68652822528.000, epoch:  8.000, value:  0.932 (split:train)
+last_top5_accuracy             - bits:68652822528.000, epoch:  8.000, value:  0.932 (split:train)
+last_cross_entropy             - bits:68652822528.000, epoch:  8.000, value:  1.742 (split:test)
+last_accuracy                  - bits:68652822528.000, epoch:  8.000, value:  0.403 (split:test)
+last_top5_accuracy             - bits:68652822528.000, epoch:  8.000, value:  0.892 (split:test)
+runavg_cross_entropy           - bits:68652822528.000, epoch:  8.000, value:  1.982 (split:test)
+runavg_accuracy                - bits:68652822528.000, epoch:  8.000, value:  0.262 (split:test)
+runavg_top5_accuracy           - bits:68652822528.000, epoch:  8.000, value:  0.790 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07352s |  80.2%
+- batch.backward                 |    191 |     0.01010s |  11.0%
+- batch.evaluate                 |    191 |     0.00031s |   0.3%
+- batch.forward                  |    191 |     0.00435s |   4.8%
+- batch.reduce                   |    191 |     0.05315s |  58.3%
+- reduce.mean.allreduce          |    191 |     0.05172s |  56.8%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17550s |   9.6%
+- test.runavg                    |      7 |     0.20049s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07071s |  79.5%
+- batch.backward                 |    191 |     0.00975s |  11.0%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00433s |   4.9%
+- batch.reduce                   |    191 |     0.05061s |  57.0%
+- reduce.mean.allreduce          |    191 |     0.04925s |  55.5%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17556s |   9.6%
+- test.runavg                    |      7 |     0.20055s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07067s |  79.5%
+- batch.backward                 |    191 |     0.00984s |  11.1%
+- batch.evaluate                 |    191 |     0.00031s |   0.4%
+- batch.forward                  |    191 |     0.00437s |   4.9%
+- batch.reduce                   |    191 |     0.05028s |  56.6%
+- reduce.mean.allreduce          |    191 |     0.04885s |  55.0%
+- reduce.mean.pack               |    191 |     0.00031s |   0.4%
+- test.last                      |      7 |     0.17561s |   9.6%
+- test.runavg                    |      7 |     0.20051s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07069s |  79.6%
+- batch.backward                 |    191 |     0.00975s |  11.0%
+- batch.evaluate                 |    191 |     0.00030s |   0.3%
+- batch.forward                  |    191 |     0.00436s |   4.9%
+- batch.reduce                   |    191 |     0.05021s |  56.9%
+- reduce.mean.allreduce          |    191 |     0.04880s |  55.3%
+- reduce.mean.pack               |    191 |     0.00032s |   0.4%
+- test.last                      |      7 |     0.17567s |   9.6%
+- test.runavg                    |      7 |     0.20052s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07343s |  80.2%
+- batch.backward                 |    191 |     0.01002s |  11.0%
+- batch.evaluate                 |    191 |     0.00031s |   0.3%
+- batch.forward                  |    191 |     0.00440s |   4.8%
+- batch.reduce                   |    191 |     0.05312s |  58.3%
+- reduce.mean.allreduce          |    191 |     0.05169s |  56.7%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17561s |   9.6%
+- test.runavg                    |      7 |     0.20051s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07085s |  79.7%
+- batch.backward                 |    191 |     0.00973s |  11.0%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00433s |   4.9%
+- batch.reduce                   |    191 |     0.05084s |  57.3%
+- reduce.mean.allreduce          |    191 |     0.04949s |  55.7%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17565s |   9.6%
+- test.runavg                    |      7 |     0.20051s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07361s |  80.3%
+- batch.backward                 |    191 |     0.01002s |  11.0%
+- batch.evaluate                 |    191 |     0.00031s |   0.3%
+- batch.forward                  |    191 |     0.00437s |   4.8%
+- batch.reduce                   |    191 |     0.05282s |  57.9%
+- reduce.mean.allreduce          |    191 |     0.05138s |  56.3%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17568s |   9.6%
+- test.runavg                    |      7 |     0.20054s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07075s |  79.6%
+- batch.backward                 |    191 |     0.00975s |  11.0%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00435s |   4.9%
+- batch.reduce                   |    191 |     0.05056s |  56.9%
+- reduce.mean.allreduce          |    191 |     0.04918s |  55.4%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17564s |   9.6%
+- test.runavg                    |      7 |     0.20052s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07089s |  79.7%
+- batch.backward                 |    191 |     0.00972s |  11.0%
+- batch.evaluate                 |    191 |     0.00027s |   0.3%
+- batch.forward                  |    191 |     0.00432s |   4.9%
+- batch.reduce                   |    191 |     0.05098s |  57.4%
+- reduce.mean.allreduce          |    191 |     0.04963s |  55.9%
+- reduce.mean.pack               |    191 |     0.00030s |   0.3%
+- test.last                      |      7 |     0.17565s |   9.6%
+- test.runavg                    |      7 |     0.20052s |  10.9%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07062s |  79.5%
+- batch.backward                 |    191 |     0.00976s |  11.0%
+- batch.evaluate                 |    191 |     0.00029s |   0.3%
+- batch.forward                  |    191 |     0.00431s |   4.9%
+- batch.reduce                   |    191 |     0.05045s |  56.8%
+- reduce.mean.allreduce          |    191 |     0.04906s |  55.3%
+- reduce.mean.pack               |    191 |     0.00031s |   0.4%
+- test.last                      |      7 |     0.17568s |   9.6%
+- test.runavg                    |      7 |     0.20052s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07059s |  79.4%
+- batch.backward                 |    191 |     0.00979s |  11.1%
+- batch.evaluate                 |    191 |     0.00029s |   0.3%
+- batch.forward                  |    191 |     0.00434s |   4.9%
+- batch.reduce                   |    191 |     0.05033s |  56.7%
+- reduce.mean.allreduce          |    191 |     0.04895s |  55.2%
+- reduce.mean.pack               |    191 |     0.00031s |   0.4%
+- test.last                      |      7 |     0.17568s |   9.6%
+- test.runavg                    |      7 |     0.20052s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07365s |  80.3%
+- batch.backward                 |    191 |     0.01010s |  11.1%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00431s |   4.7%
+- batch.reduce                   |    191 |     0.05299s |  58.2%
+- reduce.mean.allreduce          |    191 |     0.05162s |  56.7%
+- reduce.mean.pack               |    191 |     0.00030s |   0.3%
+- test.last                      |      7 |     0.17563s |   9.6%
+- test.runavg                    |      7 |     0.20053s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07070s |  79.5%
+- batch.backward                 |    191 |     0.00967s |  10.9%
+- batch.evaluate                 |    191 |     0.00027s |   0.3%
+- batch.forward                  |    191 |     0.00431s |   4.9%
+- batch.reduce                   |    191 |     0.05074s |  57.1%
+- reduce.mean.allreduce          |    191 |     0.04938s |  55.6%
+- reduce.mean.pack               |    191 |     0.00030s |   0.3%
+- test.last                      |      7 |     0.17570s |   9.6%
+- test.runavg                    |      7 |     0.20054s |  10.9%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07073s |  79.6%
+- batch.backward                 |    191 |     0.00976s |  11.0%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00431s |   4.9%
+- batch.reduce                   |    191 |     0.05056s |  57.0%
+- reduce.mean.allreduce          |    191 |     0.04918s |  55.4%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17569s |   9.6%
+- test.runavg                    |      7 |     0.20052s |  10.9%
+-----------------------------------------------------------------
+
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07066s |  79.5%
+- batch.backward                 |    191 |     0.00976s |  11.0%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00431s |   4.9%
+- batch.reduce                   |    191 |     0.05046s |  56.9%
+- reduce.mean.allreduce          |    191 |     0.04906s |  55.3%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17569s |   9.6%
+- test.runavg                    |      7 |     0.20058s |  11.0%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    191 |     0.07083s |  79.6%
+- batch.backward                 |    191 |     0.00971s |  10.9%
+- batch.evaluate                 |    191 |     0.00028s |   0.3%
+- batch.forward                  |    191 |     0.00432s |   4.9%
+- batch.reduce                   |    191 |     0.05080s |  57.2%
+- reduce.mean.allreduce          |    191 |     0.04943s |  55.7%
+- reduce.mean.pack               |    191 |     0.00031s |   0.3%
+- test.last                      |      7 |     0.17563s |   9.6%
+- test.runavg                    |      7 |     0.20055s |  10.9%
+-----------------------------------------------------------------
+
+effective_lr                   - epoch:  8.333, value:  0.005 (weight:layer4.1.conv2.weight)
+grad_norm                      - epoch:  8.333, value:  0.120 (weight:layer4.1.conv2.weight)
+effective_lr                   - epoch:  8.583, value:  0.004 (weight:layer4.0.conv2.weight)
+grad_norm                      - epoch:  8.583, value:  0.210 (weight:layer4.0.conv2.weight)
+effective_lr                   - epoch:  8.917, value:  1.021 (weight:layer3.0.bn1.bias)
+grad_norm                      - epoch:  8.917, value:  0.009 (weight:layer3.0.bn1.bias)
+cross_entropy                  - bits:77234425344.000, epoch:  9.000, value:  1.300 (split:train)
+last_cross_entropy             - bits:77234425344.000, epoch:  9.000, value:  1.300 (split:train)
+accuracy                       - bits:77234425344.000, epoch:  9.000, value:  0.532 (split:train)
+last_accuracy                  - bits:77234425344.000, epoch:  9.000, value:  0.532 (split:train)
+top5_accuracy                  - bits:77234425344.000, epoch:  9.000, value:  0.941 (split:train)
+last_top5_accuracy             - bits:77234425344.000, epoch:  9.000, value:  0.941 (split:train)
+last_cross_entropy             - bits:77234425344.000, epoch:  9.000, value:  1.299 (split:test)
+last_accuracy                  - bits:77234425344.000, epoch:  9.000, value:  0.536 (split:test)
+last_top5_accuracy             - bits:77234425344.000, epoch:  9.000, value:  0.950 (split:test)
+runavg_cross_entropy           - bits:77234425344.000, epoch:  9.000, value:  1.948 (split:test)
+runavg_accuracy                - bits:77234425344.000, epoch:  9.000, value:  0.270 (split:test)
+runavg_top5_accuracy           - bits:77234425344.000, epoch:  9.000, value:  0.807 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07012s |  79.1%
+- batch.backward                 |    215 |     0.00975s |  11.0%
+- batch.evaluate                 |    215 |     0.00028s |   0.3%
+- batch.forward                  |    215 |     0.00433s |   4.9%
+- batch.reduce                   |    215 |     0.05006s |  56.5%
+- reduce.mean.allreduce          |    215 |     0.04870s |  55.0%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17528s |   9.4%
+- test.runavg                    |      8 |     0.19800s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07260s |  79.7%
+- batch.backward                 |    215 |     0.01004s |  11.1%
+- batch.evaluate                 |    215 |     0.00031s |   0.3%
+- batch.forward                  |    215 |     0.00434s |   4.8%
+- batch.reduce                   |    215 |     0.05234s |  57.8%
+- reduce.mean.allreduce          |    215 |     0.05091s |  56.2%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17521s |   9.4%
+- test.runavg                    |      8 |     0.19794s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07255s |  79.7%
+- batch.backward                 |    215 |     0.01000s |  11.0%
+- batch.evaluate                 |    215 |     0.00031s |   0.3%
+- batch.forward                  |    215 |     0.00439s |   4.8%
+- batch.reduce                   |    215 |     0.05229s |  57.7%
+- reduce.mean.allreduce          |    215 |     0.05087s |  56.1%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17533s |   9.4%
+- test.runavg                    |      8 |     0.19797s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07024s |  79.2%
+- batch.backward                 |    215 |     0.00975s |  11.0%
+- batch.evaluate                 |    215 |     0.00028s |   0.3%
+- batch.forward                  |    215 |     0.00433s |   4.9%
+- batch.reduce                   |    215 |     0.05025s |  56.8%
+- reduce.mean.allreduce          |    215 |     0.04890s |  55.2%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17537s |   9.4%
+- test.runavg                    |      8 |     0.19795s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07000s |  79.0%
+- batch.backward                 |    215 |     0.00979s |  11.1%
+- batch.evaluate                 |    215 |     0.00029s |   0.3%
+- batch.forward                  |    215 |     0.00433s |   4.9%
+- batch.reduce                   |    215 |     0.04978s |  56.3%
+- reduce.mean.allreduce          |    215 |     0.04840s |  54.7%
+- reduce.mean.pack               |    215 |     0.00031s |   0.4%
+- test.last                      |      8 |     0.17540s |   9.4%
+- test.runavg                    |      8 |     0.19795s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07009s |  79.1%
+- batch.backward                 |    215 |     0.00984s |  11.1%
+- batch.evaluate                 |    215 |     0.00031s |   0.4%
+- batch.forward                  |    215 |     0.00437s |   5.0%
+- batch.reduce                   |    215 |     0.04975s |  56.2%
+- reduce.mean.allreduce          |    215 |     0.04831s |  54.6%
+- reduce.mean.pack               |    215 |     0.00031s |   0.4%
+- test.last                      |      8 |     0.17533s |   9.4%
+- test.runavg                    |      8 |     0.19796s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07023s |  79.2%
+- batch.backward                 |    215 |     0.00972s |  11.0%
+- batch.evaluate                 |    215 |     0.00028s |   0.3%
+- batch.forward                  |    215 |     0.00432s |   4.9%
+- batch.reduce                   |    215 |     0.05021s |  56.7%
+- reduce.mean.allreduce          |    215 |     0.04885s |  55.2%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17536s |   9.4%
+- test.runavg                    |      8 |     0.19798s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07013s |  79.1%
+- batch.backward                 |    215 |     0.00976s |  11.1%
+- batch.evaluate                 |    215 |     0.00029s |   0.3%
+- batch.forward                  |    215 |     0.00432s |   4.9%
+- batch.reduce                   |    215 |     0.04998s |  56.5%
+- reduce.mean.allreduce          |    215 |     0.04860s |  54.9%
+- reduce.mean.pack               |    215 |     0.00031s |   0.4%
+- test.last                      |      8 |     0.17541s |   9.4%
+- test.runavg                    |      8 |     0.19795s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07016s |  79.2%
+- batch.backward                 |    215 |     0.00974s |  11.0%
+- batch.evaluate                 |    215 |     0.00028s |   0.3%
+- batch.forward                  |    215 |     0.00435s |   4.9%
+- batch.reduce                   |    215 |     0.05002s |  56.5%
+- reduce.mean.allreduce          |    215 |     0.04865s |  55.0%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17536s |   9.4%
+- test.runavg                    |      8 |     0.19797s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07273s |  79.9%
+- batch.backward                 |    215 |     0.01009s |  11.1%
+- batch.evaluate                 |    215 |     0.00028s |   0.3%
+- batch.forward                  |    215 |     0.00431s |   4.8%
+- batch.reduce                   |    215 |     0.05216s |  57.6%
+- reduce.mean.allreduce          |    215 |     0.05078s |  56.1%
+- reduce.mean.pack               |    215 |     0.00030s |   0.3%
+- test.last                      |      8 |     0.17536s |   9.4%
+- test.runavg                    |      8 |     0.19796s |  10.7%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07004s |  79.1%
+- batch.backward                 |    215 |     0.00976s |  11.0%
+- batch.evaluate                 |    215 |     0.00029s |   0.3%
+- batch.forward                  |    215 |     0.00432s |   4.9%
+- batch.reduce                   |    215 |     0.04990s |  56.4%
+- reduce.mean.allreduce          |    215 |     0.04852s |  54.8%
+- reduce.mean.pack               |    215 |     0.00031s |   0.4%
+- test.last                      |      8 |     0.17539s |   9.4%
+- test.runavg                    |      8 |     0.19796s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07009s |  79.1%
+- batch.backward                 |    215 |     0.00974s |  11.0%
+- batch.evaluate                 |    215 |     0.00030s |   0.3%
+- batch.forward                  |    215 |     0.00435s |   4.9%
+- batch.reduce                   |    215 |     0.04970s |  56.5%
+- reduce.mean.allreduce          |    215 |     0.04830s |  54.9%
+- reduce.mean.pack               |    215 |     0.00031s |   0.4%
+- test.last                      |      8 |     0.17538s |   9.4%
+- test.runavg                    |      8 |     0.19797s |  10.7%
+-----------------------------------------------------------------
+
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07006s |  79.1%
+- batch.backward                 |    215 |     0.00976s |  11.0%
+- batch.evaluate                 |    215 |     0.00028s |   0.3%
+- batch.forward                  |    215 |     0.00432s |   4.9%
+- batch.reduce                   |    215 |     0.04991s |  56.4%
+- reduce.mean.allreduce          |    215 |     0.04851s |  54.8%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17541s |   9.4%
+- test.runavg                    |      8 |     0.19801s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07270s |  79.8%
+- batch.backward                 |    215 |     0.00999s |  11.0%
+- batch.evaluate                 |    215 |     0.00031s |   0.3%
+- batch.forward                  |    215 |     0.00438s |   4.8%
+- batch.reduce                   |    215 |     0.05197s |  57.3%
+- reduce.mean.allreduce          |    215 |     0.05053s |  55.7%
+- reduce.mean.pack               |    215 |     0.00031s |   0.3%
+- test.last                      |      8 |     0.17539s |   9.4%
+- test.runavg                    |      8 |     0.19798s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07027s |  79.3%
+- batch.backward                 |    215 |     0.00972s |  11.0%
+- batch.evaluate                 |    215 |     0.00027s |   0.3%
+- batch.forward                  |    215 |     0.00432s |   4.9%
+- batch.reduce                   |    215 |     0.05040s |  56.9%
+- reduce.mean.allreduce          |    215 |     0.04905s |  55.4%
+- reduce.mean.pack               |    215 |     0.00030s |   0.3%
+- test.last                      |      8 |     0.17537s |   9.4%
+- test.runavg                    |      8 |     0.19797s |  10.7%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    215 |     0.07011s |  79.1%
+- batch.backward                 |    215 |     0.00967s |  10.9%
+- batch.evaluate                 |    215 |     0.00027s |   0.3%
+- batch.forward                  |    215 |     0.00431s |   4.9%
+- batch.reduce                   |    215 |     0.05019s |  56.7%
+- reduce.mean.allreduce          |    215 |     0.04883s |  55.2%
+- reduce.mean.pack               |    215 |     0.00030s |   0.3%
+- test.last                      |      8 |     0.17542s |   9.4%
+- test.runavg                    |      8 |     0.19798s |  10.7%
+-----------------------------------------------------------------
+
+cross_entropy                  - bits:85816028160.000, epoch: 10.000, value:  1.176 (split:train)
+last_cross_entropy             - bits:85816028160.000, epoch: 10.000, value:  1.176 (split:train)
+accuracy                       - bits:85816028160.000, epoch: 10.000, value:  0.579 (split:train)
+last_accuracy                  - bits:85816028160.000, epoch: 10.000, value:  0.579 (split:train)
+top5_accuracy                  - bits:85816028160.000, epoch: 10.000, value:  0.954 (split:train)
+last_top5_accuracy             - bits:85816028160.000, epoch: 10.000, value:  0.954 (split:train)
+last_cross_entropy             - bits:85816028160.000, epoch: 10.000, value:  1.974 (split:test)
+last_accuracy                  - bits:85816028160.000, epoch: 10.000, value:  0.417 (split:test)
+last_top5_accuracy             - bits:85816028160.000, epoch: 10.000, value:  0.889 (split:test)
+runavg_cross_entropy           - bits:85816028160.000, epoch: 10.000, value:  1.921 (split:test)
+runavg_accuracy                - bits:85816028160.000, epoch: 10.000, value:  0.279 (split:test)
+runavg_top5_accuracy           - bits:85816028160.000, epoch: 10.000, value:  0.817 (split:test)
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06989s |  78.9%
+- batch.backward                 |    239 |     0.00976s |  11.1%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00434s |   4.9%
+- batch.reduce                   |    239 |     0.04984s |  56.4%
+- reduce.mean.allreduce          |    239 |     0.04847s |  54.8%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17497s |   9.3%
+- test.runavg                    |      9 |     0.19705s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06992s |  79.0%
+- batch.backward                 |    239 |     0.00975s |  11.0%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00435s |   4.9%
+- batch.reduce                   |    239 |     0.04980s |  56.3%
+- reduce.mean.allreduce          |    239 |     0.04842s |  54.8%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17503s |   9.3%
+- test.runavg                    |      9 |     0.19703s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.07210s |  79.5%
+- batch.backward                 |    239 |     0.01002s |  11.1%
+- batch.evaluate                 |    239 |     0.00031s |   0.3%
+- batch.forward                  |    239 |     0.00435s |   4.8%
+- batch.reduce                   |    239 |     0.05185s |  57.4%
+- reduce.mean.allreduce          |    239 |     0.05042s |  55.9%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17489s |   9.3%
+- test.runavg                    |      9 |     0.19699s |  10.4%
+-----------------------------------------------------------------
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06985s |  78.9%
+- batch.backward                 |    239 |     0.00983s |  11.1%
+- batch.evaluate                 |    239 |     0.00031s |   0.3%
+- batch.forward                  |    239 |     0.00437s |   5.0%
+- batch.reduce                   |    239 |     0.04956s |  56.1%
+- reduce.mean.allreduce          |    239 |     0.04812s |  54.4%
+- reduce.mean.pack               |    239 |     0.00031s |   0.4%
+- test.last                      |      9 |     0.17501s |   9.3%
+- test.runavg                    |      9 |     0.19701s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06999s |  79.1%
+- batch.backward                 |    239 |     0.00975s |  11.0%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00433s |   4.9%
+- batch.reduce                   |    239 |     0.05003s |  56.6%
+- reduce.mean.allreduce          |    239 |     0.04867s |  55.0%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17505s |   9.3%
+- test.runavg                    |      9 |     0.19702s |  10.4%
+-----------------------------------------------------------------
+
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06974s |  78.8%
+- batch.backward                 |    239 |     0.00980s |  11.1%
+- batch.evaluate                 |    239 |     0.00029s |   0.3%
+- batch.forward                  |    239 |     0.00433s |   4.9%
+- batch.reduce                   |    239 |     0.04952s |  56.0%
+- reduce.mean.allreduce          |    239 |     0.04814s |  54.5%
+- reduce.mean.pack               |    239 |     0.00031s |   0.4%
+- test.last                      |      9 |     0.17508s |   9.3%
+- test.runavg                    |      9 |     0.19701s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.07209s |  79.5%
+- batch.backward                 |    239 |     0.00998s |  11.0%
+- batch.evaluate                 |    239 |     0.00031s |   0.3%
+- batch.forward                  |    239 |     0.00438s |   4.8%
+- batch.reduce                   |    239 |     0.05187s |  57.4%
+- reduce.mean.allreduce          |    239 |     0.05045s |  55.9%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17501s |   9.3%
+- test.runavg                    |      9 |     0.19702s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.07001s |  79.1%
+- batch.backward                 |    239 |     0.00972s |  11.0%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00437s |   5.0%
+- batch.reduce                   |    239 |     0.05007s |  56.6%
+- reduce.mean.allreduce          |    239 |     0.04870s |  55.1%
+- reduce.mean.pack               |    239 |     0.00031s |   0.4%
+- test.last                      |      9 |     0.17505s |   9.3%
+- test.runavg                    |      9 |     0.19703s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06984s |  79.0%
+- batch.backward                 |    239 |     0.00974s |  11.0%
+- batch.evaluate                 |    239 |     0.00030s |   0.3%
+- batch.forward                  |    239 |     0.00435s |   4.9%
+- batch.reduce                   |    239 |     0.04952s |  56.3%
+- reduce.mean.allreduce          |    239 |     0.04812s |  54.7%
+- reduce.mean.pack               |    239 |     0.00031s |   0.4%
+- test.last                      |      9 |     0.17506s |   9.3%
+- test.runavg                    |      9 |     0.19703s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.07224s |  79.6%
+- batch.backward                 |    239 |     0.01006s |  11.1%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00431s |   4.8%
+- batch.reduce                   |    239 |     0.05174s |  57.3%
+- reduce.mean.allreduce          |    239 |     0.05037s |  55.8%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17504s |   9.3%
+- test.runavg                    |      9 |     0.19702s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06986s |  78.9%
+- batch.backward                 |    239 |     0.00967s |  11.0%
+- batch.evaluate                 |    239 |     0.00027s |   0.3%
+- batch.forward                  |    239 |     0.00431s |   4.9%
+- batch.reduce                   |    239 |     0.04997s |  56.5%
+- reduce.mean.allreduce          |    239 |     0.04861s |  55.0%
+- reduce.mean.pack               |    239 |     0.00030s |   0.3%
+- test.last                      |      9 |     0.17510s |   9.3%
+- test.runavg                    |      9 |     0.19704s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.07220s |  79.6%
+- batch.backward                 |    239 |     0.00997s |  11.0%
+- batch.evaluate                 |    239 |     0.00031s |   0.3%
+- batch.forward                  |    239 |     0.00441s |   4.9%
+- batch.reduce                   |    239 |     0.05148s |  57.0%
+- reduce.mean.allreduce          |    239 |     0.05002s |  55.4%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17507s |   9.3%
+- test.runavg                    |      9 |     0.19704s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06998s |  79.0%
+- batch.backward                 |    239 |     0.00971s |  11.0%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00432s |   4.9%
+- batch.reduce                   |    239 |     0.05000s |  56.5%
+- reduce.mean.allreduce          |    239 |     0.04864s |  55.0%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17504s |   9.3%
+- test.runavg                    |      9 |     0.19705s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06979s |  78.9%
+- batch.backward                 |    239 |     0.00975s |  11.0%
+- batch.evaluate                 |    239 |     0.00029s |   0.3%
+- batch.forward                  |    239 |     0.00432s |   4.9%
+- batch.reduce                   |    239 |     0.04971s |  56.3%
+- reduce.mean.allreduce          |    239 |     0.04833s |  54.7%
+- reduce.mean.pack               |    239 |     0.00031s |   0.4%
+- test.last                      |      9 |     0.17507s |   9.3%
+- test.runavg                    |      9 |     0.19702s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06987s |  79.0%
+- batch.backward                 |    239 |     0.00976s |  11.1%
+- batch.evaluate                 |    239 |     0.00029s |   0.3%
+- batch.forward                  |    239 |     0.00432s |   4.9%
+- batch.reduce                   |    239 |     0.04975s |  56.3%
+- reduce.mean.allreduce          |    239 |     0.04837s |  54.7%
+- reduce.mean.pack               |    239 |     0.00031s |   0.4%
+- test.last                      |      9 |     0.17509s |   9.3%
+- test.runavg                    |      9 |     0.19702s |  10.4%
+-----------------------------------------------------------------
+
+--- Timer summary -----------------------------------------------
+  Event                          |  Count | Average time |  Frac.
+- batch                          |    239 |     0.06981s |  78.9%
+- batch.backward                 |    239 |     0.00977s |  11.1%
+- batch.evaluate                 |    239 |     0.00028s |   0.3%
+- batch.forward                  |    239 |     0.00432s |   4.9%
+- batch.reduce                   |    239 |     0.04968s |  56.2%
+- reduce.mean.allreduce          |    239 |     0.04828s |  54.6%
+- reduce.mean.pack               |    239 |     0.00031s |   0.3%
+- test.last                      |      9 |     0.17509s |   9.3%
+- test.runavg                    |      9 |     0.19707s |  10.5%
+-----------------------------------------------------------------
+
