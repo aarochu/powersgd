@@ -6,18 +6,19 @@ agree on it before submitting.
 
 | # | Question | How | Nodes | Cap (time limit) | Expected use |
 |---|---|---|---|---|---|
-| 1 | Are the NanoGPT gaps bigger than seed noise? | `scripts/nanogpt_seeds.sbatch` | 1 | 0.75 node-h | about 0.4-0.5 |
+| 1 | Are the NanoGPT gaps bigger than seed noise? | `scripts/nanogpt_seeds.sbatch` | 1 (or 2) | 0.75 node-h (1.5) | about 0.4-0.5 (0.8-1.0) |
 | 2 | Lower-precision gradients (fp16, bf16, fp8) | `scripts/nanogpt_precision.sbatch` | 1 | 0.67 node-h | about 0.35-0.45 |
 | 3 | PowerSGD on a modeled 10 Gbit/s link | `scripts/nanogpt_slowlink.sbatch` | 1 | 0.75 node-h | about 0.35 |
-| 4 | Larger models (25M and 85M parameters) | `scripts/nanogpt_large.sbatch` | 1 or 2 | 1-2 node-h per job | not measured; timing check first |
+| 4 | Larger models (25M and 85M parameters), up to 16 GPUs with one profiled step | `scripts/nanogpt_large.sbatch` | 1, 2 or 4 | 1-4 node-h per job | not measured; timing check first |
 | 5 | Matched NCCL baseline for the Gloo runs | `perlmutter/submit_scaling.sh` | 2-4 | 2.0 node-h | small (Gloo versions took 50-73 s) |
 | 6 | Rest of the scaling curve (1, 2, 4 GPUs) | `perlmutter/submit_scaling.sh` | 1 | 2.0 node-h | small |
 | 7 | More seeds for the Gloo runs | `perlmutter/submit_scaling.sh` | 2-4 | 4.0 node-h | about 0.4 |
 | 8 | Time to accuracy under Gloo (full 300 epochs) | `perlmutter/submit_scaling.sh` | 4 | 12 node-h | **about 3.6, over 2: agree first** |
 | 9 | Data vs tensor parallelism | [`docs/tensor_parallelism.md`](tensor_parallelism.md) | - | - | write-up, no compute |
+| 10 | ResNet-18 trained with our own DDP trainer | `scripts/time_epoch_1node.sh`, then `scripts/tier1_resnet18_1node.sbatch` | 1 | 0.33 (timing) + 1.0 (placeholder) | not measured; timing first |
 
-Experiments 1-4 use `train_ddp.py` (NanoGPT). 5-8 use the paper code (`paper-code/run_experiment.py`, CIFAR-10
-ResNet-18), the same code as Table 3 and `results/gloo_scaling/`.
+Experiments 1-4 and 10 use `train_ddp.py` (NanoGPT, and ResNet-18 for 10). 5-8 use the paper code
+(`paper-code/run_experiment.py`, CIFAR-10 ResNet-18), the same code as Table 3 and `results/gloo_scaling/`.
 
 ## 0. Before anything
 
@@ -51,8 +52,13 @@ close to the expected value it prints. `smoke_r4_fp16` (PowerSGD on fp16 buckets
 sbatch scripts/nanogpt_seeds.sbatch                 # seeds 2 and 3: DDP, PowerSGD rank 1, 2, 4, 2000 steps
 ```
 
-Runs are named `gpt_<mode>_s<seed>_1node_<jobid>`. With seed 1 from `results/`, this gives 3 seeds per configuration,
-on the same hardware type (1-node jobs have run on 80 GB A100s).
+```bash
+sbatch -N 2 scripts/nanogpt_seeds.sbatch            # the same on 2 nodes (8 GPUs)
+```
+
+Runs are named `gpt_<mode>_s<seed>_<nodes>node_<jobid>`. With seed 1 from `results/`, this gives 3 seeds per
+configuration. 1-node jobs have run on 80 GB A100s and 2-node jobs on 40 GB A100s, matching the earlier runs of each
+setup; check the `device` in each run's `metrics.jsonl` start line before pooling seeds.
 
 ## 2. Gradient precision
 
@@ -83,7 +89,13 @@ SIZE=large MAX_STEPS=50 EVAL=50 sbatch -q debug -t 00:15:00 scripts/nanogpt_larg
 SIZE=large sbatch scripts/nanogpt_large.sbatch                                              # DDP, r2, r4, 1000 steps
 SIZE=medium sbatch scripts/nanogpt_large.sbatch
 SIZE=large sbatch -N 2 scripts/nanogpt_large.sbatch                                         # 2 nodes
+SIZE=large PROFILE_STEP=100 sbatch -N 4 scripts/nanogpt_large.sbatch                        # 16 GPUs, profile step 100
 ```
+
+The 16-GPU job costs 4x the node-hours of a 1-node job, so it is the one most likely to exceed 2 node-hours: price it
+from the timing check and agree on it first. `PROFILE_STEP` records one step on rank 0 with `torch.profiler`
+(`profile_table.txt`, `trace_rank0.json` in the run folder), which shows how much of a step is compute and how much is
+all-reduce; it works with any `-N`.
 
 `medium` is 8 layers, width 512 (about 25M parameters, about 100 MB gradient); `large` is 12 layers, width 768 (about
 85M, about 340 MB). From the timing check's median step time, set `-t` to about 3 x 1000 steps x step time plus 10
@@ -120,6 +132,26 @@ and about 3.6 node-hours for all six. A different `EPOCHS` needs a different `GR
 include the epoch count.
 
 `PRESETS` takes a `;`-separated list (`PRESETS="SGD;Rank 2;Rank 4"`), and `TASK=lm` runs the WikiText-2 LSTM instead.
+
+## 10. ResNet-18 with our own trainer
+
+The scripts already exist (`scripts/time_epoch_1node.sh`, `scripts/tier1_resnet18_1node.sbatch`,
+`scripts/tier3_resnet18_2node.sbatch`); their time limits are placeholders, so time an epoch first.
+
+```bash
+salloc -N 1 -C gpu -G 4 -q interactive -t 00:20:00 -A $SBATCH_ACCOUNT
+bash scripts/time_epoch_1node.sh        # 2 epochs each of DDP and PowerSGD rank 2; prints seconds per epoch; then exit
+EPOCHS=30 sbatch -t <limit> scripts/tier1_resnet18_1node.sbatch     # DDP vs PowerSGD rank 1, 2, 4 on 4 GPUs
+```
+
+Set `<limit>` (HH:MM:SS) to about 4 configs x 15 x the 2-epoch wall time the timing script prints, plus 10 minutes. On
+`master` the tier scripts still have an `-A` line; `SBATCH_ACCOUNT` overrides it (sbatch lets environment variables
+override `#SBATCH` lines). The 2-node `tier3_resnet18_2node.sbatch` (DDP vs rank 2 on 8 GPUs) is optional and costs 2x
+per hour.
+
+This trainer uses a 30-epoch cosine schedule with batch 128 per GPU, not the paper's 300-epoch schedule, so its
+accuracy is not comparable with Table 3. What it adds is the same comparison as NanoGPT (same hooks, byte counting and
+timing) on a CNN: compare DDP and PowerSGD within the job with `summarize_experiments.py runs --match resnet18`.
 
 ## After the runs: copy, then summarize
 
