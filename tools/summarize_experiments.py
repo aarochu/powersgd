@@ -190,39 +190,46 @@ def cmd_runs(a):
     rows = [r for r in rows if re.search(a.match, r["run_id"])]
     if not rows:
         sys.exit(f"no records in {a.jsonl} match {a.match!r}")
-    print("| run | job | mode | R | precision | modeled link | GPUs | params | steps | best val | final | median step | "
-          "bytes/step | GPU-h | status |")
-    print("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+    tp_of = lambda r: r.get("tp_size") or 1
+    total = lambda r: (r.get("comm_bytes_per_step") or 0) + (r.get("tp_bytes_per_step") or 0)
+    print("| run | job | mode | R | precision | modeled link | GPUs | TP | params | steps | best val | final | median step | "
+          "DP bytes/step | TP bytes/step | GPU-h | status |")
+    print("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for r in rows:
         sim = r.get("sim_link")
         link = f"{sim['bandwidth_gbps']:g} Gbit/s, {sim['latency_us']:g} us" if sim else "none"
         step = r["median_step_time_s"] * 1000 if r.get("median_step_time_s") else None
         mb = r["comm_bytes_per_step"] / 1e6 if r.get("comm_bytes_per_step") else None
+        tpmb = r["tp_bytes_per_step"] / 1e6 if r.get("tp_bytes_per_step") else None
         print(f"| {r['run_id']} | {r.get('slurm_job_id') or '-'} | {r['mode']} | {r.get('rank_R') or '-'} | {r['precision']} | "
-              f"{link} | {r['world_size']} | {r['params'] / 1e6:.1f}M | {r['steps']} | {best_of(r)} | {final_of(r)} | "
-              f"{fmt(step, '.1f')} ms | {fmt(mb, '.3f')} MB | {fmt(r.get('gpu_hours'), '.3f')} | {r['status']} |")
+              f"{link} | {r['world_size']} | {tp_of(r)} | {r['params'] / 1e6:.1f}M | {r['steps']} | {best_of(r)} | {final_of(r)} | "
+              f"{fmt(step, '.1f')} ms | {fmt(mb, '.3f')} MB | {fmt(tpmb, '.1f')}{' MB' if tpmb else ''} | "
+              f"{fmt(r.get('gpu_hours'), '.3f')} | {r['status']} |")
 
-    # within one Slurm job (same hardware): each run against DDP / fp32 on the same modeled link (or none), with the
-    # same seed, model size, GPU count and planned steps
+    # within one Slurm job (same hardware): each run against plain data-parallel DDP / fp32 (tensor-parallel size 1) on
+    # the same modeled link (or none), with the same seed, model size, GPU count and planned steps
     link = lambda r: (r["sim_link"]["bandwidth_gbps"], r["sim_link"]["latency_us"]) if r.get("sim_link") else None
     key = lambda r: (r.get("slurm_job_id"), r["seed"], r["params"], r["world_size"], r.get("planned_steps"), link(r))
-    refs = {key(r): r for r in rows if r["mode"] == "ddp" and r["precision"] == "fp32"}
+    refs = {key(r): r for r in rows if r["mode"] == "ddp" and r["precision"] == "fp32" and tp_of(r) == 1}
     lines = []
     for r in rows:
         ref = refs.get(key(r))
         if ref is None or r is ref:
             continue
         rs, fs = r.get("median_step_time_s"), ref.get("median_step_time_s")
-        rb, fb = r.get("comm_bytes_per_step"), ref.get("comm_bytes_per_step")
-        lines.append(f"| {r['run_id']} | {ref['run_id']} | {fmt(change(rs, fs), '+.1f')}% | "
-                     f"{fmt(fb / rb if rb and fb else None, '.1f')}x | {best_of(r)} vs {best_of(ref)} |")
+        rb, fb = total(r), total(ref)
+        ratio = "-" if not (rb and fb) else (f"{fb / rb:.1f}x less" if fb >= rb else f"{rb / fb:.1f}x more")
+        lines.append(f"| {r['run_id']} | {ref['run_id']} | {fmt(change(rs, fs), '+.1f')}% | {ratio} | "
+                     f"{best_of(r)} vs {best_of(ref)} |")
     if lines:
-        print("\nWithin each job, against DDP / fp32 on the same modeled link (same seed, model size, GPU count and steps):\n")
-        print("| run | reference | median step change | less data per step | best val (run vs reference) |")
+        print("\nWithin each job, against data-parallel DDP / fp32 on the same modeled link (same seed, model size, GPU "
+              "count and steps):\n")
+        print("| run | reference | median step change | data per step (DP + TP) | best val (run vs reference) |")
         print("|---|---|---|---|---|")
         print("\n".join(lines))
     print("\nbytes/step is the logical payload handed to all-reduce per GPU, not wire traffic; fp8 runs are emulated, "
-          "so their bytes and step times are fp32's.")
+          "so their bytes and step times are fp32's. DP = data-parallel gradient traffic, TP = tensor-parallel "
+          "activation traffic (train_tensor.py runs only).")
 
 
 def main():

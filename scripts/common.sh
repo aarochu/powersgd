@@ -33,6 +33,17 @@ launch() {
     train_ddp.py "$@"
 }
 
+# launch_with <script.py> <args...>: the same as launch, for another trainer (e.g. train_tensor.py).
+launch_with() {
+  local script=$1; shift
+  local master; master=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n1)
+  RDZV_PORT=$(( ${RDZV_PORT:-29500} + 1 ))
+  srun --nodes="$SLURM_NNODES" --ntasks-per-node=1 --cpu-bind=none \
+    torchrun --nnodes="$SLURM_NNODES" --nproc_per_node=$GPUS_PER_NODE \
+             --rdzv_backend=c10d --rdzv_endpoint="$master:$RDZV_PORT" --rdzv_id="${SLURM_JOB_ID}_$RDZV_PORT" \
+    "$script" "$@"
+}
+
 # Record Slurm accounting for this job (call at the end; sacct may lag a few minutes, so
 # also run `python tools/update_budget.py` later from a login node).
 finish() { stop_gpu_monitor; sacct -j "$SLURM_JOB_ID" --format=JobID,Elapsed,NNodes,AllocTRES%60,State || true; }

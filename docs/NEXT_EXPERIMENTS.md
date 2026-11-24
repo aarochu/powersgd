@@ -16,8 +16,9 @@ agree on it before submitting.
 | 8 | Time to accuracy under Gloo (full 300 epochs) | `perlmutter/submit_scaling.sh` | 4 | 12 node-h | **about 3.6, over 2: agree first** |
 | 9 | Data vs tensor parallelism | [`docs/tensor_parallelism.md`](tensor_parallelism.md) | - | - | write-up, no compute |
 | 10 | ResNet-18 trained with our own DDP trainer | `scripts/time_epoch_1node.sh`, then `scripts/tier1_resnet18_1node.sbatch` | 1 | 0.33 (timing) + 1.0 (placeholder) | not measured; timing first |
+| 11 | Tensor vs data parallelism, measured | `scripts/smoke_tp.sh`, then `scripts/nanogpt_tp.sbatch` | 1 (or 2) | 0.33 (smoke) + 0.75 (1.5) | not measured; roughly 0.3-0.5 |
 
-Experiments 1-4 and 10 use `train_ddp.py` (NanoGPT, and ResNet-18 for 10). 5-8 use the paper code
+Experiments 1-4 and 10 use `train_ddp.py` (NanoGPT, and ResNet-18 for 10); 11 uses `train_tensor.py`. 5-8 use the paper code
 (`paper-code/run_experiment.py`, CIFAR-10 ResNet-18), the same code as Table 3 and `results/gloo_scaling/`.
 
 ## 0. Before anything
@@ -153,6 +154,33 @@ This trainer uses a 30-epoch cosine schedule with batch 128 per GPU, not the pap
 accuracy is not comparable with Table 3. What it adds is the same comparison as NanoGPT (same hooks, byte counting and
 timing) on a CNN: compare DDP and PowerSGD within the job with `summarize_experiments.py runs --match resnet18`.
 
+## 11. Tensor parallelism
+
+`train_tensor.py` splits the unchanged NanoGPT across 2 or 4 GPUs of a node (Megatron-style: attention and MLP split
+by columns then rows, two activation all-reduces per block each way) and uses data parallelism across the
+tensor-parallel groups. `train_ddp.py` and `models.py` are not touched; the trainer imports the same NanoGPT task, so
+`--tp-size 1` is plain data parallelism. See [`tensor_parallelism.md`](tensor_parallelism.md) for the design.
+
+**Correctness first.** On an interactive node:
+
+```bash
+bash scripts/smoke_tp.sh
+```
+
+It prints PASS / FAIL for: tp 1 reproduces `train_ddp.py`; the validation loss before training is the same at tp 1, 2
+and 4 (the split forward pass is exact); with dropout off, tp 2 and 4 train like tp 1 (the backward pass); and the
+counted tensor- and data-parallel bytes equal their formulas exactly. Do not run the batch job unless all of them pass.
+
+```bash
+sbatch scripts/nanogpt_tp.sbatch          # 1 node: tp1 ddp, tp1 r4, tp2 ddp, tp2 r4, tp4 ddp; 2000 steps each
+sbatch -N 2 scripts/nanogpt_tp.sbatch     # 2 nodes: adds tp4 with PowerSGD across the nodes
+```
+
+Every config gets the same global batch (64 sequences per GPU; per tensor-parallel group that is 64 x tp). Expected,
+computed from the model shapes, per GPU per step: tp 1 sends 43.2 MB of gradients; tp 2 sends 21.9 MB of gradients
+(each GPU holds about half the parameters) plus 1.21 GB of activations (4 x 6 layers x 128 x 256 x 384 x 4 bytes).
+PowerSGD shrinks only the gradient part. The `runs` summary and the `bars` plot show both parts.
+
 ## After the runs: copy, then summarize
 
 `perlmutter/bundle_results.sh` copies the outputs (never moves them), adds `sacct` job and GPU accounting files, redacts
@@ -176,11 +204,25 @@ python tools/summarize_experiments.py paper <extracted>/results/scaling/*
 python tools/summarize_experiments.py gpu <extracted>/logs/gpu_<jobid>_*.csv
 ```
 
-`runs` compares each run with the DDP / fp32 run on the same modeled link (or none) in the same job, with the same seed,
-model size and step count; the full table above it has every run's absolute step time, including DDP with and without
-the link.
+`runs` compares each run with the data-parallel DDP / fp32 run on the same modeled link (or none) in the same job, with
+the same seed, model size and step count; the full table above it has every run's absolute step time and its
+data-parallel and tensor-parallel bytes, including DDP with and without the link.
 `paper` compares each method with SGD in the same task, backend, GPU count, seed and epoch count, and gives
 mean [min, max] wherever a setting has more than one seed.
+
+Figures (needs matplotlib; on Perlmutter run them after `module load pytorch`):
+
+```bash
+python tools/plot_experiments.py curves  --runs-dir <extracted>/results/runs --match '_<jobid>$' --out figures/<name>_curves.png
+python tools/plot_experiments.py curves  --runs-dir <extracted>/results/runs --match '_<jobid>$' --x time --out figures/<name>_vs_time.png
+python tools/plot_experiments.py bars    --jsonl <extracted>/results/runs.jsonl --match '_<jobid>$' --out figures/<name>_bars.png
+python tools/plot_experiments.py seeds   --jsonl <extracted>/results/runs.jsonl --match 'gpt_.*_s[123]_1node' --out figures/seeds.png
+python tools/plot_experiments.py scaling <extracted>/results/scaling/* --out figures/scaling.png
+```
+
+`curves --x time` is the time-to-accuracy view; `bars` shows step time and bytes per step (tensor-parallel bytes stacked
+on gradient bytes); `seeds` shows each seed and the mean per configuration; `scaling` shows time per batch and the
+communication share of a batch against GPU count, one line per method and backend (dashed = Gloo).
 
 ## Reporting rules
 
@@ -190,3 +232,27 @@ mean [min, max] wherever a setting has more than one seed.
 - Gloo on Perlmutter is a slower software path on a fast network, not the paper's 10 Gbit/s Ethernet.
 - Compare step times within a job. 1-node and 2-node jobs have run on different A100 models (80 GB and 40 GB).
 - A faster batch is not faster training: use experiment 8 (or best validation loss against wall time) for that claim.
+- Tensor-parallel bytes are activation traffic inside a node; do not add them to the gradient bytes when talking about
+  what PowerSGD compresses.
+
+## Closing checklist
+
+The project is closed when every row of the deck's status slide is either done, with its numbers in committed files,
+or marked "not run" with the reason.
+
+1. **Merge the code.** PR #7 (README, `.gitignore`, redaction), #8 (Gloo results), #9 (experiment scripts) and #10
+   (tensor parallelism, built on #9). Until they are merged, run from the `experiments/tensor-parallel` branch, which
+   has everything in #9 and #10.
+2. **Smoke tests on one GPU node:** `scripts/smoke_next.sh` (every row `ok`), then `scripts/smoke_tp.sh` (every line
+   `PASS`). Fix anything that fails before submitting jobs.
+3. **Run, cheapest first:** 1, 2, 3 and 11; then 5, 6 and 7; then 10 (time an epoch first) and 4 (timing check first).
+   **Agree before submitting** anything over 2 node-hours: experiment 8 (about 3.6) and the 16-GPU run of 4.
+4. **After each job:** `bundle_results.sh`, copy to the laptop, check the redaction line, summarize, plot, and commit
+   the results with a short README per experiment (as in `results/gloo_scaling/`).
+5. **Update the deliverables:** the repository README's results section, the deck's status, scorecard and next-steps
+   slides, and the final report. Every number should trace to a committed file; label single-seed, emulated (fp8) and
+   modeled (slow link) results as such.
+6. **Not code:** the LSTM tokenizer test (paper code; Nayan's call), charged hours and the remaining allocation (`sacct`
+   or Iris), and asking the professor for more allocation if the runs need it.
+7. **Out of scope unless the final report needs it:** a real slow network (no root on Perlmutter), real fp8 hardware
+   (A100 has none), and the paper's other compressors (Top-K, Signum and the rest in `submit_paper.sh`).

@@ -1,7 +1,7 @@
 # Data vs tensor parallelism: where gradient compression applies
 
-A design note for the "data vs tensor parallelism" next step. **Nothing here was run.** The traffic numbers are computed
-from the model sizes we used, not measured.
+A design note for the "data vs tensor parallelism" next step. The traffic numbers below are computed from the model
+sizes we used; `train_tensor.py` (experiment 11 in `NEXT_EXPERIMENTS.md`) measures them. **It has not been run yet.**
 
 ## Data parallelism (what we ran)
 
@@ -57,9 +57,26 @@ Large models usually combine both: tensor parallelism inside a node and data par
 This is the setting of the follow-up work listed in the upstream README (Song et al., 2023), which applies PowerSGD-style
 compression to the data-parallel and pipeline-parallel parts of 3D-parallel LLM training.
 
-## What an experiment would need
+## How we measure it: `train_tensor.py`
 
-To measure this instead of computing it: a tensor-parallel NanoGPT (for example with
-`torch.distributed.tensor.parallel` column/row-wise plans), byte counting on its collectives, and a run with
-2-way tensor parallelism x 2-way data parallelism on one node, then across nodes. That changes `models.py`, so it needs
-an explicit go-ahead; it is not part of this change.
+A separate trainer, so `train_ddp.py` (which produced every result so far) and `models.py` stay unchanged:
+
+- It builds the normal `models.GPT` with the usual init, then replaces each block's attention `qkv` and MLP first layer
+  with column slices and the attention `proj` and MLP second layer with row slices, Megatron-style. The split layers
+  are written by hand with plain PyTorch (explicit all-reduces in two small autograd functions), so DDP, the PowerSGD
+  hook and byte counting work as before. Because the fused `qkv` layer is split by heads (each rank keeps the q, k and v
+  rows of its own heads), a replacement attention forward runs the same math on the local heads.
+- `--tp-size` GPUs of a node form a tensor-parallel group; data parallelism (DDP, optionally PowerSGD) runs across the
+  groups, only on gradients. Every GPU of a group sees the same batch, and evaluation runs on the whole group.
+- Bytes are counted per group: gradient all-reduces (data-parallel) and activation all-reduces (tensor-parallel).
+- With the default per-replica batch of 64 x tp, every config trains on the same global batch as `train_ddp.py` on the
+  same GPUs, so the table above becomes: tp 2 moves about 1.21 GB of activations and 21.9 MB of gradients per GPU per
+  step, against 43.2 MB of gradients for plain data parallelism.
+
+`scripts/smoke_tp.sh` checks it before any real run: tp 1 must reproduce `train_ddp.py`, the loss before training must
+be the same at tp 1, 2 and 4, training with dropout off must match across tp sizes, and the counted bytes must equal
+the formulas. `scripts/nanogpt_tp.sbatch` runs the comparison.
+
+What it will and will not show: how much more a tensor-parallel step communicates and what that costs in step time on
+NVLink, and that PowerSGD shrinks only the gradient part. It does not test compressing activations, which this note
+argues against.
