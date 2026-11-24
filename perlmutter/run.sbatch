@@ -16,7 +16,17 @@ if [[ $BACKEND == gloo ]]; then
 fi
 
 echo "job $SLURM_JOB_ID on $SLURM_JOB_NODELIST: $TASK / $PRESET / seed $SEED / $WORKERS GPUs ($BACKEND)"
+# Optional (GPU_MONITOR=1, set by submit_scaling.sh): nvidia-smi once a second, one CSV per node, in the run's
+# output folder. Slurm accounting is too coarse for jobs of a minute or two. The monitor becomes step .0, so the
+# training step is then .1 in sacct.
+if [[ ${GPU_MONITOR:-0} == 1 ]]; then
+    mkdir -p "$OUT"
+    srun --nodes="$SLURM_NNODES" --ntasks-per-node=1 --overlap --cpu-bind=none bash -c \
+        'nvidia-smi --query-gpu=timestamp,index,utilization.gpu,memory.used,power.draw --format=csv -l 1 > "$OUT/gpu_${SLURM_JOB_ID}_$(hostname).csv"' &
+    GPU_MON_PID=$!
+fi
 cd "$REPO_DIR/paper-code"
 srun --ntasks="$WORKERS" --ntasks-per-node="$TASKS_PER_NODE" --cpus-per-task=32 --cpu-bind=cores \
     python -u run_experiment.py --task "$TASK" --preset "$PRESET" --seed "$SEED" \
     --backend "$BACKEND" --out "$OUT" $EXTRA_ARGS
+if [[ -n ${GPU_MON_PID:-} ]]; then kill "$GPU_MON_PID" 2>/dev/null || true; fi

@@ -11,6 +11,10 @@ Launch with torchrun (1 or more nodes), e.g.
              fp8 is EMULATED (A100 has no FP8 hardware): each bucket is scaled per-tensor, cast to float8 and back
              to fp32 *before* the all-reduce, so numerics are tested but bytes on the wire and speed are NOT FP8.
 --rank       PowerSGD matrix_approximation_rank R (named --rank to match the brief; NOT the dist rank).
+--sim-bandwidth-gbps / --sim-latency-us
+             MODEL a slower link (default 0 = off): after each all-reduce is issued, the calling thread sleeps for
+             latency + 2(N-1)/N * payload / bandwidth (ring all-reduce traffic per rank). No overlap with compute and no
+             contention are modeled, so the result is a model of a slow network, not a measurement of one.
 """
 import argparse
 import contextlib
@@ -60,21 +64,32 @@ def parse_args():
     p.add_argument("--n-head", type=int, default=6)
     p.add_argument("--n-embd", type=int, default=384)
     p.add_argument("--block-size", type=int, default=256)
+    p.add_argument("--sim-bandwidth-gbps", type=float, default=0.0, help="model a link of this bandwidth (0 = off)")
+    p.add_argument("--sim-latency-us", type=float, default=0.0, help="modeled latency added per all-reduce (0 = off)")
     return p.parse_args()
 
 
 # ----------------------------------------------------------------------------- comm hooks
 class CommCounter:
-    """Counts logical payload bytes passed to dist.all_reduce (per rank, not ring wire traffic)."""
+    """Counts logical payload bytes passed to dist.all_reduce (per rank, not ring wire traffic).
+    With sim_gbps or sim_latency_us > 0 it also adds the modeled slow-link delay described in the module docstring."""
 
-    def __init__(self):
-        self.bytes, self.enabled = 0, True
+    def __init__(self, sim_gbps=0.0, sim_latency_us=0.0):
+        self.bytes, self.enabled, self.sim_s = 0, True, 0.0
         orig = dist.all_reduce
+        bytes_per_s = sim_gbps * 1e9 / 8
 
         def counted(tensor, *a, **k):
+            nbytes = tensor.numel() * tensor.element_size()
             if self.enabled:
-                self.bytes += tensor.numel() * tensor.element_size()
-            return orig(tensor, *a, **k)
+                self.bytes += nbytes
+            work = orig(tensor, *a, **k)
+            if self.enabled and (bytes_per_s > 0 or sim_latency_us > 0):
+                n = dist.get_world_size()
+                delay = sim_latency_us * 1e-6 + (2 * (n - 1) / n * nbytes / bytes_per_s if bytes_per_s > 0 else 0.0)
+                time.sleep(delay)
+                self.sim_s += delay
+            return work
 
         dist.all_reduce = counted
 
@@ -317,7 +332,7 @@ def main():
     model = task.build_model().to(dev)
     nparams = sum(p.numel() for p in model.parameters())
     model = DDP(model, device_ids=[local] if cuda else None)
-    counter = CommCounter()
+    counter = CommCounter(a.sim_bandwidth_gbps, a.sim_latency_us)
     state, hook = build_hook(a)
     model.register_comm_hook(state, hook)
     opt = task.make_optimizer(model)
@@ -429,6 +444,9 @@ def main():
                 "throughput_unit": "images/s" if a.model == "resnet18" else "tokens/s",
                 "comm_bytes_per_step": float(np.mean(sb)) if len(sb) else None,
                 "comm_bytes_note": "logical payload per rank passed to dist.all_reduce, steady state; not wire bytes",
+                "sim_link": ({"bandwidth_gbps": a.sim_bandwidth_gbps, "latency_us": a.sim_latency_us,
+                              "modeled_delay_s_total": counter.sim_s}
+                             if a.sim_bandwidth_gbps > 0 or a.sim_latency_us > 0 else None),
                 "status": status, "run_dir": str(run_dir), "params": nparams, "torch": torch.__version__,
             }
             if not cuda:
