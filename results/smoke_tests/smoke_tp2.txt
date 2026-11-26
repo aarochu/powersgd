@@ -1,0 +1,43 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+=== smoketp_ddp_ref (4 GPUs)
+{"type": "done", "wall_time_s": 4.40220201597549, "median_step_time_s": 0.07824119803262874, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+=== smoketp_tp1 (4 GPUs)
+{"type": "done", "wall_time_s": 4.3068617769749835, "median_step_time_s": 0.07827180699678138, "comm_bytes_per_step": 43183104.0, "tp_bytes_per_step": 0.0, "status": "ok"}
+=== smoketp_eq2_tp1 (2 GPUs)
+{"type": "done", "wall_time_s": 4.205236205016263, "median_step_time_s": 0.07625028601614758, "comm_bytes_per_step": 43183104.0, "tp_bytes_per_step": 0.0, "status": "ok"}
+=== smoketp_eq2_tp2 (4 GPUs)
+{"type": "done", "wall_time_s": 3.1410125750117004, "median_step_time_s": 0.0532951689674519, "comm_bytes_per_step": 21917184.0, "tp_bytes_per_step": 603979776.0, "status": "ok"}
+=== smoketp_eq4_tp1 (1 GPUs)
+{"type": "done", "wall_time_s": 4.379592985031195, "median_step_time_s": 0.07942017301684245, "comm_bytes_per_step": 43183104.0, "tp_bytes_per_step": 0.0, "status": "ok"}
+=== smoketp_eq4_tp4 (4 GPUs)
+{"type": "done", "wall_time_s": 2.021037185972091, "median_step_time_s": 0.032435893022920936, "comm_bytes_per_step": 11284224.0, "tp_bytes_per_step": 603979776.0, "status": "ok"}
+=== smoketp_tp2_r4 (4 GPUs)
+{"type": "done", "wall_time_s": 6.277632028970402, "median_step_time_s": 0.11209960700944066, "comm_bytes_per_step": 483872.0, "tp_bytes_per_step": 1207959552.0, "status": "ok"}
+=== smoketp_tp2_large (4 GPUs)
+{"type": "done", "wall_time_s": 32.89804459200241, "median_step_time_s": 0.6072719210060313, "comm_bytes_per_step": 171411456.0, "tp_bytes_per_step": 4831838208.0, "status": "ok"}
+run                  status      tp  dp  params/GPU  step ms    DP bytes    TP bytes  init val     val
+smoketp_ddp_ref      ok           1   4  10,795,776     78.2  4.3183e+07  0.0000e+00       nan  2.9774
+smoketp_tp1          ok           1   4  10,795,776     78.3  4.3183e+07  0.0000e+00    4.3046  2.9774
+smoketp_eq2_tp1      ok           1   2  10,795,776     76.3  4.3183e+07  0.0000e+00    4.3046  3.3411
+smoketp_eq2_tp2      ok           2   2   5,479,296     53.3  2.1917e+07  6.0398e+08    4.3046  3.3411
+smoketp_eq4_tp1      ok           1   1  10,795,776     79.4  4.3183e+07  0.0000e+00    4.3050  3.3121
+smoketp_eq4_tp4      ok           4   1   2,821,056     32.4  1.1284e+07  6.0398e+08    4.3050  3.3123
+smoketp_tp2_r4       ok           2   2   5,479,296    112.1  4.8387e+05  1.2080e+09    4.2543  4.1750
+smoketp_tp2_large    ok           2   2  42,852,864    607.3  1.7141e+08  4.8318e+09    4.3310  4.1749
+PASS  all runs finished: ok
+PASS  tp 1 reproduces train_ddp.py: |delta val loss| = 5.40e-05
+PASS  split forward pass (smoketp_eq2_tp2): |delta init val loss| vs smoketp_eq2_tp1 = 1.19e-08
+PASS  split backward pass (smoketp_eq2_tp2): |delta val loss after 40 steps| vs smoketp_eq2_tp1 = 6.97e-07
+PASS  training moved (smoketp_eq2_tp1): val loss 4.305 -> 3.341 (needs a drop > 0.3)
+PASS  split forward pass (smoketp_eq4_tp4): |delta init val loss| vs smoketp_eq4_tp1 = 3.58e-08
+PASS  split backward pass (smoketp_eq4_tp4): |delta val loss after 40 steps| vs smoketp_eq4_tp1 = 1.36e-04
+PASS  training moved (smoketp_eq4_tp1): val loss 4.305 -> 3.312 (needs a drop > 0.3)
+PASS  TP bytes (smoketp_eq2_tp2): 603979776 vs expected 603979776
+PASS  DP bytes (smoketp_eq2_tp2): 21917184 vs 4 x 5479296 params
+PASS  TP bytes (smoketp_eq4_tp4): 603979776 vs expected 603979776
+PASS  TP bytes (smoketp_tp2_r4): 1207959552 vs expected 1207959552
+PASS  TP bytes (smoketp_tp2_large): 4831838208 vs expected 4831838208
+PASS  DP bytes (smoketp_tp2_large): 171411456 vs 4 x 42852864 params

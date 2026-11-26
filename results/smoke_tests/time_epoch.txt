@@ -1,0 +1,18 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 1.7680745616401594, "train_time_s": 2.2910184358479455, "elapsed_s": 3.907748195983004, "median_step_s": 0.015513045014813542, "test_acc": 0.482, "test_loss": 1.7584957885742187}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 0.9748837769646006, "train_time_s": 3.8722760607488453, "elapsed_s": 7.0634961649775505, "median_step_s": 0.015551750519080088, "test_acc": 0.7165, "test_loss": 0.7901391235351563}
+{"type": "done", "wall_time_s": 7.064012874965556, "median_step_time_s": 0.015551750519080088, "comm_bytes_per_step": 44695848.0, "status": "ok"}
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 1.9553110021905802, "train_time_s": 2.4760338636115193, "elapsed_s": 4.021331331052352, "median_step_s": 0.01984412199817598, "test_acc": 0.2091, "test_loss": 3.5496268310546877}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 1.4319740361774091, "train_time_s": 4.463293635752052, "elapsed_s": 7.514967590046581, "median_step_s": 0.019765590026509017, "test_acc": 0.5345, "test_loss": 1.2678384216308594}
+{"type": "done", "wall_time_s": 7.51565841701813, "median_step_time_s": 0.019765590026509017, "comm_bytes_per_step": 329040.0, "status": "ok"}
+srun: forcing job termination
+timing_ddp_r0: median step 15.6 ms, 97 steps/epoch => ~1.5 s/epoch (train only), wall 7s for 2 epochs
+timing_powersgd_r2: median step 19.8 ms, 97 steps/epoch => ~1.9 s/epoch (train only), wall 8s for 2 epochs
+Rough 30-epoch cost per config: 15x the 2-epoch wall time; node-hours = that in hours x 1 node.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-26T00:52:08.235] error: *** STEP 62006046.27 ON nid200396 CANCELLED AT 2026-11-26T00:52:08 DUE to SIGNAL Killed ***
+srun: error: nid200396: task 0: Killed
+srun: Terminating StepId=62006046.27

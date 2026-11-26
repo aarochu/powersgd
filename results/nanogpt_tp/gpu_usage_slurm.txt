@@ -1,0 +1,21 @@
+# GPU usage per job step from Slurm accounting (TRESUsageInAve). gpuutil = average % of time a GPU kernel ran;
+# gpumem = average GPU memory used. The .batch step is the launcher and reports 0. Jobs started by
+# perlmutter/run.sbatch with GPU_MONITOR=1 have the monitor as step .0 and training as step .1.
+# Coarse sampling makes this unreliable for jobs of a minute or two; prefer the nvidia-smi CSVs when present.
+# Command: sacct -j 62006046,62006912,62006917,62006918,62006920,62006924,62006927,62006947,62006949,62006950 -P -n --format=JobID,JobName%60,TRESUsageInAve%500
+62006949|gpt_tp|
+62006949.batch|batch|cpu=00:00:01,energy=1410256,fs/disk=6235952,gres/gpumem=0,gres/gpuutil=0,mem=47620K,pages=13,vmem=0
+62006949.extern|extern|energy=1409846
+62006949.0|torchrun|cpu=00:11:12,energy=301079,fs/disk=233338540,gres/gpumem=15936M,gres/gpuutil=392,mem=5273924K,pages=944,vmem=0
+62006949.1|bash|cpu=00:00:00,energy=1410316,fs/disk=345771,gres/gpumem=0,gres/gpuutil=0,mem=17448K,pages=0,vmem=0
+62006949.2|torchrun|cpu=00:11:48,energy=293536,fs/disk=233971307,gres/gpumem=22384M,gres/gpuutil=387,mem=4368136K,pages=42,vmem=0
+62006949.3|torchrun|cpu=00:15:42,energy=369879,fs/disk=233394825,gres/gpumem=19768M,gres/gpuutil=392,mem=4356.50M,pages=1,vmem=0
+62006949.4|torchrun|cpu=00:15:51,energy=355214,fs/disk=234026530,gres/gpumem=23920M,gres/gpuutil=384,mem=4514240K,pages=0,vmem=0
+62006950|gpt_tp|
+62006950.batch|batch|cpu=00:00:01,energy=1565230,fs/disk=6245137,gres/gpumem=0,gres/gpuutil=0,mem=45796K,pages=14,vmem=0
+62006950.extern|extern|energy=1559402
+62006950.0|bash|cpu=00:00:00,energy=1561937,fs/disk=345935,gres/gpumem=0,gres/gpuutil=0,mem=19226K,pages=1,vmem=0
+62006950.1|torchrun|cpu=00:20:58,energy=296061,fs/disk=233169432,gres/gpumem=15344M,gres/gpuutil=392,mem=6200550K,pages=945,vmem=0
+62006950.2|torchrun|cpu=00:24:05,energy=335455,fs/disk=233814832,gres/gpumem=21792M,gres/gpuutil=385,mem=5295796K,pages=43,vmem=0
+62006950.3|torchrun|cpu=00:32:27,energy=426628,fs/disk=233251512,gres/gpumem=25624M,gres/gpuutil=386,mem=6185558K,pages=1,vmem=0
+62006950.4|torchrun|cpu=00:34:45,energy=458893,fs/disk=233900494,gres/gpumem=28488M,gres/gpuutil=380,mem=6244074K,pages=0,vmem=0

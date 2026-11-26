@@ -1,0 +1,4 @@
+{"type": "start", "run_id": "timing_powersgd_r2", "params": 11173962, "world_size": 4, "total_steps": 194, "lr_eff": 0.1, "global_batch": 512, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 1.9553110021905802, "train_time_s": 2.4760338636115193, "elapsed_s": 4.021331331052352, "median_step_s": 0.01984412199817598, "test_acc": 0.2091, "test_loss": 3.5496268310546877}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 1.4319740361774091, "train_time_s": 4.463293635752052, "elapsed_s": 7.514967590046581, "median_step_s": 0.019765590026509017, "test_acc": 0.5345, "test_loss": 1.2678384216308594}
+{"type": "done", "wall_time_s": 7.51565841701813, "median_step_time_s": 0.019765590026509017, "comm_bytes_per_step": 329040.0, "status": "ok"}

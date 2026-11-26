@@ -1,0 +1,19 @@
+# GPU usage per job step from Slurm accounting (TRESUsageInAve). gpuutil = average % of time a GPU kernel ran;
+# gpumem = average GPU memory used. The .batch step is the launcher and reports 0. Jobs started by
+# perlmutter/run.sbatch with GPU_MONITOR=1 have the monitor as step .0 and training as step .1.
+# Coarse sampling makes this unreliable for jobs of a minute or two; prefer the nvidia-smi CSVs when present.
+# Command: sacct -j 62006046,62006912,62006917,62006918,62006920,62006924,62006927,62006947,62006949,62006950 -P -n --format=JobID,JobName%60,TRESUsageInAve%500
+62006924|gpt_large|
+62006924.batch|batch|cpu=00:00:00,energy=2906494,fs/disk=5627373,gres/gpumem=0,gres/gpuutil=0,mem=43888K,pages=13,vmem=0
+62006924.extern|extern|energy=2900718
+62006924.0|bash|cpu=00:00:00,energy=2907587,fs/disk=345793,gres/gpumem=0,gres/gpuutil=0,mem=17968K,pages=0,vmem=0
+62006924.1|torchrun|cpu=00:35:16,energy=920717,fs/disk=233325852,gres/gpumem=51584M,gres/gpuutil=400,mem=5565200K,pages=932,vmem=0
+62006924.2|torchrun|cpu=00:37:42,energy=975436,fs/disk=234098464,gres/gpumem=58440M,gres/gpuutil=398,mem=4751380K,pages=12,vmem=0
+62006924.3|torchrun|cpu=00:37:43,energy=968772,fs/disk=233961967,gres/gpumem=58728M,gres/gpuutil=399,mem=4666756K,pages=40,vmem=0
+62006927|gpt_large|
+62006927.batch|batch|cpu=00:00:00,energy=1020422,fs/disk=5627372,gres/gpumem=0,gres/gpuutil=0,mem=43032K,pages=14,vmem=0
+62006927.extern|extern|energy=1017813
+62006927.0|bash|cpu=00:00:00,energy=1019867,fs/disk=345801,gres/gpumem=0,gres/gpuutil=0,mem=17820K,pages=0,vmem=0
+62006927.1|torchrun|cpu=00:11:21,energy=303703,fs/disk=233212360,gres/gpumem=24640M,gres/gpuutil=396,mem=5339056K,pages=950,vmem=0
+62006927.2|torchrun|cpu=00:11:49,energy=312780,fs/disk=233841574,gres/gpumem=33752M,gres/gpuutil=395,mem=4518444K,pages=9,vmem=0
+62006927.3|torchrun|cpu=00:11:42,energy=303092,fs/disk=233844365,gres/gpumem=34000M,gres/gpuutil=395,mem=4428084K,pages=42,vmem=0

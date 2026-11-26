@@ -1,0 +1,42 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+=== smoke_ddp_fp32
+{"type": "done", "wall_time_s": 4.616286737960763, "median_step_time_s": 0.07823396800085902, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+=== smoke_r2_fp32
+{"type": "done", "wall_time_s": 4.657255017023999, "median_step_time_s": 0.08404266799334437, "comm_bytes_per_step": 430096.0, "status": "ok"}
+=== smoke_ddp_fp16
+{"type": "done", "wall_time_s": 4.3921482670120895, "median_step_time_s": 0.07820420601638034, "comm_bytes_per_step": 21591552.0, "status": "ok"}
+=== smoke_ddp_bf16
+{"type": "done", "wall_time_s": 4.387523851997685, "median_step_time_s": 0.07819539803313091, "comm_bytes_per_step": 21591552.0, "status": "ok"}
+=== smoke_ddp_fp8e4m3
+{"type": "done", "wall_time_s": 4.43366960901767, "median_step_time_s": 0.07860646303743124, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+=== smoke_ddp_fp8e5m2
+{"type": "done", "wall_time_s": 4.437574899988249, "median_step_time_s": 0.078626008995343, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+=== smoke_r4_fp16
+{"type": "done", "wall_time_s": 4.861350374005269, "median_step_time_s": 0.08657089696498588, "comm_bytes_per_step": 368656.0, "status": "ok"}
+=== smoke_ddp_bw10
+{"type": "done", "wall_time_s": 4.482388355012517, "median_step_time_s": 0.078174615977332, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+=== smoke_r2_bw10
+{"type": "done", "wall_time_s": 4.686735102965031, "median_step_time_s": 0.08402759401360527, "comm_bytes_per_step": 430096.0, "status": "ok"}
+=== smoke_medium_ddp
+{"type": "done", "wall_time_s": 9.029841797950212, "median_step_time_s": 0.16604485997231677, "comm_bytes_per_step": 101670912.0, "status": "ok"}
+=== smoke_large_ddp
+{"type": "done", "wall_time_s": 27.2853793510003, "median_step_time_s": 0.5118281950126402, "comm_bytes_per_step": 341409792.0, "status": "ok"}
+=== smoke_large_r4
+{"type": "done", "wall_time_s": 28.219552071008366, "median_step_time_s": 0.5308568709879182, "comm_bytes_per_step": 2887712.0, "status": "ok"}
+run                  status          params  step ms  bytes/step modeled delay s
+smoke_ddp_fp32       ok          10,795,776     78.2   4.318e+07               -
+smoke_r2_fp32        ok          10,795,776     84.0   4.301e+05               -
+smoke_ddp_fp16       ok          10,795,776     78.2   2.159e+07               -
+smoke_ddp_bf16       ok          10,795,776     78.2   2.159e+07               -
+smoke_ddp_fp8e4m3    ok          10,795,776     78.6   4.318e+07               -
+smoke_ddp_fp8e5m2    ok          10,795,776     78.6   4.318e+07               -
+smoke_r4_fp16        ok          10,795,776     86.6   3.687e+05               -
+smoke_ddp_bw10       ok          10,795,776     78.2   4.318e+07 2.072788992000002
+smoke_r2_bw10        ok          10,795,776     84.0   4.301e+05 0.27716265599999995
+smoke_medium_ddp     ok          25,417,728    166.0   1.017e+08               -
+smoke_large_ddp      ok          85,352,448    511.8   3.414e+08               -
+smoke_large_r4       ok          85,352,448    530.9   2.888e+06               -
+modeled 10 Gbit/s link on DDP: expected about +51.8 ms/step, measured +-0.1 ms/step

@@ -1,0 +1,2 @@
+JobID|JobName|Elapsed|State|NNodes|ExitCode|Start|End
+62006046|interactive|00:29:20|COMPLETED|1|0:0|2026-11-25T16:28:25|2026-11-25T16:57:45

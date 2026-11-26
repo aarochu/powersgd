@@ -1,0 +1,58 @@
+# GPU usage per job step from Slurm accounting (TRESUsageInAve). gpuutil = average % of time a GPU kernel ran;
+# gpumem = average GPU memory used. The .batch step is the launcher and reports 0. Jobs started by
+# perlmutter/run.sbatch with GPU_MONITOR=1 have the monitor as step .0 and training as step .1.
+# Coarse sampling makes this unreliable for jobs of a minute or two; prefer the nvidia-smi CSVs when present.
+# Command: sacct -j 62006046,62006912,62006917,62006918,62006920,62006924,62006927,62006947,62006949,62006950 -P -n --format=JobID,JobName%60,TRESUsageInAve%500
+62006046|interactive|
+62006046.interactive|interactive|cpu=00:00:06,energy=1074154,fs/disk=47941208,gres/gpumem=0,gres/gpuutil=0,mem=60428K,pages=21,vmem=0
+62006046.extern|extern|energy=1074055
+62006046.0|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.1|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.2|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.3|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.4|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.5|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.6|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.7|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.8|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.9|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.10|torchrun|cpu=00:01:47,energy=38278,fs/disk=228314673,gres/gpumem=51008M,gres/gpuutil=396,mem=4543608K,pages=0,vmem=0
+62006046.11|torchrun|cpu=00:01:39,energy=34901,fs/disk=228946294,gres/gpumem=57576M,gres/gpuutil=396,mem=4620812K,pages=34,vmem=0
+62006046.12|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.13|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.14|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.15|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.16|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.17|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.18|torchrun|cpu=00:01:46,energy=34091,fs/disk=228459607,gres/gpumem=61056M,gres/gpuutil=396,mem=4594816K,pages=0,vmem=0
+62006046.19|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.20|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.21|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.22|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.23|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.24|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.25|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.26|torchrun|cpu=00:01:47,energy=34295,fs/disk=228462637,gres/gpumem=59868M,gres/gpuutil=396,mem=4601592K,pages=0,vmem=0
+62006046.27|bash|cpu=00:00:00,energy=16892,fs/disk=352699,gres/gpumem=0,gres/gpuutil=0,mem=17600K,pages=0,vmem=0
+62006046.28|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.29|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.30|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.31|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.32|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.33|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.34|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.35|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.36|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.37|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.38|torchrun|cpu=00:00:00,energy=0,fs/disk=822,gres/gpumem=0,gres/gpuutil=0,mem=512K,pages=0,vmem=0
+62006046.39|torchrun|cpu=00:00:00,energy=0,fs/disk=774,gres/gpumem=0,gres/gpuutil=0,mem=0,pages=0,vmem=0
+62006046.40|torchrun|cpu=00:01:47,energy=37892,fs/disk=228322665,gres/gpumem=50720M,gres/gpuutil=396,mem=4538020K,pages=0,vmem=0
+62006046.41|torchrun|cpu=00:01:46,energy=37248,fs/disk=228953990,gres/gpumem=58728M,gres/gpuutil=396,mem=4602768K,pages=0,vmem=0
+62006947|t1_resnet18_1n|
+62006947.batch|batch|cpu=00:00:01,energy=470772,fs/disk=6234641,gres/gpumem=0,gres/gpuutil=0,mem=43236K,pages=13,vmem=0
+62006947.extern|extern|energy=470228
+62006947.0|bash|cpu=00:00:00,energy=470902,fs/disk=345812,gres/gpumem=0,gres/gpuutil=0,mem=18520K,pages=0,vmem=0
+62006947.1|torchrun|cpu=00:09:51,energy=86348,fs/disk=2492715159,gres/gpumem=9422M,gres/gpuutil=338,mem=7144388K,pages=1318,vmem=0
+62006947.2|torchrun|cpu=00:10:33,energy=88681,fs/disk=2493443488,gres/gpumem=15566M,gres/gpuutil=331,mem=6087532K,pages=25,vmem=0
+62006947.3|torchrun|cpu=00:10:30,energy=88985,fs/disk=2493327741,gres/gpumem=15566M,gres/gpuutil=330,mem=6063580K,pages=9,vmem=0
+62006947.4|torchrun|cpu=00:13:26,energy=116665,fs/disk=2496131087,gres/gpumem=15624M,gres/gpuutil=332,mem=5978604K,pages=28,vmem=0

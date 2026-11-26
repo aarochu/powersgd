@@ -1,0 +1,235 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+W1125 17:34:44.607000 8583 site-packages/torch/distributed/run.py:874] 
+W1125 17:34:44.607000 8583 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:34:44.607000 8583 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:34:44.607000 8583 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:34:49] nid001305:8693:8693 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:34:49] nid001305:8695:8695 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:34:49] nid001305:8692:8692 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:34:49] nid001305:8694:8694 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_ddp_s2_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.3155908999443056, "train_time_s": 20.656171492300928, "elapsed_s": 21.666628501960076, "median_step_s": 0.07970644696615636, "val_loss": 1.838307011127472, "val_ppl": 6.285887310329787}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 1.4927444438934325, "train_time_s": 40.84715677599888, "elapsed_s": 42.88969207392074, "median_step_s": 0.07970842102076858, "val_loss": 1.5216048985719681, "val_ppl": 4.579569044318792}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.2378968381881714, "train_time_s": 61.03499848791398, "elapsed_s": 64.08849216694944, "median_step_s": 0.07970868150005117, "val_loss": 1.4884577721357346, "val_ppl": 4.430257780688407}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.0650879983901977, "train_time_s": 81.22237325995229, "elapsed_s": 85.28722084092442, "median_step_s": 0.0797022320330143, "val_loss": 1.5747201889753342, "val_ppl": 4.82939011244013}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 0.8848239574432373, "train_time_s": 101.40747479395941, "elapsed_s": 106.4838326399913, "median_step_s": 0.07969618251081556, "val_loss": 1.7463924080133437, "val_ppl": 5.733879819785577}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 0.7176540322303772, "train_time_s": 121.59322352823801, "elapsed_s": 127.68056023598183, "median_step_s": 0.07969339052215219, "val_loss": 1.9387149065732956, "val_ppl": 6.94981406911345}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 0.5979363658428192, "train_time_s": 141.77235227497295, "elapsed_s": 148.8701372089563, "median_step_s": 0.07968909747432917, "val_loss": 2.0968795359134673, "val_ppl": 8.140727389515797}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 0.5233810474872589, "train_time_s": 161.98944948602002, "elapsed_s": 170.0985996068921, "median_step_s": 0.07968525745673105, "val_loss": 2.2054955422878266, "val_ppl": 9.074747374908766}
+{"type": "done", "wall_time_s": 170.09924027498346, "median_step_time_s": 0.07968525745673105, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:37:50.779000 9128 site-packages/torch/distributed/run.py:874] 
+W1125 17:37:50.779000 9128 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:37:50.779000 9128 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:37:50.779000 9128 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:37:55] nid001305:9220:9220 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:37:55] nid001305:9222:9222 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:37:55] nid001305:9223:9223 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:37:55] nid001305:9221:9221 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_r1_s2_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.8424790201187133, "train_time_s": 21.383665657718666, "elapsed_s": 22.396230067010038, "median_step_s": 0.08300351101206616, "val_loss": 2.6644989967346193, "val_ppl": 14.360752959264639}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.6301773443222047, "train_time_s": 42.40605742158368, "elapsed_s": 44.44380121899303, "median_step_s": 0.08299370249733329, "val_loss": 2.567536783218384, "val_ppl": 13.0336800884131}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.567125040054321, "train_time_s": 63.411066926666535, "elapsed_s": 66.45982138509862, "median_step_s": 0.08296189503744245, "val_loss": 2.5395793974399568, "val_ppl": 12.674338990164003}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 2.520003589630127, "train_time_s": 84.41772670729551, "elapsed_s": 88.47778153407853, "median_step_s": 0.08296136651188135, "val_loss": 2.4934012472629545, "val_ppl": 12.102369347334344}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 2.4684448719024656, "train_time_s": 105.42667822027579, "elapsed_s": 110.49819852702785, "median_step_s": 0.08296287554549053, "val_loss": 2.4423610866069794, "val_ppl": 11.500161590369682}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 2.417360531806946, "train_time_s": 126.43252555013169, "elapsed_s": 132.51489749306347, "median_step_s": 0.0829617470735684, "val_loss": 2.3972748160362243, "val_ppl": 10.993177092494824}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 2.3655505323410035, "train_time_s": 147.42654864129145, "elapsed_s": 154.5204127850011, "median_step_s": 0.08295693853870034, "val_loss": 2.345812326669693, "val_ppl": 10.441751396495901}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 2.3208038578033445, "train_time_s": 168.458478291519, "elapsed_s": 176.56299739901442, "median_step_s": 0.08295390743296593, "val_loss": 2.309666794538498, "val_ppl": 10.071068360895865}
+{"type": "done", "wall_time_s": 176.56358998001087, "median_step_time_s": 0.08295390743296593, "comm_bytes_per_step": 276488.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:41:01.049000 9362 site-packages/torch/distributed/run.py:874] 
+W1125 17:41:01.049000 9362 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:41:01.049000 9362 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:41:01.049000 9362 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:41:05] nid001305:9455:9455 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:41:05] nid001305:9458:9458 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:41:05] nid001305:9456:9456 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:41:05] nid001305:9457:9457 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_r2_s2_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.661796360015869, "train_time_s": 21.77558936108835, "elapsed_s": 22.787680200999603, "median_step_s": 0.08497172605711967, "val_loss": 2.548941195011139, "val_ppl": 12.793550733569242}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.4974261312484742, "train_time_s": 43.19501258956734, "elapsed_s": 45.23503331607208, "median_step_s": 0.08466927101835608, "val_loss": 2.4913880944252016, "val_ppl": 12.078029935837085}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.433072334289551, "train_time_s": 64.61224581033457, "elapsed_s": 67.6641226389911, "median_step_s": 0.08458085003076121, "val_loss": 2.4262593746185304, "val_ppl": 11.316472126712709}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 2.2966441192626954, "train_time_s": 86.02839055308141, "elapsed_s": 90.09218096500263, "median_step_s": 0.08455683948704973, "val_loss": 2.2043409943580627, "val_ppl": 9.064276190019509}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 2.069661307811737, "train_time_s": 107.4417473548092, "elapsed_s": 112.5173953929916, "median_step_s": 0.08455028157914057, "val_loss": 2.046104538440704, "val_ppl": 7.73770040717235}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 1.895478681087494, "train_time_s": 128.89024294365663, "elapsed_s": 134.97701745701488, "median_step_s": 0.08454220648854971, "val_loss": 1.9018242001533507, "val_ppl": 6.698101983059785}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 1.766152286052704, "train_time_s": 150.30304707598407, "elapsed_s": 157.40080097899772, "median_step_s": 0.08453753747744486, "val_loss": 1.8137500047683717, "val_ppl": 6.133404657186826}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 1.6839805274009705, "train_time_s": 171.7074690995505, "elapsed_s": 179.8168760710396, "median_step_s": 0.08453217695932835, "val_loss": 1.7622154295444488, "val_ppl": 5.825328714564496}
+{"type": "done", "wall_time_s": 179.8173741060309, "median_step_time_s": 0.08453217695932835, "comm_bytes_per_step": 430096.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:44:14.907000 10922 site-packages/torch/distributed/run.py:874] 
+W1125 17:44:14.907000 10922 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:44:14.907000 10922 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:44:14.907000 10922 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:44:19] nid001305:11015:11015 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:44:19] nid001305:11017:11017 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:44:19] nid001305:11018:11018 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:44:19] nid001305:11016:11016 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_r4_s2_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.5900840673446655, "train_time_s": 22.88005697040353, "elapsed_s": 23.8967092219973, "median_step_s": 0.08945339743513614, "val_loss": 2.4670212507247924, "val_ppl": 11.787283144589766}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.3009599199295043, "train_time_s": 45.528332631103694, "elapsed_s": 47.57483219495043, "median_step_s": 0.08938168844906613, "val_loss": 2.182497668266296, "val_ppl": 8.868429013287466}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.9936674208641052, "train_time_s": 68.18224578280933, "elapsed_s": 71.24497132992838, "median_step_s": 0.08937120257178321, "val_loss": 1.9746027559041976, "val_ppl": 7.203757435249647}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.7828571257591248, "train_time_s": 90.82915252353996, "elapsed_s": 94.90818169701379, "median_step_s": 0.0893546610022895, "val_loss": 1.8042564958333969, "val_ppl": 6.075452644498511}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 1.6193354020118713, "train_time_s": 113.4785470982315, "elapsed_s": 118.57353491499089, "median_step_s": 0.08934256352949888, "val_loss": 1.6788407385349273, "val_ppl": 5.359339492804031}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 1.4969056072235107, "train_time_s": 136.0985011169687, "elapsed_s": 142.20950905198697, "median_step_s": 0.08931220998056233, "val_loss": 1.5967330574989318, "val_ppl": 4.9368775551414625}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 1.408849799633026, "train_time_s": 158.72548980161082, "elapsed_s": 165.8525190060027, "median_step_s": 0.08929718850413337, "val_loss": 1.53805610537529, "val_ppl": 4.655531606431064}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 1.3499144191741943, "train_time_s": 181.342629186227, "elapsed_s": 189.48590930900536, "median_step_s": 0.08927781804231927, "val_loss": 1.51114442050457, "val_ppl": 4.531914243310863}
+{"type": "done", "wall_time_s": 189.48644716094714, "median_step_time_s": 0.08927781804231927, "comm_bytes_per_step": 737312.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:47:37.347000 11136 site-packages/torch/distributed/run.py:874] 
+W1125 17:47:37.347000 11136 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:47:37.347000 11136 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:47:37.347000 11136 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:47:42] nid001305:11229:11229 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:47:42] nid001305:11231:11231 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:47:42] nid001305:11230:11230 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:47:42] nid001305:11232:11232 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_ddp_s3_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.297125639438629, "train_time_s": 20.417472705128603, "elapsed_s": 21.430235747015104, "median_step_s": 0.07968432898633182, "val_loss": 1.8003643661737443, "val_ppl": 6.051852152944627}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 1.4771218414306642, "train_time_s": 40.62390004086774, "elapsed_s": 42.66456103196833, "median_step_s": 0.07968726597027853, "val_loss": 1.5053672403097154, "val_ppl": 4.505808040827203}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.2309722747802734, "train_time_s": 60.81675623788033, "elapsed_s": 63.86996595002711, "median_step_s": 0.07967352401465178, "val_loss": 1.4747068494558335, "val_ppl": 4.36975458921338}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.0618032281398773, "train_time_s": 81.01993534795474, "elapsed_s": 85.08655209094286, "median_step_s": 0.07967587048187852, "val_loss": 1.559892201423645, "val_ppl": 4.758308278631526}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 0.8850505905151367, "train_time_s": 101.21609375020489, "elapsed_s": 106.29581448005047, "median_step_s": 0.07967664900934324, "val_loss": 1.737736961245537, "val_ppl": 5.684464691738971}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 0.722900286436081, "train_time_s": 121.43732832337264, "elapsed_s": 127.5286016339669, "median_step_s": 0.07968201697804034, "val_loss": 1.9255491316318512, "val_ppl": 6.858914078631664}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 0.6029935793876648, "train_time_s": 141.65334037761204, "elapsed_s": 148.75664108502679, "median_step_s": 0.07968719053314999, "val_loss": 2.0769922494888307, "val_ppl": 7.980429639021719}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 0.5313839398622513, "train_time_s": 161.87028666154947, "elapsed_s": 169.9845379940234, "median_step_s": 0.07969003648031503, "val_loss": 2.1854544937610627, "val_ppl": 8.894690216056345}
+{"type": "done", "wall_time_s": 169.98505188897252, "median_step_time_s": 0.07969003648031503, "comm_bytes_per_step": 43183104.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:50:40.373000 11364 site-packages/torch/distributed/run.py:874] 
+W1125 17:50:40.373000 11364 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:50:40.373000 11364 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:50:40.373000 11364 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:50:45] nid001305:11458:11458 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:50:45] nid001305:11457:11457 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:50:45] nid001305:11456:11456 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:50:45] nid001305:11459:11459 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_r1_s3_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.8542682409286497, "train_time_s": 21.329227433889173, "elapsed_s": 22.340584708959796, "median_step_s": 0.0829966144519858, "val_loss": 2.665842133760452, "val_ppl": 14.380054377606204}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.632309362411499, "train_time_s": 42.35667486488819, "elapsed_s": 44.396570649929345, "median_step_s": 0.08297234697965905, "val_loss": 2.6043111741542817, "val_ppl": 13.521907854452891}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.5665838060379027, "train_time_s": 63.373486215248704, "elapsed_s": 66.42438698990736, "median_step_s": 0.08295801153872162, "val_loss": 2.535328358411789, "val_ppl": 12.620574239454092}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 2.519810118675232, "train_time_s": 84.38445451587904, "elapsed_s": 88.44673507090192, "median_step_s": 0.08295156148960814, "val_loss": 2.5000961065292358, "val_ppl": 12.183664834178863}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 2.470238780975342, "train_time_s": 105.36795293248724, "elapsed_s": 110.44096406793687, "median_step_s": 0.08292243449250236, "val_loss": 2.4494977235794066, "val_ppl": 11.582527627431299}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 2.4272369146347046, "train_time_s": 126.35837130714208, "elapsed_s": 132.4422517939238, "median_step_s": 0.08291165251284838, "val_loss": 2.41610272526741, "val_ppl": 11.202116405961192}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 2.3783136987686158, "train_time_s": 147.22883900278248, "elapsed_s": 154.3236276579555, "median_step_s": 0.08286767749814317, "val_loss": 2.3734882533550263, "val_ppl": 10.73477265683801}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 2.338455877304077, "train_time_s": 168.1216717112111, "elapsed_s": 176.2279101239983, "median_step_s": 0.08281586295925081, "val_loss": 2.335175794363022, "val_ppl": 10.331275949816579}
+{"type": "done", "wall_time_s": 176.22842176491395, "median_step_time_s": 0.08281586295925081, "comm_bytes_per_step": 276488.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:53:49.222000 12923 site-packages/torch/distributed/run.py:874] 
+W1125 17:53:49.222000 12923 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:53:49.222000 12923 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:53:49.222000 12923 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:53:54] nid001305:13018:13018 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:53:54] nid001305:13016:13016 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:53:54] nid001305:13017:13017 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:53:54] nid001305:13015:13015 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_r2_s3_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.6631755113601683, "train_time_s": 21.81208604387939, "elapsed_s": 22.826234159991145, "median_step_s": 0.08504544105380774, "val_loss": 2.5323361337184904, "val_ppl": 12.582867087840233}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.499163745880127, "train_time_s": 43.38169665564783, "elapsed_s": 45.43476491991896, "median_step_s": 0.08505484397755936, "val_loss": 2.4950071692466738, "val_ppl": 12.121820422598669}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.4319765501022337, "train_time_s": 64.9580678291386, "elapsed_s": 68.02455159393139, "median_step_s": 0.0850440485519357, "val_loss": 2.410276120901108, "val_ppl": 11.137035888930567}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 2.272196765899658, "train_time_s": 86.56462663586717, "elapsed_s": 90.64412249496672, "median_step_s": 0.08505619404604658, "val_loss": 2.169861841201782, "val_ppl": 8.757074090327887}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 2.0571516613960266, "train_time_s": 108.1461608747486, "elapsed_s": 113.23716186999809, "median_step_s": 0.08504989347420633, "val_loss": 2.038101816177368, "val_ppl": 7.6760248551732175}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 1.8916748609542846, "train_time_s": 129.72161447477993, "elapsed_s": 135.8231711969711, "median_step_s": 0.0850440485519357, "val_loss": 1.8986011415719986, "val_ppl": 6.676548360936325}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 1.7594959468841553, "train_time_s": 151.24626434326638, "elapsed_s": 158.35877533699386, "median_step_s": 0.08504162798635662, "val_loss": 1.8094891965389253, "val_ppl": 6.107326991567305}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 1.6814065928459168, "train_time_s": 172.76308534666896, "elapsed_s": 180.88601640600245, "median_step_s": 0.08503749954979867, "val_loss": 1.7664834767580033, "val_ppl": 5.850244625872836}
+{"type": "done", "wall_time_s": 180.8866682179505, "median_step_time_s": 0.08503749954979867, "comm_bytes_per_step": 430096.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:57:03.104000 13135 site-packages/torch/distributed/run.py:874] 
+W1125 17:57:03.104000 13135 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:57:03.104000 13135 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:57:03.104000 13135 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:57:07] nid001305:13227:13227 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:57:07] nid001305:13230:13230 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:57:08] nid001305:13229:13229 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:57:08] nid001305:13228:13228 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_r4_s3_1node_62006912", "params": 10795776, "world_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.5915284643173218, "train_time_s": 22.82809464109596, "elapsed_s": 23.84494917304255, "median_step_s": 0.08944184897700325, "val_loss": 2.4645049273967743, "val_ppl": 11.75765981560692}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.3009570837020874, "train_time_s": 45.46873701084405, "elapsed_s": 47.52784244797658, "median_step_s": 0.0894056684919633, "val_loss": 2.1824576199054717, "val_ppl": 8.86807385435421}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.0081077222824097, "train_time_s": 68.11424419493414, "elapsed_s": 71.18826594296843, "median_step_s": 0.08940188703127205, "val_loss": 1.9622398555278777, "val_ppl": 7.115246353925684}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.78873646402359, "train_time_s": 90.7544320098823, "elapsed_s": 94.84335369395558, "median_step_s": 0.08939567947527394, "val_loss": 1.8068374186754226, "val_ppl": 6.091153171213044}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 1.623914423942566, "train_time_s": 113.40220899647102, "elapsed_s": 118.50716783502139, "median_step_s": 0.08939850050956011, "val_loss": 1.6852847695350648, "val_ppl": 5.393986756761995}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 1.4988991932868958, "train_time_s": 136.04072874656413, "elapsed_s": 142.1609170420561, "median_step_s": 0.08939028898021206, "val_loss": 1.5875758200883865, "val_ppl": 4.891875755850616}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 1.4047006349563598, "train_time_s": 158.68668753525708, "elapsed_s": 165.8225933200447, "median_step_s": 0.08939028898021206, "val_loss": 1.5366726398468018, "val_ppl": 4.649095292172813}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 1.3475384101867676, "train_time_s": 181.33957267354708, "elapsed_s": 189.49110526195727, "median_step_s": 0.08939740300411358, "val_loss": 1.5105335026979447, "val_ppl": 4.529146461731134}
+{"type": "done", "wall_time_s": 189.49176570097916, "median_step_time_s": 0.08939740300411358, "comm_bytes_per_step": 737312.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+srun: forcing job termination
+JobID           Elapsed   NNodes                                                    AllocTRES      State 
+------------ ---------- -------- ------------------------------------------------------------ ---------- 
+62006912       00:25:51        1 billing=128,cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,+    RUNNING 
+62006912.ba+   00:25:51        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62006912.ex+   00:25:51        1 billing=128,cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,+    RUNNING 
+62006912.0     00:25:46        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62006912.1     00:03:12        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.2     00:03:08        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.3     00:03:15        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.4     00:03:22        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.5     00:03:04        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.6     00:03:08        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.7     00:03:15        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006912.8     00:03:22        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 

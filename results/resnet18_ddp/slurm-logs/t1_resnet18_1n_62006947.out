@@ -1,0 +1,243 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+W1125 17:10:21.075000 1197157 site-packages/torch/distributed/run.py:874] 
+W1125 17:10:21.075000 1197157 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:10:21.075000 1197157 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:10:21.075000 1197157 site-packages/torch/distributed/run.py:874] *****************************************
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:10:32] nid008348:1197270:1197270 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:10:32] nid008348:1197268:1197268 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:10:32] nid008348:1197269:1197269 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:10:32] nid008348:1197267:1197267 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "resnet18_ddp_fp32_w4_s1_1125-171032", "params": 11173962, "world_size": 4, "total_steps": 2910, "lr_eff": 0.1, "global_batch": 512, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 1.7572308840210904, "train_time_s": 2.6513659248594195, "elapsed_s": 4.262090962030925, "median_step_s": 0.015447307960130274, "test_acc": 0.427, "test_loss": 2.2008849365234373}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 1.0426957465938687, "train_time_s": 4.2329534373711795, "elapsed_s": 7.369217975996435, "median_step_s": 0.015439933456946164, "test_acc": 0.6279, "test_loss": 1.1289950408935547}
+{"type": "eval", "step": 291, "epoch": 3.0, "train_loss": 0.7641841627887844, "train_time_s": 5.789972235681489, "elapsed_s": 10.42893514293246, "median_step_s": 0.015357873984612525, "test_acc": 0.6709, "test_loss": 1.1089581604003906}
+{"type": "eval", "step": 388, "epoch": 4.0, "train_loss": 0.6060876895471946, "train_time_s": 7.340552033972926, "elapsed_s": 13.471612320980057, "median_step_s": 0.015349753433838487, "test_acc": 0.7743, "test_loss": 0.6791547576904297}
+{"type": "eval", "step": 485, "epoch": 5.0, "train_loss": 0.5199386965982693, "train_time_s": 8.890872332733124, "elapsed_s": 16.507795230019838, "median_step_s": 0.01534008898306638, "test_acc": 0.808, "test_loss": 0.604042431640625}
+{"type": "eval", "step": 582, "epoch": 6.0, "train_loss": 0.4546791849677096, "train_time_s": 10.441927125910297, "elapsed_s": 19.55294445902109, "median_step_s": 0.015333392017055303, "test_acc": 0.7825, "test_loss": 0.6865211059570312}
+{"type": "eval", "step": 679, "epoch": 7.0, "train_loss": 0.402711320015573, "train_time_s": 11.991722106235102, "elapsed_s": 22.594821412931196, "median_step_s": 0.01533066900447011, "test_acc": 0.8343, "test_loss": 0.4853770935058594}
+{"type": "eval", "step": 776, "epoch": 8.0, "train_loss": 0.3642690475146795, "train_time_s": 13.553077853517607, "elapsed_s": 25.658742410014383, "median_step_s": 0.015328963520005345, "test_acc": 0.8089, "test_loss": 0.6197902709960937}
+{"type": "eval", "step": 873, "epoch": 9.0, "train_loss": 0.33955121516566916, "train_time_s": 15.104357970063575, "elapsed_s": 28.700437132967636, "median_step_s": 0.01532754604704678, "test_acc": 0.8235, "test_loss": 0.5354350036621094}
+{"type": "eval", "step": 970, "epoch": 10.0, "train_loss": 0.3256873864795744, "train_time_s": 16.654461457394063, "elapsed_s": 31.74704055802431, "median_step_s": 0.015324758482165635, "test_acc": 0.8465, "test_loss": 0.4805758529663086}
+{"type": "eval", "step": 1067, "epoch": 11.0, "train_loss": 0.2879002068153362, "train_time_s": 18.204382002935745, "elapsed_s": 34.79386415902991, "median_step_s": 0.015320211998187006, "test_acc": 0.8496, "test_loss": 0.4839358703613281}
+{"type": "eval", "step": 1164, "epoch": 12.0, "train_loss": 0.2677273919287416, "train_time_s": 19.750157922506332, "elapsed_s": 37.82200910698157, "median_step_s": 0.015316945035010576, "test_acc": 0.8609, "test_loss": 0.43875703125}
+{"type": "eval", "step": 1261, "epoch": 13.0, "train_loss": 0.24951477602277836, "train_time_s": 21.297453598934226, "elapsed_s": 40.871863369015045, "median_step_s": 0.015314709977246821, "test_acc": 0.869, "test_loss": 0.412868928527832}
+{"type": "eval", "step": 1358, "epoch": 14.0, "train_loss": 0.22191896904067895, "train_time_s": 22.843543285271153, "elapsed_s": 43.90782035503071, "median_step_s": 0.015310916467569768, "test_acc": 0.8797, "test_loss": 0.39206475830078125}
+{"type": "eval", "step": 1455, "epoch": 15.0, "train_loss": 0.19519420667100199, "train_time_s": 24.391181592014618, "elapsed_s": 46.94540190300904, "median_step_s": 0.015310132061131299, "test_acc": 0.8924, "test_loss": 0.3421028564453125}
+{"type": "eval", "step": 1552, "epoch": 16.0, "train_loss": 0.17745830026484027, "train_time_s": 25.952873957459815, "elapsed_s": 49.99811588600278, "median_step_s": 0.015311683528125286, "test_acc": 0.884, "test_loss": 0.38363399810791016}
+{"type": "eval", "step": 1649, "epoch": 17.0, "train_loss": 0.16097003659329465, "train_time_s": 27.49973459506873, "elapsed_s": 53.03251285501756, "median_step_s": 0.01531051890924573, "test_acc": 0.8722, "test_loss": 0.4596466125488281}
+{"type": "eval", "step": 1746, "epoch": 18.0, "train_loss": 0.14489303283470192, "train_time_s": 29.047937570605427, "elapsed_s": 56.080684251966886, "median_step_s": 0.015310424496419728, "test_acc": 0.8801, "test_loss": 0.4201919677734375}
+{"type": "eval", "step": 1843, "epoch": 19.0, "train_loss": 0.11928748293328531, "train_time_s": 30.597322148038074, "elapsed_s": 59.11919161095284, "median_step_s": 0.01531043997965753, "test_acc": 0.8944, "test_loss": 0.35669530334472654}
+{"type": "eval", "step": 1940, "epoch": 20.0, "train_loss": 0.10892136058933341, "train_time_s": 32.145826315972954, "elapsed_s": 62.15927823295351, "median_step_s": 0.015309187059756368, "test_acc": 0.9082, "test_loss": 0.3168849304199219}
+{"type": "eval", "step": 2037, "epoch": 21.0, "train_loss": 0.08442886818930045, "train_time_s": 33.69515262765344, "elapsed_s": 65.21427213493735, "median_step_s": 0.015307777910493314, "test_acc": 0.9109, "test_loss": 0.3150832420349121}
+{"type": "eval", "step": 2134, "epoch": 22.0, "train_loss": 0.07339630139626793, "train_time_s": 35.2450845784042, "elapsed_s": 68.38367792300414, "median_step_s": 0.015307735942769796, "test_acc": 0.9157, "test_loss": 0.3121036155700684}
+{"type": "eval", "step": 2231, "epoch": 23.0, "train_loss": 0.0626080083977623, "train_time_s": 36.792434714501724, "elapsed_s": 71.43994101893622, "median_step_s": 0.015306171029806137, "test_acc": 0.9177, "test_loss": 0.30197350540161133}
+{"type": "eval", "step": 2328, "epoch": 24.0, "train_loss": 0.04818569478511657, "train_time_s": 38.33741213334724, "elapsed_s": 74.47696708294097, "median_step_s": 0.015303252032026649, "test_acc": 0.9204, "test_loss": 0.2928640121459961}
+{"type": "eval", "step": 2425, "epoch": 25.0, "train_loss": 0.04347976377790736, "train_time_s": 39.89624346513301, "elapsed_s": 77.5293355169706, "median_step_s": 0.015302903950214386, "test_acc": 0.9226, "test_loss": 0.2980471374511719}
+{"type": "eval", "step": 2522, "epoch": 26.0, "train_loss": 0.03424777628700297, "train_time_s": 41.43895041185897, "elapsed_s": 80.56361657194793, "median_step_s": 0.015301587525755167, "test_acc": 0.9248, "test_loss": 0.2966190818786621}
+{"type": "eval", "step": 2619, "epoch": 27.0, "train_loss": 0.027870871217863767, "train_time_s": 42.982914122985676, "elapsed_s": 83.60092111094855, "median_step_s": 0.015300791012123227, "test_acc": 0.9242, "test_loss": 0.2934628730773926}
+{"type": "eval", "step": 2716, "epoch": 28.0, "train_loss": 0.025477931131464765, "train_time_s": 44.53097334643826, "elapsed_s": 86.64615385897923, "median_step_s": 0.015301164472475648, "test_acc": 0.9252, "test_loss": 0.2884936088562012}
+{"type": "eval", "step": 2813, "epoch": 29.0, "train_loss": 0.023109318532491315, "train_time_s": 46.077229157672264, "elapsed_s": 89.6779318189947, "median_step_s": 0.015299869002774358, "test_acc": 0.9254, "test_loss": 0.28956218643188475}
+{"type": "eval", "step": 2910, "epoch": 30.0, "train_loss": 0.021885497490731404, "train_time_s": 47.622886325232685, "elapsed_s": 92.71370420593303, "median_step_s": 0.01529971498530358, "test_acc": 0.9249, "test_loss": 0.28935413513183594}
+{"type": "done", "wall_time_s": 92.71433460502885, "median_step_time_s": 0.01529971498530358, "comm_bytes_per_step": 44695848.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:12:11.139000 1197448 site-packages/torch/distributed/run.py:874] 
+W1125 17:12:11.139000 1197448 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:12:11.139000 1197448 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:12:11.139000 1197448 site-packages/torch/distributed/run.py:874] *****************************************
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:12:19] nid008348:1197540:1197540 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:12:19] nid008348:1197541:1197541 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:12:19] nid008348:1197542:1197542 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:12:19] nid008348:1197543:1197543 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "resnet18_powersgd1_fp32_w4_s1_1125-171219", "params": 11173962, "world_size": 4, "total_steps": 2910, "lr_eff": 0.1, "global_batch": 512, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 2.247588125700803, "train_time_s": 2.5590777478646487, "elapsed_s": 4.108533036080189, "median_step_s": 0.019614921999163926, "test_acc": 0.2248, "test_loss": 2.9510172729492186}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 1.7573856398002388, "train_time_s": 4.618183781742118, "elapsed_s": 7.683583021047525, "median_step_s": 0.019314933044370264, "test_acc": 0.3222, "test_loss": 1.8245005615234375}
+{"type": "eval", "step": 291, "epoch": 3.0, "train_loss": 1.5991420917904253, "train_time_s": 6.638510299962945, "elapsed_s": 11.204997054999694, "median_step_s": 0.019089395995251834, "test_acc": 0.432, "test_loss": 1.5370769287109376}
+{"type": "eval", "step": 388, "epoch": 4.0, "train_loss": 1.4867845859724222, "train_time_s": 8.400470599066466, "elapsed_s": 14.464806283009239, "median_step_s": 0.01840238948352635, "test_acc": 0.4345, "test_loss": 1.5785449462890624}
+{"type": "eval", "step": 485, "epoch": 5.0, "train_loss": 1.3607780957959361, "train_time_s": 10.160397897823714, "elapsed_s": 17.72908717300743, "median_step_s": 0.017706835991702974, "test_acc": 0.4937, "test_loss": 1.4525375122070312}
+{"type": "eval", "step": 582, "epoch": 6.0, "train_loss": 1.2586870838686364, "train_time_s": 11.917485302779824, "elapsed_s": 20.970905859023333, "median_step_s": 0.017619856516830623, "test_acc": 0.5453, "test_loss": 1.2764139343261718}
+{"type": "eval", "step": 679, "epoch": 7.0, "train_loss": 1.1434179292511695, "train_time_s": 13.676012426847592, "elapsed_s": 24.20944662007969, "median_step_s": 0.017587224021553993, "test_acc": 0.5777, "test_loss": 1.2092745849609374}
+{"type": "eval", "step": 776, "epoch": 8.0, "train_loss": 1.0673079527530474, "train_time_s": 15.491086246445775, "elapsed_s": 27.51048171601724, "median_step_s": 0.01758102746680379, "test_acc": 0.5861, "test_loss": 1.2214068664550781}
+{"type": "eval", "step": 873, "epoch": 9.0, "train_loss": 1.0106942457022126, "train_time_s": 17.254329454735853, "elapsed_s": 30.74271258409135, "median_step_s": 0.017563838977366686, "test_acc": 0.6116, "test_loss": 1.0869645568847657}
+{"type": "eval", "step": 970, "epoch": 10.0, "train_loss": 0.9552105192056636, "train_time_s": 19.024871950037777, "elapsed_s": 33.998466705088504, "median_step_s": 0.017558988998644054, "test_acc": 0.6236, "test_loss": 1.0951689331054688}
+{"type": "eval", "step": 1067, "epoch": 11.0, "train_loss": 0.9349527721552505, "train_time_s": 20.79322977468837, "elapsed_s": 37.255912969005294, "median_step_s": 0.017556182923726737, "test_acc": 0.6332, "test_loss": 1.0576493713378907}
+{"type": "eval", "step": 1164, "epoch": 12.0, "train_loss": 0.8654202333430654, "train_time_s": 22.67245584737975, "elapsed_s": 40.61848008609377, "median_step_s": 0.017565927002578974, "test_acc": 0.6837, "test_loss": 0.9118678955078126}
+{"type": "eval", "step": 1261, "epoch": 13.0, "train_loss": 0.7924687057426295, "train_time_s": 24.779680609935895, "elapsed_s": 44.201797425048426, "median_step_s": 0.01759869500529021, "test_acc": 0.6475, "test_loss": 1.0724315368652344}
+{"type": "eval", "step": 1358, "epoch": 14.0, "train_loss": 0.7513224955686589, "train_time_s": 26.88467985216994, "elapsed_s": 47.79543710802682, "median_step_s": 0.017633863957598805, "test_acc": 0.6982, "test_loss": 0.8805235321044922}
+{"type": "eval", "step": 1455, "epoch": 15.0, "train_loss": 0.6897034178075102, "train_time_s": 28.801056547672488, "elapsed_s": 51.19312589708716, "median_step_s": 0.017636359087191522, "test_acc": 0.7128, "test_loss": 0.8251590454101563}
+{"type": "eval", "step": 1552, "epoch": 16.0, "train_loss": 0.6525742270282864, "train_time_s": 30.71943516389001, "elapsed_s": 54.5937158530578, "median_step_s": 0.017641122511122376, "test_acc": 0.7491, "test_loss": 0.7248957275390625}
+{"type": "eval", "step": 1649, "epoch": 17.0, "train_loss": 0.6371705885400477, "train_time_s": 32.63496601651423, "elapsed_s": 57.99716052704025, "median_step_s": 0.017645786982029676, "test_acc": 0.7616, "test_loss": 0.677314779663086}
+{"type": "eval", "step": 1746, "epoch": 18.0, "train_loss": 0.589126067677724, "train_time_s": 34.551430495339446, "elapsed_s": 61.38930543907918, "median_step_s": 0.01765203446848318, "test_acc": 0.7918, "test_loss": 0.6116182830810547}
+{"type": "eval", "step": 1843, "epoch": 19.0, "train_loss": 0.5116868658164113, "train_time_s": 36.473449527751654, "elapsed_s": 64.79372899606824, "median_step_s": 0.017663462087512016, "test_acc": 0.7936, "test_loss": 0.6047254058837891}
+{"type": "eval", "step": 1940, "epoch": 20.0, "train_loss": 0.4781446023700164, "train_time_s": 38.39814186014701, "elapsed_s": 68.19019126298372, "median_step_s": 0.01766577106900513, "test_acc": 0.7822, "test_loss": 0.6825662567138672}
+{"type": "eval", "step": 2037, "epoch": 21.0, "train_loss": 0.45497573466645075, "train_time_s": 40.31927684985567, "elapsed_s": 71.74209202209022, "median_step_s": 0.01767199207097292, "test_acc": 0.8225, "test_loss": 0.519762353515625}
+{"type": "eval", "step": 2134, "epoch": 22.0, "train_loss": 0.4080316740827462, "train_time_s": 42.23866371088661, "elapsed_s": 75.13602572202217, "median_step_s": 0.017678091418929398, "test_acc": 0.8302, "test_loss": 0.5116641372680664}
+{"type": "eval", "step": 2231, "epoch": 23.0, "train_loss": 0.38267230234809757, "train_time_s": 44.15441117133014, "elapsed_s": 78.53942751407158, "median_step_s": 0.01768732606433332, "test_acc": 0.8487, "test_loss": 0.44407479553222656}
+{"type": "eval", "step": 2328, "epoch": 24.0, "train_loss": 0.35556853508826386, "train_time_s": 46.00436446047388, "elapsed_s": 81.88344180502463, "median_step_s": 0.017674341972451657, "test_acc": 0.8588, "test_loss": 0.42257834014892576}
+{"type": "eval", "step": 2425, "epoch": 25.0, "train_loss": 0.34220412419628854, "train_time_s": 47.76441048504785, "elapsed_s": 85.12719800299965, "median_step_s": 0.01765412196982652, "test_acc": 0.863, "test_loss": 0.4112736541748047}
+{"type": "eval", "step": 2522, "epoch": 26.0, "train_loss": 0.31303155299314517, "train_time_s": 49.54693719604984, "elapsed_s": 88.39871427207254, "median_step_s": 0.017660256009548903, "test_acc": 0.8646, "test_loss": 0.40509586791992186}
+{"type": "eval", "step": 2619, "epoch": 27.0, "train_loss": 0.31049731711751405, "train_time_s": 51.31462138122879, "elapsed_s": 91.65326021600049, "median_step_s": 0.017639916040934622, "test_acc": 0.8712, "test_loss": 0.38991277923583983}
+{"type": "eval", "step": 2716, "epoch": 28.0, "train_loss": 0.29729157440441173, "train_time_s": 53.06942706054542, "elapsed_s": 94.90193631406873, "median_step_s": 0.017627152963541448, "test_acc": 0.8704, "test_loss": 0.39196060485839845}
+{"type": "eval", "step": 2813, "epoch": 29.0, "train_loss": 0.2826352088721757, "train_time_s": 54.8274886860745, "elapsed_s": 98.14766225905623, "median_step_s": 0.017610833048820496, "test_acc": 0.8733, "test_loss": 0.3878008682250977}
+{"type": "eval", "step": 2910, "epoch": 30.0, "train_loss": 0.27940166503498237, "train_time_s": 56.58530913293362, "elapsed_s": 101.39620154199656, "median_step_s": 0.017599886981770396, "test_acc": 0.8718, "test_loss": 0.39019084167480467}
+{"type": "done", "wall_time_s": 101.39688642602414, "median_step_time_s": 0.017599886981770396, "comm_bytes_per_step": 183740.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:14:06.387000 1197738 site-packages/torch/distributed/run.py:874] 
+W1125 17:14:06.387000 1197738 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:14:06.387000 1197738 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:14:06.387000 1197738 site-packages/torch/distributed/run.py:874] *****************************************
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:14:13] nid008348:1197830:1197830 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:14:13] nid008348:1197831:1197831 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:14:13] nid008348:1197833:1197833 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:14:13] nid008348:1197832:1197832 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "resnet18_powersgd2_fp32_w4_s1_1125-171413", "params": 11173962, "world_size": 4, "total_steps": 2910, "lr_eff": 0.1, "global_batch": 512, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 1.9537916490712117, "train_time_s": 2.691389469546266, "elapsed_s": 4.236751087941229, "median_step_s": 0.021352524985559285, "test_acc": 0.2906, "test_loss": 2.4551822021484373}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 1.462555394959204, "train_time_s": 4.8699269159697, "elapsed_s": 7.926853814977221, "median_step_s": 0.021157526993192732, "test_acc": 0.5218, "test_loss": 1.3256849365234376}
+{"type": "eval", "step": 291, "epoch": 3.0, "train_loss": 1.2348180278060363, "train_time_s": 6.894268469535746, "elapsed_s": 11.439460551948287, "median_step_s": 0.020781309925951064, "test_acc": 0.5281, "test_loss": 1.3670013610839844}
+{"type": "eval", "step": 388, "epoch": 4.0, "train_loss": 1.0502395021546747, "train_time_s": 8.892156696063466, "elapsed_s": 14.923889541998506, "median_step_s": 0.020349576021544635, "test_acc": 0.5913, "test_loss": 1.1578340576171875}
+{"type": "eval", "step": 485, "epoch": 5.0, "train_loss": 0.949445889168179, "train_time_s": 10.899565242347308, "elapsed_s": 18.423306492972188, "median_step_s": 0.02000362705439329, "test_acc": 0.5727, "test_loss": 1.3168412963867187}
+{"type": "eval", "step": 582, "epoch": 6.0, "train_loss": 0.8437939783961502, "train_time_s": 12.902480215067044, "elapsed_s": 21.920281384023838, "median_step_s": 0.01993634196696803, "test_acc": 0.6339, "test_loss": 1.14041806640625}
+{"type": "eval", "step": 679, "epoch": 7.0, "train_loss": 0.7517680513490107, "train_time_s": 14.887854112312198, "elapsed_s": 25.40043249493465, "median_step_s": 0.019870950956828892, "test_acc": 0.7005, "test_loss": 0.87563427734375}
+{"type": "eval", "step": 776, "epoch": 8.0, "train_loss": 0.6825254000339311, "train_time_s": 16.872889821999706, "elapsed_s": 28.888524345005862, "median_step_s": 0.01984480954706669, "test_acc": 0.7376, "test_loss": 0.7539301025390625}
+{"type": "eval", "step": 873, "epoch": 9.0, "train_loss": 0.6319693689493789, "train_time_s": 18.853273701737635, "elapsed_s": 32.35476696002297, "median_step_s": 0.019822056056000292, "test_acc": 0.7239, "test_loss": 0.8000768646240234}
+{"type": "eval", "step": 970, "epoch": 10.0, "train_loss": 0.5834611749526152, "train_time_s": 20.831594942952506, "elapsed_s": 35.82765703496989, "median_step_s": 0.01981672050897032, "test_acc": 0.7787, "test_loss": 0.6384823028564454}
+{"type": "eval", "step": 1067, "epoch": 11.0, "train_loss": 0.5401839558611211, "train_time_s": 22.814617793890648, "elapsed_s": 39.302929444937035, "median_step_s": 0.019807197037152946, "test_acc": 0.7541, "test_loss": 0.7541438018798828}
+{"type": "eval", "step": 1164, "epoch": 12.0, "train_loss": 0.4931900089549035, "train_time_s": 24.79728926194366, "elapsed_s": 42.771824216935784, "median_step_s": 0.01980173692572862, "test_acc": 0.7807, "test_loss": 0.6447096008300781}
+{"type": "eval", "step": 1261, "epoch": 13.0, "train_loss": 0.46676981756367636, "train_time_s": 26.787787352805026, "elapsed_s": 46.256902804016136, "median_step_s": 0.01979484292678535, "test_acc": 0.7781, "test_loss": 0.6924341217041016}
+{"type": "eval", "step": 1358, "epoch": 14.0, "train_loss": 0.41964381380179494, "train_time_s": 28.77299703960307, "elapsed_s": 49.74704419099726, "median_step_s": 0.01979356602532789, "test_acc": 0.8113, "test_loss": 0.5562316497802734}
+{"type": "eval", "step": 1455, "epoch": 15.0, "train_loss": 0.40499270822584016, "train_time_s": 30.758832953986712, "elapsed_s": 53.21245309791993, "median_step_s": 0.019789543002843857, "test_acc": 0.8175, "test_loss": 0.5681821838378907}
+{"type": "eval", "step": 1552, "epoch": 16.0, "train_loss": 0.36215701207672196, "train_time_s": 32.74129185732454, "elapsed_s": 56.696519988938235, "median_step_s": 0.01978539995616302, "test_acc": 0.7983, "test_loss": 0.6630529968261719}
+{"type": "eval", "step": 1649, "epoch": 17.0, "train_loss": 0.3307081646833223, "train_time_s": 34.720150625216775, "elapsed_s": 60.17229521693662, "median_step_s": 0.019779653986915946, "test_acc": 0.853, "test_loss": 0.43373922576904295}
+{"type": "eval", "step": 1746, "epoch": 18.0, "train_loss": 0.3081383503896674, "train_time_s": 36.70692919718567, "elapsed_s": 63.64753681397997, "median_step_s": 0.019776057451963425, "test_acc": 0.8407, "test_loss": 0.48700924224853515}
+{"type": "eval", "step": 1843, "epoch": 19.0, "train_loss": 0.27359245671439414, "train_time_s": 38.690304180956446, "elapsed_s": 67.12578134599607, "median_step_s": 0.01977570599410683, "test_acc": 0.8602, "test_loss": 0.4340751876831055}
+{"type": "eval", "step": 1940, "epoch": 20.0, "train_loss": 0.2530794847257358, "train_time_s": 40.67013103491627, "elapsed_s": 70.5966832319973, "median_step_s": 0.019774218497332186, "test_acc": 0.8796, "test_loss": 0.3770013595581055}
+{"type": "eval", "step": 2037, "epoch": 21.0, "train_loss": 0.23141041167618073, "train_time_s": 42.64773373352364, "elapsed_s": 74.23687818099279, "median_step_s": 0.01977247605100274, "test_acc": 0.8783, "test_loss": 0.38789619140625}
+{"type": "eval", "step": 2134, "epoch": 22.0, "train_loss": 0.20920634300438398, "train_time_s": 44.63358564709779, "elapsed_s": 77.7158397110179, "median_step_s": 0.019772358529735357, "test_acc": 0.8729, "test_loss": 0.4241430374145508}
+{"type": "eval", "step": 2231, "epoch": 23.0, "train_loss": 0.19076915500090294, "train_time_s": 46.60819716134574, "elapsed_s": 81.20251296798233, "median_step_s": 0.019766104989685118, "test_acc": 0.8916, "test_loss": 0.35820733032226565}
+{"type": "eval", "step": 2328, "epoch": 24.0, "train_loss": 0.16739737399920976, "train_time_s": 48.59484996565152, "elapsed_s": 84.6806285319617, "median_step_s": 0.019766160985454917, "test_acc": 0.8996, "test_loss": 0.3188062515258789}
+{"type": "eval", "step": 2425, "epoch": 25.0, "train_loss": 0.15509544773814604, "train_time_s": 50.655177632463165, "elapsed_s": 88.24400827998761, "median_step_s": 0.01977040304336697, "test_acc": 0.9064, "test_loss": 0.31698358306884766}
+{"type": "eval", "step": 2522, "epoch": 26.0, "train_loss": 0.12582155685756624, "train_time_s": 52.79536597954575, "elapsed_s": 91.87205309898127, "median_step_s": 0.019776326953433454, "test_acc": 0.9047, "test_loss": 0.311979377746582}
+{"type": "eval", "step": 2619, "epoch": 27.0, "train_loss": 0.12386553961130761, "train_time_s": 54.93425527855288, "elapsed_s": 95.5039754739264, "median_step_s": 0.01978365203831345, "test_acc": 0.9056, "test_loss": 0.31064606018066404}
+{"type": "eval", "step": 2716, "epoch": 28.0, "train_loss": 0.12133153789129454, "train_time_s": 57.076767402817495, "elapsed_s": 99.13463262293953, "median_step_s": 0.019793522485997528, "test_acc": 0.9087, "test_loss": 0.306938240814209}
+{"type": "eval", "step": 2813, "epoch": 29.0, "train_loss": 0.1077494388926275, "train_time_s": 59.21611025230959, "elapsed_s": 102.7605178259546, "median_step_s": 0.01980227802414447, "test_acc": 0.9109, "test_loss": 0.3061238075256348}
+{"type": "eval", "step": 2910, "epoch": 30.0, "train_loss": 0.10783706666882505, "train_time_s": 61.3536534543382, "elapsed_s": 106.37809222203214, "median_step_s": 0.01980882848147303, "test_acc": 0.9106, "test_loss": 0.3078669105529785}
+{"type": "done", "wall_time_s": 106.37874584598467, "median_step_time_s": 0.01980882848147303, "comm_bytes_per_step": 329040.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 17:16:06.301000 1198014 site-packages/torch/distributed/run.py:874] 
+W1125 17:16:06.301000 1198014 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:16:06.301000 1198014 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:16:06.301000 1198014 site-packages/torch/distributed/run.py:874] *****************************************
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:16:15] nid008348:1198109:1198109 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:16:15] nid008348:1198107:1198107 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:16:15] nid008348:1198106:1198106 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:16:15] nid008348:1198108:1198108 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "resnet18_powersgd4_fp32_w4_s1_1125-171615", "params": 11173962, "world_size": 4, "total_steps": 2910, "lr_eff": 0.1, "global_batch": 512, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 97, "epoch": 1.0, "train_loss": 1.8312062147966366, "train_time_s": 2.7167802026961, "elapsed_s": 4.335887458059005, "median_step_s": 0.0222908069845289, "test_acc": 0.3811, "test_loss": 2.516247521972656}
+{"type": "eval", "step": 194, "epoch": 2.0, "train_loss": 1.219305572436028, "train_time_s": 4.991420159931295, "elapsed_s": 8.24545552697964, "median_step_s": 0.02231802005553618, "test_acc": 0.546, "test_loss": 1.4456966064453125}
+{"type": "eval", "step": 291, "epoch": 3.0, "train_loss": 0.9489758524698081, "train_time_s": 7.224925419548526, "elapsed_s": 11.997740910970606, "median_step_s": 0.02229973499197513, "test_acc": 0.584, "test_loss": 1.3253666442871095}
+{"type": "eval", "step": 388, "epoch": 4.0, "train_loss": 0.7957445810136107, "train_time_s": 9.471545640029944, "elapsed_s": 15.777148233028129, "median_step_s": 0.02232301951153204, "test_acc": 0.6477, "test_loss": 1.1790399658203126}
+{"type": "eval", "step": 485, "epoch": 5.0, "train_loss": 0.6781824172772083, "train_time_s": 11.725845010601915, "elapsed_s": 19.573849181062542, "median_step_s": 0.022355722961947322, "test_acc": 0.7269, "test_loss": 0.830411703491211}
+{"type": "eval", "step": 582, "epoch": 6.0, "train_loss": 0.6081299744930464, "train_time_s": 13.96906243392732, "elapsed_s": 23.342750470037572, "median_step_s": 0.02237649797461927, "test_acc": 0.6907, "test_loss": 0.9567929321289063}
+{"type": "eval", "step": 679, "epoch": 7.0, "train_loss": 0.5382362960540142, "train_time_s": 16.229763816925697, "elapsed_s": 27.15224330103956, "median_step_s": 0.022409897996112704, "test_acc": 0.7747, "test_loss": 0.6684148040771485}
+{"type": "eval", "step": 776, "epoch": 8.0, "train_loss": 0.5003516686331365, "train_time_s": 18.470014073885977, "elapsed_s": 30.92707589804195, "median_step_s": 0.022414316015783697, "test_acc": 0.7523, "test_loss": 0.8116327362060547}
+{"type": "eval", "step": 873, "epoch": 9.0, "train_loss": 0.45161803973089787, "train_time_s": 20.704924356308766, "elapsed_s": 34.69069385295734, "median_step_s": 0.022404156043194234, "test_acc": 0.7658, "test_loss": 0.7164994842529296}
+{"type": "eval", "step": 970, "epoch": 10.0, "train_loss": 0.4240226211007108, "train_time_s": 22.933305346406996, "elapsed_s": 38.451347496011294, "median_step_s": 0.02239440247649327, "test_acc": 0.7937, "test_loss": 0.6163159301757812}
+{"type": "eval", "step": 1067, "epoch": 11.0, "train_loss": 0.3857335133343628, "train_time_s": 25.162463338812813, "elapsed_s": 42.21311698597856, "median_step_s": 0.02238820504862815, "test_acc": 0.8172, "test_loss": 0.5676456024169921}
+{"type": "eval", "step": 1164, "epoch": 12.0, "train_loss": 0.3611021538063423, "train_time_s": 27.40239902678877, "elapsed_s": 45.987640175037086, "median_step_s": 0.02238955849315971, "test_acc": 0.8012, "test_loss": 0.6367234466552735}
+{"type": "eval", "step": 1261, "epoch": 13.0, "train_loss": 0.33934664741619347, "train_time_s": 29.634505666792393, "elapsed_s": 49.7618764389772, "median_step_s": 0.02238820504862815, "test_acc": 0.8283, "test_loss": 0.5545347457885742}
+{"type": "eval", "step": 1358, "epoch": 14.0, "train_loss": 0.30709127820644183, "train_time_s": 31.868484756327234, "elapsed_s": 53.52458773099352, "median_step_s": 0.022389357967767864, "test_acc": 0.8483, "test_loss": 0.46121773223876955}
+{"type": "eval", "step": 1455, "epoch": 15.0, "train_loss": 0.289578120886665, "train_time_s": 34.100787386880256, "elapsed_s": 57.309022502973676, "median_step_s": 0.022388786892406642, "test_acc": 0.8445, "test_loss": 0.5061771331787109}
+{"type": "eval", "step": 1552, "epoch": 16.0, "train_loss": 0.25799594120573754, "train_time_s": 36.32788608560804, "elapsed_s": 61.07236926397309, "median_step_s": 0.02238374698208645, "test_acc": 0.8629, "test_loss": 0.46292259674072267}
+{"type": "eval", "step": 1649, "epoch": 17.0, "train_loss": 0.22701001535985887, "train_time_s": 38.605920235975645, "elapsed_s": 64.8885472790571, "median_step_s": 0.02238700503949076, "test_acc": 0.8747, "test_loss": 0.39023729095458987}
+{"type": "eval", "step": 1746, "epoch": 18.0, "train_loss": 0.21310306371180052, "train_time_s": 40.83206971432082, "elapsed_s": 68.686466226005, "median_step_s": 0.022377685992978513, "test_acc": 0.8767, "test_loss": 0.4024457366943359}
+{"type": "eval", "step": 1843, "epoch": 19.0, "train_loss": 0.18512119514118766, "train_time_s": 43.06625799566973, "elapsed_s": 72.5053499089554, "median_step_s": 0.0223791979951784, "test_acc": 0.8734, "test_loss": 0.3985057189941406}
+{"type": "eval", "step": 1940, "epoch": 20.0, "train_loss": 0.1608442412977366, "train_time_s": 45.30572429741733, "elapsed_s": 76.32746242498979, "median_step_s": 0.022381654533091933, "test_acc": 0.8993, "test_loss": 0.3225262336730957}
+{"type": "eval", "step": 2037, "epoch": 21.0, "train_loss": 0.14390284268511938, "train_time_s": 47.542060955544, "elapsed_s": 80.2732056210516, "median_step_s": 0.022383195930160582, "test_acc": 0.8939, "test_loss": 0.3519424194335937}
+{"type": "eval", "step": 2134, "epoch": 22.0, "train_loss": 0.125193620158225, "train_time_s": 49.77947605808731, "elapsed_s": 84.08822372101713, "median_step_s": 0.02238374698208645, "test_acc": 0.8922, "test_loss": 0.374090625}
+{"type": "eval", "step": 2231, "epoch": 23.0, "train_loss": 0.10724823169179798, "train_time_s": 52.007976102875546, "elapsed_s": 87.90110897505656, "median_step_s": 0.022381914081051946, "test_acc": 0.9044, "test_loss": 0.3251051643371582}
+{"type": "eval", "step": 2328, "epoch": 24.0, "train_loss": 0.08823592619029517, "train_time_s": 54.23288666282315, "elapsed_s": 91.71025163400918, "median_step_s": 0.022376457985956222, "test_acc": 0.9112, "test_loss": 0.3047527626037598}
+{"type": "eval", "step": 2425, "epoch": 25.0, "train_loss": 0.0798432042572609, "train_time_s": 56.5239134671865, "elapsed_s": 95.57965076901019, "median_step_s": 0.022376301931217313, "test_acc": 0.9128, "test_loss": 0.3016567657470703}
+{"type": "eval", "step": 2522, "epoch": 26.0, "train_loss": 0.06467469954459938, "train_time_s": 58.750349540729076, "elapsed_s": 99.39512664300855, "median_step_s": 0.022373061976395547, "test_acc": 0.9136, "test_loss": 0.3044582992553711}
+{"type": "eval", "step": 2619, "epoch": 27.0, "train_loss": 0.058900315122506056, "train_time_s": 60.980227027554065, "elapsed_s": 103.20492581103463, "median_step_s": 0.022371735074557364, "test_acc": 0.9168, "test_loss": 0.29831943359375}
+{"type": "eval", "step": 2716, "epoch": 28.0, "train_loss": 0.05509801072634987, "train_time_s": 63.20593692245893, "elapsed_s": 107.02114689606242, "median_step_s": 0.022367375961039215, "test_acc": 0.918, "test_loss": 0.2944653091430664}
+{"type": "eval", "step": 2813, "epoch": 29.0, "train_loss": 0.05232173321557414, "train_time_s": 65.43115351023152, "elapsed_s": 110.83307668298949, "median_step_s": 0.022363499039784074, "test_acc": 0.9188, "test_loss": 0.2950962303161621}
+{"type": "eval", "step": 2910, "epoch": 30.0, "train_loss": 0.05100126468490079, "train_time_s": 67.65792027662974, "elapsed_s": 114.64800982701126, "median_step_s": 0.02235919499071315, "test_acc": 0.9187, "test_loss": 0.29624944915771484}
+{"type": "done", "wall_time_s": 114.64877600898035, "median_step_time_s": 0.02235919499071315, "comm_bytes_per_step": 619640.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+srun: forcing job termination
+JobID           Elapsed   NNodes                                                    AllocTRES      State 
+------------ ---------- -------- ------------------------------------------------------------ ---------- 
+62006947       00:08:05        1 billing=128,cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,+    RUNNING 
+62006947.ba+   00:08:05        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62006947.ex+   00:08:05        1 billing=128,cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,+    RUNNING 
+62006947.0     00:08:01        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62006947.1     00:01:56        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006947.2     00:01:55        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006947.3     00:01:59        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006947.4     00:02:11        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
