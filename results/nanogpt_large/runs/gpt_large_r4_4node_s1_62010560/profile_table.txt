@@ -1,0 +1,36 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+    autograd::engine::evaluate_function: AddmmBackward0         0.12%     668.366us         1.07%       5.824ms     121.327us       0.000us         0.00%     305.797ms       6.371ms            48  
+                                               aten::mm         0.33%       1.808ms         0.50%       2.750ms      27.780us     301.271ms        56.51%     301.271ms       3.043ms            99  
+                                         AddmmBackward0         0.08%     426.534us         0.66%       3.595ms      74.904us       0.000us         0.00%     300.834ms       6.267ms            48  
+                        DistributedDataParallel.forward         0.00%       0.000us         0.00%       0.000us       0.000us     169.213ms        31.74%     169.213ms     169.213ms             1  
+                        DistributedDataParallel.forward         0.47%       2.539ms         2.09%      11.382ms      11.382ms       0.000us         0.00%     168.774ms     168.774ms             1  
+                                           aten::linear         0.05%     275.439us         0.50%       2.723ms      55.580us       0.000us         0.00%     150.586ms       3.073ms            49  
+                                            aten::addmm         0.25%       1.342ms         0.33%       1.774ms      36.950us     150.428ms        28.21%     150.428ms       3.134ms            48  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us     150.428ms        28.21%     150.428ms       3.134ms            48  
+                                 ampere_sgemm_128x32_nn         0.00%       0.000us         0.00%       0.000us       0.000us     101.023ms        18.95%     101.023ms       2.806ms            36  
+                                ampere_sgemm_128x128_nt         0.00%       0.000us         0.00%       0.000us       0.000us      84.422ms        15.83%      84.422ms       3.518ms            24  
+                        ampere_sgemm_64x32_sliced1x4_nt         0.00%       0.000us         0.00%       0.000us       0.000us      66.786ms        12.53%      66.786ms       2.671ms            25  
+                                 ampere_sgemm_128x64_nn         0.00%       0.000us         0.00%       0.000us       0.000us      48.843ms         9.16%      48.843ms       3.757ms            13  
+autograd::engine::evaluate_function: torch::autograd...         1.83%      10.003ms        92.85%     506.218ms       3.397ms       0.000us         0.00%      16.979ms     113.953us           149  
+autograd::engine::evaluate_function: ScaledDotProduc...         0.03%     178.087us         0.37%       2.002ms     166.815us       0.000us         0.00%      16.913ms       1.409ms            12  
+            ScaledDotProductEfficientAttentionBackward0         0.01%      63.253us         0.33%       1.824ms     151.974us       0.000us         0.00%      16.913ms       1.409ms            12  
+aten::_scaled_dot_product_efficient_attention_backwa...         0.04%     210.072us         0.32%       1.760ms     146.703us       0.000us         0.00%      16.913ms       1.409ms            12  
+                    aten::_efficient_attention_backward         0.05%     283.558us         0.26%       1.438ms     119.797us      14.328ms         2.69%      16.913ms       1.409ms            12  
+fmha_cutlassB_f32_aligned_64x64_k64_dropout_sm80(PyT...         0.00%       0.000us         0.00%       0.000us       0.000us      14.328ms         2.69%      14.328ms       1.194ms            12  
+                                        aten::linalg_qr         1.16%       6.323ms         3.63%      19.788ms     193.997us       7.475ms         1.40%       9.021ms      88.437us           102  
+autograd::engine::evaluate_function: NativeLayerNorm...         0.09%     473.528us         0.33%       1.781ms      71.224us       0.000us         0.00%       8.260ms     330.383us            25  
+                     aten::scaled_dot_product_attention         0.02%     134.800us         0.17%     914.842us      76.237us       0.000us         0.00%       7.347ms     612.233us            12  
+          aten::_scaled_dot_product_efficient_attention         0.03%     160.756us         0.14%     780.042us      65.003us       0.000us         0.00%       7.347ms     612.233us            12  
+                     aten::_efficient_attention_forward         0.04%     197.071us         0.10%     548.334us      45.695us       7.347ms         1.38%       7.347ms     612.233us            12  
+fmha_cutlassF_f32_aligned_64x64_rf_sm80(PyTorchMemEf...         0.00%       0.000us         0.00%       0.000us       0.000us       7.347ms         1.38%       7.347ms     612.233us            12  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       6.577ms         1.23%       6.577ms      88.880us            74  
+                                              aten::sum         0.20%       1.113ms         0.31%       1.708ms      27.998us       5.961ms         1.12%       5.961ms      97.720us            61  
+                               NativeLayerNormBackward0         0.02%      84.131us         0.18%       1.004ms      40.161us       0.000us         0.00%       5.873ms     234.916us            25  
+                       aten::native_layer_norm_backward         0.05%     282.749us         0.17%     919.903us      36.796us       5.873ms         1.10%       5.873ms     234.916us            25  
+     autograd::engine::evaluate_function: GeluBackward0         0.02%     100.498us         0.08%     416.844us      34.737us       0.000us         0.00%       5.355ms     446.274us            12  
+                                          GeluBackward0         0.01%      35.199us         0.06%     316.346us      26.362us       0.000us         0.00%       5.355ms     446.274us            12  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 545.204ms
+Self CUDA time total: 533.171ms

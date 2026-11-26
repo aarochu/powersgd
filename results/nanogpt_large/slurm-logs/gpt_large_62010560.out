@@ -1,0 +1,263 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+W1125 21:21:04.298000 390525 site-packages/torch/distributed/run.py:874] 
+W1125 21:21:04.298000 390525 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:04.298000 390525 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:21:04.298000 390525 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:05.554000 646888 site-packages/torch/distributed/run.py:874] 
+W1125 21:21:05.554000 646888 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:05.554000 646888 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:21:05.554000 646888 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:05.598000 292482 site-packages/torch/distributed/run.py:874] 
+W1125 21:21:05.598000 292482 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:05.598000 292482 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:21:05.598000 292482 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:06.226000 1900113 site-packages/torch/distributed/run.py:874] 
+W1125 21:21:06.226000 1900113 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:21:06.226000 1900113 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:21:06.226000 1900113 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 21:21:12] nid003881:390638:390638 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid003881:390639:390639 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid003881:390640:390640 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid003881:390641:390641 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008397:292590:292590 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008397:292591:292591 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008397:292589:292589 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008397:292592:292592 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008349:1900225:1900225 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008349:1900222:1900222 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008349:1900223:1900223 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008349:1900224:1900224 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008340:646998:646998 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008340:647001:647001 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008340:646999:646999 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:21:12] nid008340:647000:647000 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_large_ddp_4node_s1_62010560", "params": 85352448, "world_size": 16, "total_steps": 1000, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+USDT:2026-11-25 21:22:11 390638:390638 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-25 21:22:11 390638:390638 SyncActivityProfilerHandler.cpp:59] profiler_stop
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.144296237945557, "train_time_s": 130.27838954946492, "elapsed_s": 137.45032154000364, "median_step_s": 0.5185274165123701, "val_loss": 1.6377671599388122, "val_ppl": 5.143671684407783}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 1.2344899744987488, "train_time_s": 260.20197931851726, "elapsed_s": 274.04976228403393, "median_step_s": 0.5184825219912454, "val_loss": 1.6432851910591126, "val_ppl": 5.172133078045274}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 0.5857596976757049, "train_time_s": 390.1442117561819, "elapsed_s": 410.64948484499473, "median_step_s": 0.5184801134746522, "val_loss": 2.5962394058704374, "val_ppl": 13.41320146410883}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 0.199396218419075, "train_time_s": 520.1132980337134, "elapsed_s": 547.2756854430772, "median_step_s": 0.5185012115398422, "val_loss": 3.101281726360321, "val_ppl": 22.22642122218335}
+{"type": "done", "wall_time_s": 547.2764386120252, "median_step_time_s": 0.5185012115398422, "comm_bytes_per_step": 341409792.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+[W1125 21:30:28.006497338 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=45, addr=[nid008397-hsn0]:41846, remote=[nid003881-hsn0]:29501): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /__w/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:787 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x7f8883163bfd in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10::DistError::DistError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7f8883164bd2 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #2: c10::DistNetworkError::DistNetworkError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7f8883165092 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #3: <unknown function> + 0x66ac05d (0x7f87ec4f805d in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x66ae336 (0x7f87ec4fa336 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x15f (0x7f87ec4f6e8f in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xed5fd3 (0x7f87fbb2afd3 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x3f2bb2 (0x7f87fb047bb2 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x21363b (0x560f3bdee63b in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #9: <unknown function> + 0x247af6 (0x560f3be22af6 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #10: _PyEval_EvalFrameDefault + 0x540f (0x560f3bdddcdf in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #11: _PyObject_FastCallDictTstate + 0x1ce (0x560f3bdd1c1e in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #12: _PyObject_Call_Prepend + 0xe7 (0x560f3be08c47 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #13: <unknown function> + 0x2feda9 (0x560f3bed9da9 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #14: _PyObject_Call + 0xb5 (0x560f3be0b595 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #15: _PyEval_EvalFrameDefault + 0x540f (0x560f3bdddcdf in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #16: PyEval_EvalCode + 0x9f (0x560f3be9175f in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #17: <unknown function> + 0x2f24ea (0x560f3becd4ea in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #18: <unknown function> + 0x2ed015 (0x560f3bec8015 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #19: <unknown function> + 0x2ea020 (0x560f3bec5020 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #20: _PyRun_SimpleFileObject + 0x1c6 (0x560f3bec4ce6 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #21: _PyRun_AnyFileObject + 0x44 (0x560f3bec4a14 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #22: Py_RunMain + 0x39e (0x560f3bec15ae in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #23: Py_BytesMain + 0x37 (0x560f3be79677 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #24: <unknown function> + 0x40eec (0x7f8883f83eec in /lib64/libc.so.6)
+frame #25: __libc_start_main + 0x87 (0x7f8883f83fb5 in /lib64/libc.so.6)
+frame #26: <unknown function> + 0x29e4e7 (0x560f3be794e7 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+
+[W1125 21:30:28.985306009 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=45, addr=[nid008340-hsn0]:53720, remote=[nid003881-hsn0]:29501): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /__w/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:787 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x7fc779363bfd in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10::DistError::DistError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7fc779364bd2 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #2: c10::DistNetworkError::DistNetworkError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7fc779365092 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #3: <unknown function> + 0x66ac05d (0x7fc6e2af805d in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x66ae336 (0x7fc6e2afa336 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x15f (0x7fc6e2af6e8f in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xed5fd3 (0x7fc6f212afd3 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x3f2bb2 (0x7fc6f1647bb2 in /global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x21363b (0x5565cd73863b in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #9: <unknown function> + 0x247af6 (0x5565cd76caf6 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #10: _PyEval_EvalFrameDefault + 0x540f (0x5565cd727cdf in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #11: _PyObject_FastCallDictTstate + 0x1ce (0x5565cd71bc1e in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #12: _PyObject_Call_Prepend + 0xe7 (0x5565cd752c47 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #13: <unknown function> + 0x2feda9 (0x5565cd823da9 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #14: _PyObject_Call + 0xb5 (0x5565cd755595 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #15: _PyEval_EvalFrameDefault + 0x540f (0x5565cd727cdf in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #16: PyEval_EvalCode + 0x9f (0x5565cd7db75f in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #17: <unknown function> + 0x2f24ea (0x5565cd8174ea in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #18: <unknown function> + 0x2ed015 (0x5565cd812015 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #19: <unknown function> + 0x2ea020 (0x5565cd80f020 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #20: _PyRun_SimpleFileObject + 0x1c6 (0x5565cd80ece6 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #21: _PyRun_AnyFileObject + 0x44 (0x5565cd80ea14 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #22: Py_RunMain + 0x39e (0x5565cd80b5ae in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #23: Py_BytesMain + 0x37 (0x5565cd7c3677 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+frame #24: <unknown function> + 0x40eec (0x7fc77a521eec in /lib64/libc.so.6)
+frame #25: __libc_start_main + 0x87 (0x7fc77a521fb5 in /lib64/libc.so.6)
+frame #26: <unknown function> + 0x29e4e7 (0x5565cd7c34e7 in /global/common/software/nersc9/pytorch/2.13.0/bin/python3.12)
+
+W1125 21:30:28.681000 292482 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1298] The node 'nid008397-hsn0_292482_0' has failed to shutdown the rendezvous '62010560_29501' due to an error of type RendezvousConnectionError.
+W1125 21:30:28.687000 646888 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1298] The node 'nid008340-hsn0_646888_0' has failed to shutdown the rendezvous '62010560_29501' due to an error of type RendezvousConnectionError.
+W1125 21:30:32.800000 293827 site-packages/torch/distributed/run.py:874] 
+W1125 21:30:32.800000 293827 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:32.800000 293827 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:30:32.800000 293827 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:32.871000 648266 site-packages/torch/distributed/run.py:874] 
+W1125 21:30:32.871000 648266 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:32.871000 648266 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:30:32.871000 648266 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:32.905000 392183 site-packages/torch/distributed/run.py:874] 
+W1125 21:30:32.905000 392183 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:32.905000 392183 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:30:32.905000 392183 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:33.599000 1901424 site-packages/torch/distributed/run.py:874] 
+W1125 21:30:33.599000 1901424 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:30:33.599000 1901424 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:30:33.599000 1901424 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 21:30:39] nid003881:392276:392276 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid003881:392278:392278 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid003881:392277:392277 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid003881:392279:392279 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008340:648584:648584 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008397:294177:294177 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008340:648583:648583 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008397:294175:294175 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008397:294176:294176 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008340:648586:648586 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008340:648585:648585 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008397:294174:294174 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008349:1901811:1901811 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008349:1901810:1901810 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008349:1901809:1901809 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:30:39] nid008349:1901808:1901808 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_large_r2_4node_s1_62010560", "params": 85352448, "world_size": 16, "total_steps": 1000, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+USDT:2026-11-25 21:31:38 392276:392276 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-25 21:31:38 392276:392276 SyncActivityProfilerHandler.cpp:59] profiler_stop
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.7221225900650023, "train_time_s": 133.6344744580565, "elapsed_s": 141.21284683200065, "median_step_s": 0.531553092005197, "val_loss": 2.559489554166794, "val_ppl": 12.929215966454144}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.5307769546508787, "train_time_s": 266.8211492212722, "elapsed_s": 281.06893979397137, "median_step_s": 0.5315642264904454, "val_loss": 2.512981820106506, "val_ppl": 12.341675905897922}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.432121629714966, "train_time_s": 400.0680564289214, "elapsed_s": 420.97345023194794, "median_step_s": 0.5316548654809594, "val_loss": 2.3485076248645784, "val_ppl": 10.469932992027358}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 2.2686715106964113, "train_time_s": 533.2914099114714, "elapsed_s": 560.8525438669603, "median_step_s": 0.5316883054911159, "val_loss": 2.2374761164188386, "val_ppl": 9.369653505385614}
+{"type": "done", "wall_time_s": 560.8531025300035, "median_step_time_s": 0.5316883054911159, "comm_bytes_per_step": 1686544.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 21:40:10.947000 295674 site-packages/torch/distributed/run.py:874] 
+W1125 21:40:10.947000 295674 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:10.947000 295674 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:40:10.947000 295674 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:11.018000 1903627 site-packages/torch/distributed/run.py:874] 
+W1125 21:40:11.018000 1903627 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:11.018000 1903627 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:40:11.018000 1903627 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:11.037000 650087 site-packages/torch/distributed/run.py:874] 
+W1125 21:40:11.037000 650087 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:11.037000 650087 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:40:11.037000 650087 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:11.109000 394142 site-packages/torch/distributed/run.py:874] 
+W1125 21:40:11.109000 394142 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 21:40:11.109000 394142 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 21:40:11.109000 394142 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 21:40:17] nid003881:394242:394242 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid003881:394239:394239 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid003881:394241:394241 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid003881:394240:394240 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008340:650182:650182 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008340:650179:650179 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008340:650180:650180 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008340:650181:650181 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008349:1903718:1903718 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008349:1903719:1903719 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008349:1903721:1903721 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008349:1903720:1903720 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008397:295767:295767 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008397:295768:295768 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008397:295769:295769 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 21:40:17] nid008397:295766:295766 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_large_r4_4node_s1_62010560", "params": 85352448, "world_size": 16, "total_steps": 1000, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+USDT:2026-11-25 21:41:15 394239:394239 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-25 21:41:15 394239:394239 SyncActivityProfilerHandler.cpp:59] profiler_stop
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.590727756500244, "train_time_s": 135.45577712997328, "elapsed_s": 143.23948221397586, "median_step_s": 0.5400001104571857, "val_loss": 2.489719790220261, "val_ppl": 12.057896906386159}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.299691602706909, "train_time_s": 270.7902716456447, "elapsed_s": 285.2492049509892, "median_step_s": 0.5400212725508027, "val_loss": 2.135768640041351, "val_ppl": 8.46354943032181}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.917122721672058, "train_time_s": 406.1112106787041, "elapsed_s": 427.23189585097134, "median_step_s": 0.5400095845106989, "val_loss": 1.8964033126831055, "val_ppl": 6.661890563636059}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.6949627623558043, "train_time_s": 541.3665772076929, "elapsed_s": 569.1488780399086, "median_step_s": 0.5399598384974524, "val_loss": 1.7582684099674224, "val_ppl": 5.80238134473582}
+{"type": "done", "wall_time_s": 569.1495470169466, "median_step_time_s": 0.5399598384974524, "comm_bytes_per_step": 2887712.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-26T05:49:52.805] error: *** STEP 62010560.0 ON nid003881 CANCELLED AT 2026-11-26T05:49:52 DUE to SIGNAL Killed ***
+JobID           Elapsed   NNodes                                                    AllocTRES      State 
+------------ ---------- -------- ------------------------------------------------------------ ---------- 
+62010560       00:29:00        4 billing=512,cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208+    RUNNING 
+62010560.ba+   00:29:00        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62010560.ex+   00:29:00        4 billing=512,cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208+    RUNNING 
+62010560.0     00:28:54        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4    RUNNING 
+62010560.1     00:09:31        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4  COMPLETED 
+62010560.2     00:09:38        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4  COMPLETED 
+62010560.3     00:09:45        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4    RUNNING 
+srun: error: nid008349: task 2: Killed
+srun: Terminating StepId=62010560.0
