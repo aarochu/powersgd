@@ -48,5 +48,8 @@ if "smoke_ddp_fp32" in rows and "smoke_ddp_bw10" in rows:
     n = a["world_size"]
     expect = 2 * (n - 1) / n * a["comm_bytes_per_step"] / (10e9 / 8) * 1000
     got = (b["median_step_time_s"] - a["median_step_time_s"]) * 1000
-    print(f"modeled 10 Gbit/s link on DDP: expected about +{expect:.1f} ms/step, measured +{got:.1f} ms/step")
+    # at least the modeled delay (the wait before it also removes some overlap, so a little more is normal)
+    ok = got >= 0.9 * expect
+    print(f'{"PASS" if ok else "FAIL"}  modeled 10 Gbit/s link on DDP: expected at least about +{expect:.1f} ms/step, '
+          f"measured +{got:.1f} ms/step")
 EOF

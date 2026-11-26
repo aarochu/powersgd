@@ -12,9 +12,12 @@ Launch with torchrun (1 or more nodes), e.g.
              to fp32 *before* the all-reduce, so numerics are tested but bytes on the wire and speed are NOT FP8.
 --rank       PowerSGD matrix_approximation_rank R (named --rank to match the brief; NOT the dist rank).
 --sim-bandwidth-gbps / --sim-latency-us
-             MODEL a slower link (default 0 = off): after each all-reduce is issued, the calling thread sleeps for
-             latency + 2(N-1)/N * payload / bandwidth (ring all-reduce traffic per rank). No overlap with compute and no
-             contention are modeled, so the result is a model of a slow network, not a measurement of one.
+             MODEL a slower link (default 0 = off): after each all-reduce is issued, the calling thread waits for the
+             GPU to finish all queued work (including that all-reduce), then sleeps for
+             latency + 2(N-1)/N * payload / bandwidth (ring all-reduce traffic per rank), so the GPU sits idle for
+             that long. No overlap with compute and no contention are modeled, so the result is a model of a slow
+             network, not a measurement of one. The wait itself also removes DDP's normal compute/communication
+             overlap, so compare methods on the same modeled link, not a modeled run against an unmodeled one.
 """
 import argparse
 import contextlib
@@ -87,6 +90,12 @@ class CommCounter:
             if self.enabled and (bytes_per_s > 0 or sim_latency_us > 0):
                 n = dist.get_world_size()
                 delay = sim_latency_us * 1e-6 + (2 * (n - 1) / n * nbytes / bytes_per_s if bytes_per_s > 0 else 0.0)
+                # Wait for the GPU first: the host runs ahead of queued kernels, so a bare sleep would overlap the
+                # GPU's remaining backward work and add nothing to the step (seen in the first Perlmutter smoke test).
+                if work is not None:
+                    work.wait()
+                if tensor.is_cuda:
+                    torch.cuda.synchronize(tensor.device)
                 time.sleep(delay)
                 self.sim_s += delay
             return work

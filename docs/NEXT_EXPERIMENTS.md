@@ -42,8 +42,8 @@ bash scripts/smoke_next.sh
 ```
 
 It runs 12 short configurations on synthetic data and prints a table. Check that every row says `ok`, that
-`smoke_large_*` fit in memory, and the last line: the measured extra step time for the modeled 10 Gbit/s link should be
-close to the expected value it prints. `smoke_r4_fp16` (PowerSGD on fp16 buckets) is allowed to fail; if it does, drop
+`smoke_large_*` fit in memory, and that the last line, the measured extra step time for the modeled 10 Gbit/s link,
+says `PASS` (at least about 90% of the expected delay). `smoke_r4_fp16` (PowerSGD on fp16 buckets) is allowed to fail; if it does, drop
 `powersgd:4:fp16` from experiment 2.
 
 ## 1. NanoGPT seeds
@@ -77,10 +77,17 @@ sbatch scripts/nanogpt_slowlink.sbatch              # each method with no delay 
 SIM_BWS="0 1 10 25" sbatch scripts/nanogpt_slowlink.sbatch
 ```
 
-With `--sim-bandwidth-gbps B`, `train_ddp.py` sleeps for `2(N-1)/N x bytes / B` after every all-reduce (plus
-`--sim-latency-us`). That is the per-GPU traffic of a ring all-reduce on a link of that speed, with **no overlap with
-compute and no contention**. Report it as "modeled 10 Gbit/s link", not as a measured network. At the default 0 the
-trainer is unchanged. The modeled delay is recorded per run in `runs.jsonl` (`sim_link.modeled_delay_s_total`).
+With `--sim-bandwidth-gbps B`, `train_ddp.py` waits for the GPU to finish each all-reduce and then sleeps for
+`2(N-1)/N x bytes / B` (plus `--sim-latency-us`). That is the per-GPU traffic of a ring all-reduce on a link of that
+speed, with **no overlap with compute and no contention**. Report it as "modeled 10 Gbit/s link", not as a measured
+network. At the default 0 the trainer is unchanged. The modeled delay is recorded per run in `runs.jsonl`
+(`sim_link.modeled_delay_s_total`).
+
+The wait matters: the first smoke test (job 62006046) slept without it, and the CPU's sleep hid behind GPU work
+already queued, so the 10 Gbit/s run was no slower than plain DDP. The wait also turns off DDP's usual overlap of
+communication with the backward pass, which costs a little time of its own. So compare DDP with PowerSGD **on the
+same modeled link** (that is what `runs` in `tools/summarize_experiments.py` does), not a 10 Gbit/s run with a run on
+no modeled link.
 
 ## 4. Larger NanoGPT
 
