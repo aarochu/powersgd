@@ -174,13 +174,24 @@ tensor-parallel groups. `train_ddp.py` and `models.py` are not touched; the trai
 bash scripts/smoke_tp.sh
 ```
 
-It prints PASS / FAIL for: tp 1 reproduces `train_ddp.py`; the validation loss before training is the same at tp 1, 2
-and 4 (the split forward pass is exact); with dropout off, tp 2 and 4 train like tp 1 (the backward pass); and the
-counted tensor- and data-parallel bytes equal their formulas exactly. Do not run the batch job unless all of them pass.
+It prints PASS / FAIL for: tp 1 reproduces `train_ddp.py`; the validation loss before training matches the unsplit
+model at tp 2 and 4 (the split forward pass is exact); with dropout off, tp 2 and 4 train like the unsplit model (the
+backward pass), and the loss really dropped; and the counted tensor- and data-parallel bytes equal their formulas
+exactly. Do not run the batch job unless all of them pass.
+
+The loss checks use the real Shakespeare data, and each split run is compared with an unsplit run with the same number
+of data-parallel replicas and the same per-replica batch (tp 2 on 4 GPUs against tp 1 on 2 GPUs; tp 4 on 4 GPUs against
+tp 1 on 1 GPU), so both see identical batches. The first version of this test (job 62006046) did neither: on random
+tokens every run ends at the loss floor ln 65 = 4.174, so matching final losses proved nothing, and tp 1 and tp 2 were
+scored on different validation batches.
+
+**tp must divide the number of attention heads.** The 6-head model in `results/` splits 2 ways, not 4. tp 4 runs use
+12 heads (`N_HEAD=12`: same parameter count, head width 32) with their own 12-head tp 1 baseline.
 
 ```bash
-sbatch scripts/nanogpt_tp.sbatch          # 1 node: tp1 ddp, tp1 r4, tp2 ddp, tp2 r4, tp4 ddp; 2000 steps each
-sbatch -N 2 scripts/nanogpt_tp.sbatch     # 2 nodes: adds tp4 with PowerSGD across the nodes
+sbatch scripts/nanogpt_tp.sbatch              # tp1 ddp, tp1 r4, tp2 ddp, tp2 r4 (6 heads); 2000 steps each
+sbatch -N 2 scripts/nanogpt_tp.sbatch         # the same on 2 nodes: data parallelism crosses the nodes
+N_HEAD=12 sbatch scripts/nanogpt_tp.sbatch    # tp1 ddp, tp1 r4, tp4 ddp with 12 heads (adds tp4 r4 on 2 nodes)
 ```
 
 Every config gets the same global batch (64 sequences per GPU; per tensor-parallel group that is 64 x tp). Expected,

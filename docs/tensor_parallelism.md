@@ -73,9 +73,10 @@ A separate trainer, so `train_ddp.py` (which produced every result so far) and `
   same GPUs, so the table above becomes: tp 2 moves about 1.21 GB of activations and 21.9 MB of gradients per GPU per
   step, against 43.2 MB of gradients for plain data parallelism.
 
-`scripts/smoke_tp.sh` checks it before any real run: tp 1 must reproduce `train_ddp.py`, the loss before training must
-be the same at tp 1, 2 and 4, training with dropout off must match across tp sizes, and the counted bytes must equal
-the formulas. `scripts/nanogpt_tp.sbatch` runs the comparison.
+`scripts/smoke_tp.sh` checks it before any real run: tp 1 must reproduce `train_ddp.py`; on real data, the loss before
+training and after 40 steps with dropout off must match an unsplit run with the same data-parallel layout; and the
+counted bytes must equal the formulas. `scripts/nanogpt_tp.sbatch` runs the comparison. The tensor-parallel size must
+divide the number of attention heads, so the 6-head model splits 2 ways; tp 4 runs use 12 heads.
 
 What it will and will not show: how much more a tensor-parallel step communicates and what that costs in step time on
 NVLink, and that PowerSGD shrinks only the gradient part. It does not test compressing activations, which this note
