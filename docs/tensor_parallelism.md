@@ -1,7 +1,8 @@
 # Data vs tensor parallelism: where gradient compression applies
 
 A design note for the "data vs tensor parallelism" next step. The traffic numbers below are computed from the model
-sizes we used; `train_tensor.py` (experiment 11 in `NEXT_EXPERIMENTS.md`) measures them. **It has not been run yet.**
+sizes we used; `train_tensor.py` (experiment 11 in `NEXT_EXPERIMENTS.md`) measured them on Perlmutter on 2026-11-25
+(jobs 62006949 and 62006950; see "Measured" at the end and `results/nanogpt_tp/`).
 
 ## Data parallelism (what we ran)
 
@@ -81,3 +82,23 @@ divide the number of attention heads, so the 6-head model splits 2 ways; tp 4 ru
 What it will and will not show: how much more a tensor-parallel step communicates and what that costs in step time on
 NVLink, and that PowerSGD shrinks only the gradient part. It does not test compressing activations, which this note
 argues against.
+
+## Measured
+
+One seed, 2000 steps, 40 GB A100s, 64 sequences per GPU per step. Bytes are the logical all-reduce payload per GPU per
+step. Full table, figures and caveats: `results/nanogpt_tp/README.md`.
+
+| Setup | Config | Median step | Gradient (data-parallel) bytes | Activation (tensor-parallel) bytes |
+|---|---|---|---|---|
+| 1 node, 6 heads | tp 1, DDP | 79.7 ms | 43.18 MB | 0 |
+| 1 node, 6 heads | tp 2, DDP | 106.1 ms (+33%) | 21.92 MB | 1,207.96 MB |
+| 1 node, 6 heads | tp 2, PowerSGD rank 4 | 114.9 ms (+44%) | 0.48 MB | 1,207.96 MB |
+| 2 nodes, 12 heads | tp 1, DDP | 83.7 ms | 43.18 MB | 0 |
+| 2 nodes, 12 heads | tp 4, DDP | 123.5 ms (+48%) | 11.28 MB | 2,415.92 MB |
+| 2 nodes, 12 heads | tp 4, PowerSGD rank 4 | 131.8 ms (+57%) | 0.36 MB | 2,415.92 MB |
+
+The computed numbers above hold exactly: tp 2 moves 1.21 GB of activations and 21.9 MB of gradients per GPU per step.
+Tensor parallelism costs 33% (tp 2) to 48% (tp 4) in step time at this model size, and PowerSGD, which only touches
+the gradient part, makes the step slower still (by 8% at tp 2 and 7% at tp 4) while cutting the gradient bytes 45x and
+32x. In the 2-node tp 4 runs the gradient all-reduce is the one that crosses nodes, which is where compression would
+pay off on a slower network; on Perlmutter's network it does not.
