@@ -30,7 +30,10 @@ The 30-epoch job used 0.14 node-hours by elapsed time. Source: `jobs.txt` (`sacc
 - Best accuracy is 0.66 points below DDP for rank 4, 1.45 for rank 2 and 5.21 for rank 1, after the same 30 epochs.
 - ResNet-18's steps are short (15 ms), so the compression work is a larger share of each step than for NanoGPT
   (where rank 4 costs +12% at 80 ms per step). Inside one NVLink node PowerSGD is slower per step at every rank.
-- Rank 2 sends 135.8x less than DDP, the same ratio as the paper-code Gloo runs (`results/gloo_scaling/`, PR #8).
+- Rank 2 sends 135.8x less than DDP. The paper code's Table 3 runs give the same ratio (SGD bits / Rank 2 bits =
+  2,574,480,844,800 / 18,952,704,000 = 135.84 for every seed, in `results/paper_reproduction/powersgd_raw_runs.tgz`),
+  as do the Gloo runs in PR #8: both implementations compress the same ResNet-18 gradient tensors at rank 2. Ranks 1
+  and 4 give 243.3x and 72.1x here.
 - ResNet-18's fp32 gradient is 44.70 MB per step (11,173,962 x 4 bytes), slightly more than the small NanoGPT's 43.18 MB.
 - Mean GPU utilization was 71% (`gpu/`), lower than NanoGPT's 89-97%: with 15 ms steps, data loading and launch
   overhead show up.

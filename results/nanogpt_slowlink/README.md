@@ -23,9 +23,15 @@ Compare methods on the same modeled link.
 |---|---|---|---|---|
 | DDP | 43,183,104 | 79.7 ms | 133.9 ms | +54.2 ms (the model predicts at least 51.8) |
 | rank 2 | 430,096 | 84.9 ms (+6.5% vs DDP) | 88.5 ms (**-33.9% vs DDP**) | +3.6 ms |
-| rank 4 | 737,312 | 89.5 ms (+12.2% vs DDP) | 91.0 ms (**-32.0% vs DDP**) | +1.5 ms |
+| rank 4 | 737,312 | 89.5 ms (+12.2% vs DDP) | 91.0 ms (**-32.0% vs DDP**) | +1.6 ms |
 
 On the modeled link PowerSGD steps are about a third faster than DDP's.
+
+The trainer records the delay it added (`sim_link.modeled_delay_s_total`): 51.8 ms per step for DDP, 0.8 ms for rank 2
+and 1.1 ms for rank 4. The rest of each "added" figure (2.3 ms for DDP, 2.8 ms for rank 2, 0.4 ms for rank 4) is the
+cost of the wait itself (it removes overlap) plus run-to-run variation between separate runs; these runs cannot separate
+the two. Rank 2's extra is not a one-off: the smoke-test rerun, a separate job, measured +3.8 ms (83.9 to 87.7 ms;
+`results/smoke_tests/smoke_next2.txt`).
 
 ## Validation loss against training time
 

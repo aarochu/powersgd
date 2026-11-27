@@ -32,9 +32,9 @@ Median step time (steps after warm-up). Bytes are the logical all-reduce payload
 | small | 4 | 79.7 ms | +6.1-6.7% | +12.0-12.2% |
 | medium | 4 | 170.4 ms | 176.4 ms (+3.5%) | 182.8 ms (+7.3%) |
 | large | 4 | 518.0 ms | 529.3 ms (+2.2%) | 537.3 ms (+3.7%) |
-| large | 8 | 522.1 ms | 534.9 ms (+2.5%) | 542.2 ms (+3.8%) |
+| large | 8 | 522.1 ms | 534.9 ms (+2.4%) | 542.2 ms (+3.9%) |
 | large | 16 | 518.5 ms | 531.7 ms (+2.5%) | 540.0 ms (+4.1%) |
-| large | 16 (job 62010559, 80 GB) | 511.7 ms | 524.5 ms (+2.5%) | 532.9 ms (+4.1%) |
+| large | 16 (job 62010559, 80 GB) | 511.7 ms | 524.5 ms (+2.5%) | 532.9 ms (+4.2%) |
 
 | Size | DDP bytes per step | rank 2 | rank 4 |
 |---|---|---|---|
@@ -50,7 +50,7 @@ Median step time (steps after warm-up). Bytes are the logical all-reduce payload
   341 MB per GPU and from 8 GPUs on that crosses nodes. On Perlmutter's network the gradient all-reduce is not a
   bottleneck at this size, so PowerSGD stays 2-4% slower per step at every node count.
 
-## The profiled step (step 100 on rank 0, 16 GPUs, job 62010560)
+## The profiled step (job 62010560, 16 GPUs: one step, step 100, on one rank, rank 0)
 
 `profile_table.txt` in each 4-node run folder is PyTorch's per-operation summary; `trace_rank0.json.gz` is the full
 trace (gzipped; open it in Perfetto or `chrome://tracing` after unzipping). From the traces, summing GPU kernel time:
@@ -63,12 +63,15 @@ trace (gzipped; open it in Perfetto or `chrome://tracing` after unzipping). From
 | QR orthogonalization (`aten::linalg_qr`, from the table) | - | not in the top 30 rows | 7.5 ms |
 | First to last GPU kernel | 518.7 ms | 533.4 ms | 542.6 ms |
 
-- Computation dominates: matrix multiplies are 85% of the step. Gradient communication is 13.3 ms of GPU time for
-  DDP, and DDP runs it alongside the backward pass (its kernel time adds up to more than the step's span).
+- Computation dominates: matrix multiplies are 85% of GPU kernel time. Gradient communication is 13.3 ms of GPU time
+  for DDP.
+- Measured: DDP's kernel time exceeds its first-to-last-kernel span by 10.2 ms (528.9 vs 518.7 ms), so kernels ran
+  at the same time on different streams, communication alongside the backward pass. For rank 4 it is the other way
+  round: the span exceeds the kernel time by 11.8 ms (542.6 vs 530.8 ms), time in which the GPU ran nothing.
 - PowerSGD cuts the NCCL time to 2.4-2.7 ms (about 10.6 ms saved) but the step gets 14.7 ms (rank 2) and 23.9 ms
-  (rank 4) longer from first to last kernel. Rank 4 spends 7.5 ms on QR alone. The rest of the gap is time the GPU
-  waits between kernels; our reading is that PowerSGD's steps (compress, all-reduce P, orthogonalize, all-reduce Q)
-  run in sequence and overlap less with backward than DDP's single all-reduce, but the profile does not prove that.
+  (rank 4) longer from first to last kernel. Rank 4 spends 7.5 ms on QR alone. Our reading of the idle time is that
+  PowerSGD's steps (compress, all-reduce P, orthogonalize, all-reduce Q) run in sequence and overlap less with
+  backward than DDP's single all-reduce; the profile shows the gaps but does not prove their cause.
 - The 300-step job (62010559, 80 GB nodes) shows the same: NCCL 13.0 ms for DDP against 2.0-2.5 ms for PowerSGD.
   Every 4-node run's numbers are in its `profile_table.txt`.
 
@@ -79,7 +82,7 @@ trace (gzipped; open it in Perfetto or `chrome://tracing` after unzipping). From
 | medium | 4 | 1.502 @ 500 (final 1.670) | 2.160 @ 1000 | 1.759 @ 1000 |
 | large | 4 | 1.517 @ 500 (final 2.191) | 2.236 @ 1000 | 1.782 @ 1000 |
 | large | 8 | 1.580 @ 500 | 2.257 @ 1000 | 1.784 @ 1000 |
-| large | 16 | 1.638 @ 250 | 2.238 @ 1000 | 1.758 @ 1000 |
+| large | 16 | 1.638 @ 250 | 2.237 @ 1000 | 1.758 @ 1000 |
 
 Shakespeare is about 1 MB of text, so these models overfit quickly, and sooner with more GPUs (a larger global batch
 sees the data faster): DDP peaks at step 500 on 4 and 8 GPUs and at step 250 on 16. PowerSGD is still improving at
