@@ -1,0 +1,3 @@
+{"type": "start", "run_id": "gpt_large_r2_4node_s1_62010559", "params": 85352448, "world_size": 16, "total_steps": 300, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+{"type": "eval", "step": 300, "epoch": null, "train_loss": 2.7804617063204446, "train_time_s": 157.88738167763222, "elapsed_s": 165.40466219990049, "median_step_s": 0.5244996274705045, "val_loss": 2.544059878587723, "val_ppl": 12.731253534128575}
+{"type": "done", "wall_time_s": 165.41563450195827, "median_step_time_s": 0.5244996274705045, "comm_bytes_per_step": 1686544.0, "status": "ok"}

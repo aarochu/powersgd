@@ -1,0 +1,190 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+W1125 19:32:35.611000 2352361 site-packages/torch/distributed/run.py:874] 
+W1125 19:32:35.611000 2352361 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:35.611000 2352361 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:32:35.611000 2352361 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:37.976000 2326824 site-packages/torch/distributed/run.py:874] 
+W1125 19:32:37.976000 2326824 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:37.976000 2326824 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:32:37.976000 2326824 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:38.944000 353972 site-packages/torch/distributed/run.py:874] 
+W1125 19:32:38.944000 353972 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:38.944000 353972 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:32:38.944000 353972 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:39.201000 70803 site-packages/torch/distributed/run.py:874] 
+W1125 19:32:39.201000 70803 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:32:39.201000 70803 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:32:39.201000 70803 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 19:32:45] nid008681:2352470:2352470 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008681:2352471:2352471 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008681:2352472:2352472 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008681:2352473:2352473 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008684:354082:354082 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008684:354079:354079 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008684:354081:354081 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008684:354080:354080 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008685:2326931:2326931 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008685:2326934:2326934 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008685:2326933:2326933 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:45] nid008685:2326932:2326932 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:46] nid008688:70915:70915 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:46] nid008688:70913:70913 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:46] nid008688:70914:70914 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:32:46] nid008688:70912:70912 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_large_ddp_4node_s1_62010559", "params": 85352448, "world_size": 16, "total_steps": 300, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+USDT:2026-11-25 19:33:46 2352470:2352470 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-25 19:33:46 2352470:2352470 SyncActivityProfilerHandler.cpp:59] profiler_stop
+{"type": "eval", "step": 300, "epoch": null, "train_loss": 2.589571401278178, "train_time_s": 154.27936697704718, "elapsed_s": 161.38223861099686, "median_step_s": 0.5116511519881897, "val_loss": 2.2190605998039246, "val_ppl": 9.198685558798864}
+{"type": "done", "wall_time_s": 161.40960872604046, "median_step_time_s": 0.5116511519881897, "comm_bytes_per_step": 341409792.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 19:35:41.029000 2328356 site-packages/torch/distributed/run.py:874] 
+W1125 19:35:41.029000 2328356 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.029000 2328356 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:35:41.029000 2328356 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.108000 2353960 site-packages/torch/distributed/run.py:874] 
+W1125 19:35:41.108000 2353960 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.108000 2353960 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:35:41.108000 2353960 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.194000 355523 site-packages/torch/distributed/run.py:874] 
+W1125 19:35:41.194000 355523 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.194000 355523 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:35:41.194000 355523 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.198000 72356 site-packages/torch/distributed/run.py:874] 
+W1125 19:35:41.198000 72356 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:35:41.198000 72356 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:35:41.198000 72356 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 19:35:47] nid008681:2354056:2354056 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008681:2354057:2354057 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008688:72449:72449 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008688:72446:72446 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008681:2354054:2354054 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008681:2354055:2354055 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008688:72448:72448 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008688:72447:72447 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008685:2328450:2328450 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008685:2328447:2328447 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008685:2328449:2328449 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008684:355616:355616 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008684:355614:355614 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008684:355615:355615 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008684:355613:355613 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:35:47] nid008685:2328448:2328448 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_large_r2_4node_s1_62010559", "params": 85352448, "world_size": 16, "total_steps": 300, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+USDT:2026-11-25 19:36:42 2354054:2354054 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-25 19:36:43 2354054:2354054 SyncActivityProfilerHandler.cpp:59] profiler_stop
+{"type": "eval", "step": 300, "epoch": null, "train_loss": 2.7804617063204446, "train_time_s": 157.88738167763222, "elapsed_s": 165.40466219990049, "median_step_s": 0.5244996274705045, "val_loss": 2.544059878587723, "val_ppl": 12.731253534128575}
+{"type": "done", "wall_time_s": 165.41563450195827, "median_step_time_s": 0.5244996274705045, "comm_bytes_per_step": 1686544.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 19:38:41.222000 2328559 site-packages/torch/distributed/run.py:874] 
+W1125 19:38:41.222000 2328559 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.222000 2328559 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:38:41.222000 2328559 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.227000 72539 site-packages/torch/distributed/run.py:874] 
+W1125 19:38:41.227000 72539 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.227000 72539 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:38:41.227000 72539 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.275000 356041 site-packages/torch/distributed/run.py:874] 
+W1125 19:38:41.275000 356041 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.275000 356041 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:38:41.275000 356041 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.446000 2354193 site-packages/torch/distributed/run.py:874] 
+W1125 19:38:41.446000 2354193 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 19:38:41.446000 2354193 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 19:38:41.446000 2354193 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 19:38:47] nid008681:2354285:2354285 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008681:2354287:2354287 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008681:2354286:2354286 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008681:2354288:2354288 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008685:2328654:2328654 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008688:72631:72631 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008688:72633:72633 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008688:72632:72632 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008688:72630:72630 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008685:2328653:2328653 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008685:2328651:2328651 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008685:2328652:2328652 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008684:356132:356132 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008684:356131:356131 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008684:356133:356133 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 19:38:47] nid008684:356134:356134 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_large_r4_4node_s1_62010559", "params": 85352448, "world_size": 16, "total_steps": 300, "lr_eff": 0.001, "global_batch": 1024, "device": "NVIDIA A100-SXM4-80GB", "torch": "2.13.0+cu130", "tf32_matmul": false, "tf32_cudnn": true}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+USDT:2026-11-25 19:39:45 2354285:2354285 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-25 19:39:46 2354285:2354285 SyncActivityProfilerHandler.cpp:59] profiler_stop
+{"type": "eval", "step": 300, "epoch": null, "train_loss": 2.661755840778351, "train_time_s": 160.47340003878344, "elapsed_s": 168.14905101805925, "median_step_s": 0.5329222229775041, "val_loss": 2.4279603481292726, "val_ppl": 11.33573752635747}
+{"type": "done", "wall_time_s": 168.16246772604063, "median_step_time_s": 0.5329222229775041, "comm_bytes_per_step": 2887712.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-26T03:41:42.532] error: *** STEP 62010559.1 ON nid008681 CANCELLED AT 2026-11-26T03:41:42 DUE to SIGNAL Killed ***
+JobID           Elapsed   NNodes                                                    AllocTRES      State 
+------------ ---------- -------- ------------------------------------------------------------ ---------- 
+62010559       00:09:19        4 billing=512,cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208+    RUNNING 
+62010559.ba+   00:09:19        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62010559.ex+   00:09:19        4 billing=512,cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208+    RUNNING 
+62010559.0     00:03:09        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4  COMPLETED 
+62010559.1     00:09:13        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4    RUNNING 
+62010559.2     00:03:00        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4  COMPLETED 
+62010559.3     00:03:04        4      cpu=512,gres/gpu:a100=16,gres/gpu=16,mem=919208M,node=4    RUNNING 

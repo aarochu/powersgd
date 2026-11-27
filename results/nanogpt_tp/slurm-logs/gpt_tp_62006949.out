@@ -1,0 +1,127 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/13.2 => cudatoolkit/13.0     2) gcc-native/14 => gcc-native/13.2
+
+W1125 17:59:31.365000 9499 site-packages/torch/distributed/run.py:874] 
+W1125 17:59:31.365000 9499 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 17:59:31.365000 9499 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 17:59:31.365000 9499 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 17:59:36] nid002124:9611:9611 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:59:36] nid002124:9608:9608 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:59:36] nid002124:9609:9609 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 17:59:36] nid002124:9610:9610 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_tp1_ddp_1node_s1_62006949", "params": 10795776, "params_per_gpu": 10795776, "world_size": 4, "tp_size": 1, "dp_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "init_val_loss": 4.3045836091041565, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.298777897834778, "train_time_s": 20.41938634228427, "elapsed_s": 21.431245360989124, "median_step_s": 0.0797330675413832, "val_loss": 1.793420034646988, "val_ppl": 6.009971669527003}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 1.470370952129364, "train_time_s": 40.61375338782091, "elapsed_s": 42.671171744936146, "median_step_s": 0.07972057204460725, "val_loss": 1.4993951171636581, "val_ppl": 4.478978993263781}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.2218881921768188, "train_time_s": 60.81425659300294, "elapsed_s": 63.88437684404198, "median_step_s": 0.07971696049207821, "val_loss": 1.4810613572597504, "val_ppl": 4.397610640865527}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.0502434985637665, "train_time_s": 81.00121231679805, "elapsed_s": 85.0840604880359, "median_step_s": 0.0797097019967623, "val_loss": 1.5858191311359406, "val_ppl": 4.883289795392508}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 0.8732495956420898, "train_time_s": 101.19139931653626, "elapsed_s": 106.28773055202328, "median_step_s": 0.07970509299775586, "val_loss": 1.7585454523563384, "val_ppl": 5.803989073019126}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 0.7102871015071869, "train_time_s": 121.38878396886867, "elapsed_s": 127.50003540702164, "median_step_s": 0.07970139046665281, "val_loss": 1.9455999314785004, "val_ppl": 6.99782881374979}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 0.5914641664028167, "train_time_s": 141.57957218342926, "elapsed_s": 148.70645126793534, "median_step_s": 0.07969858398428187, "val_loss": 2.0968172371387483, "val_ppl": 8.140220247971422}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 0.5217232612371445, "train_time_s": 161.76360928139184, "elapsed_s": 169.90417788503692, "median_step_s": 0.07969511800911278, "val_loss": 2.2040653347969057, "val_ppl": 9.061777879980108}
+{"type": "done", "wall_time_s": 169.90703908493742, "median_step_time_s": 0.07969511800911278, "comm_bytes_per_step": 43183104.0, "tp_bytes_per_step": 0.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 18:02:38.416000 11061 site-packages/torch/distributed/run.py:874] 
+W1125 18:02:38.416000 11061 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 18:02:38.416000 11061 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 18:02:38.416000 11061 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 18:02:43] nid002124:11166:11166 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:02:43] nid002124:11169:11169 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:02:43] nid002124:11168:11168 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:02:43] nid002124:11167:11167 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+{"type": "start", "run_id": "gpt_tp1_r4_1node_s1_62006949", "params": 10795776, "params_per_gpu": 10795776, "world_size": 4, "tp_size": 1, "dp_size": 4, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "init_val_loss": 4.3045836091041565, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.5920566940307617, "train_time_s": 22.78618168795947, "elapsed_s": 23.80271230696235, "median_step_s": 0.08944455900928006, "val_loss": 2.468641757965088, "val_ppl": 11.806400007592964}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.299325828552246, "train_time_s": 45.426266223425046, "elapsed_s": 47.47399356495589, "median_step_s": 0.08939805702539161, "val_loss": 2.1590740084648132, "val_ppl": 8.663111974822312}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 2.0037500443458556, "train_time_s": 68.06209027767181, "elapsed_s": 71.12763007695321, "median_step_s": 0.0893690410302952, "val_loss": 1.9749312967061996, "val_ppl": 7.20612455232083}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.7893716325759887, "train_time_s": 90.70061714644544, "elapsed_s": 94.7841698009288, "median_step_s": 0.08936568000353873, "val_loss": 1.8238854676485061, "val_ppl": 6.195885654456826}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 1.6251955451965332, "train_time_s": 113.34233975457028, "elapsed_s": 118.44543570000678, "median_step_s": 0.08936500846175477, "val_loss": 1.6817640155553817, "val_ppl": 5.3750292483659745}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 1.4971664514541625, "train_time_s": 135.98191749933176, "elapsed_s": 142.10412421496585, "median_step_s": 0.08936568000353873, "val_loss": 1.589767289161682, "val_ppl": 4.902607905571941}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 1.4030224671363831, "train_time_s": 158.62033941666596, "elapsed_s": 165.76074230391532, "median_step_s": 0.08936460094992071, "val_loss": 1.5308206140995027, "val_ppl": 4.621968118697039}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 1.3455407371520995, "train_time_s": 181.2533867127495, "elapsed_s": 189.41212663194165, "median_step_s": 0.08936258853645995, "val_loss": 1.5047106862068176, "val_ppl": 4.502850705002846}
+{"type": "done", "wall_time_s": 189.41383827792015, "median_step_time_s": 0.08936258853645995, "comm_bytes_per_step": 737312.0, "tp_bytes_per_step": 0.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 18:06:01.944000 11302 site-packages/torch/distributed/run.py:874] 
+W1125 18:06:01.944000 11302 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 18:06:01.944000 11302 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 18:06:01.944000 11302 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 18:06:07] nid002124:11398:11398 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:06:07] nid002124:11396:11396 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:06:07] nid002124:11395:11395 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:06:07] nid002124:11397:11397 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+NCCL version 2.29.7+cuda13.2
+NCCL version 2.29.7+cuda13.2
+{"type": "start", "run_id": "gpt_tp2_ddp_1node_s1_62006949", "params": 10795776, "params_per_gpu": 5479296, "world_size": 4, "tp_size": 2, "dp_size": 2, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "init_val_loss": 4.304440462589264, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.3070109548568727, "train_time_s": 27.162246749387123, "elapsed_s": 28.71368021098897, "median_step_s": 0.10607231903122738, "val_loss": 1.8156666040420533, "val_ppl": 6.145171208377828}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 1.4853167548179627, "train_time_s": 54.19051574927289, "elapsed_s": 57.305091629968956, "median_step_s": 0.10607580648502335, "val_loss": 1.513695016503334, "val_ppl": 4.543488079462178}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.242300184726715, "train_time_s": 81.20513033820316, "elapsed_s": 85.8722755049821, "median_step_s": 0.10607792605878785, "val_loss": 1.4801878303289413, "val_ppl": 4.39377088684795}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.0725121533870696, "train_time_s": 108.21092902997043, "elapsed_s": 114.42734201392159, "median_step_s": 0.10608136199880391, "val_loss": 1.5643609404563903, "val_ppl": 4.779619498240784}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 0.8986554625034332, "train_time_s": 135.21773561730515, "elapsed_s": 142.98370148101822, "median_step_s": 0.10608317301375791, "val_loss": 1.732234001159668, "val_ppl": 5.653269221866793}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 0.7400281145572662, "train_time_s": 162.2228332759114, "elapsed_s": 171.53949003398884, "median_step_s": 0.1060869634966366, "val_loss": 1.8933941930532456, "val_ppl": 6.641874268785548}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 0.6223366279602051, "train_time_s": 189.22456921066623, "elapsed_s": 200.09139408392366, "median_step_s": 0.10608949151355773, "val_loss": 2.0456131041049956, "val_ppl": 7.733898769716939}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 0.5512507271766662, "train_time_s": 216.22898085939232, "elapsed_s": 228.64383801002987, "median_step_s": 0.10609103698516265, "val_loss": 2.14130175113678, "val_ppl": 8.510508985993946}
+{"type": "done", "wall_time_s": 228.64709377894178, "median_step_time_s": 0.10609103698516265, "comm_bytes_per_step": 21917184.0, "tp_bytes_per_step": 1207959552.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+W1125 18:10:05.955000 11572 site-packages/torch/distributed/run.py:874] 
+W1125 18:10:05.955000 11572 site-packages/torch/distributed/run.py:874] *****************************************
+W1125 18:10:05.955000 11572 site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1125 18:10:05.955000 11572 site-packages/torch/distributed/run.py:874] *****************************************
+NCCL version 2.29.7+cuda13.2
+
+[2026-11-25 18:10:10] nid002124:11665:11665 [1] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:10:10] nid002124:11664:11664 [0] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:10:10] nid002124:11666:11666 [2] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+
+[2026-11-25 18:10:10] nid002124:11667:11667 [3] misc/ibvwrap.cc:173 NCCL WARN lib wrapper not initialized.
+NCCL version 2.29.7+cuda13.2
+NCCL version 2.29.7+cuda13.2
+{"type": "start", "run_id": "gpt_tp2_r4_1node_s1_62006949", "params": 10795776, "params_per_gpu": 5479296, "world_size": 4, "tp_size": 2, "dp_size": 2, "total_steps": 2000, "lr_eff": 0.001, "global_batch": 256, "init_val_loss": 4.304440462589264, "device": "NVIDIA A100-SXM4-40GB", "torch": "2.13.0+cu130"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"type": "eval", "step": 250, "epoch": null, "train_loss": 2.5879217195510864, "train_time_s": 29.40811092639342, "elapsed_s": 30.96712230204139, "median_step_s": 0.11495249695144594, "val_loss": 2.445532190799713, "val_ppl": 11.536687684422452}
+{"type": "eval", "step": 500, "epoch": null, "train_loss": 2.2788606004714964, "train_time_s": 58.721897343639284, "elapsed_s": 61.85487657506019, "median_step_s": 0.11494824243709445, "val_loss": 2.1428675532341, "val_ppl": 8.52384519702234}
+{"type": "eval", "step": 750, "epoch": null, "train_loss": 1.979674440383911, "train_time_s": 88.029405462672, "elapsed_s": 92.72244859102648, "median_step_s": 0.11494831746676937, "val_loss": 1.9453529238700866, "val_ppl": 6.996100510251261}
+{"type": "eval", "step": 1000, "epoch": null, "train_loss": 1.7671315059661865, "train_time_s": 117.32694047305267, "elapsed_s": 123.57938662508968, "median_step_s": 0.11493347201030701, "val_loss": 1.7827007323503494, "val_ppl": 5.945893019189255}
+{"type": "eval", "step": 1250, "epoch": null, "train_loss": 1.6073713212013245, "train_time_s": 146.62872012122534, "elapsed_s": 154.44023042707704, "median_step_s": 0.11492416600231081, "val_loss": 1.6720634907484055, "val_ppl": 5.323140723657207}
+{"type": "eval", "step": 1500, "epoch": null, "train_loss": 1.486706790447235, "train_time_s": 175.93432775721885, "elapsed_s": 185.30466447700746, "median_step_s": 0.11492136551532894, "val_loss": 1.5729267001152039, "val_ppl": 4.820736417544567}
+{"type": "eval", "step": 1750, "epoch": null, "train_loss": 1.396761203289032, "train_time_s": 205.23460317472927, "elapsed_s": 216.1634131980827, "median_step_s": 0.11491394496988505, "val_loss": 1.526121324300766, "val_ppl": 4.60029910543023}
+{"type": "eval", "step": 2000, "epoch": null, "train_loss": 1.3417245907783508, "train_time_s": 234.4277705750428, "elapsed_s": 246.9145112039987, "median_step_s": 0.1148816465283744, "val_loss": 1.497138464450836, "val_ppl": 4.468882889152843}
+{"type": "done", "wall_time_s": 246.91562353004701, "median_step_time_s": 0.1148816465283744, "comm_bytes_per_step": 483872.0, "tp_bytes_per_step": 1207959552.0, "status": "ok"}
+/global/common/software/nersc9/pytorch/2.13.0/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+srun: forcing job termination
+JobID           Elapsed   NNodes                                                    AllocTRES      State 
+------------ ---------- -------- ------------------------------------------------------------ ---------- 
+62006949       00:15:05        1 billing=128,cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,+    RUNNING 
+62006949.ba+   00:15:05        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62006949.ex+   00:15:05        1 billing=128,cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,+    RUNNING 
+62006949.0     00:03:12        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006949.1     00:15:01        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
+62006949.2     00:03:23        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006949.3     00:04:05        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1  COMPLETED 
+62006949.4     00:04:21        1        cpu=128,gres/gpu:a100=4,gres/gpu=4,mem=229802M,node=1    RUNNING 
