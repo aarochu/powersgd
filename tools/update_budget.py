@@ -2,9 +2,9 @@
 """Rebuild results/budget.md from Slurm accounting (sacct). Run on a Perlmutter login node.
 
 Reads results/budget_config.json:
-  {"accounts": {"m4431_g": {"allocation_node_hours": null}},   # fill in from Iris
+  {"accounts": {"<account>": {"allocation_node_hours": null}},   # fill in from Iris
    "since": "2026-10-29",
-   "planned": [{"name": "tier1 resnet18 1-node", "account": "m4431_g", "node_hours": null}]}
+   "planned": [{"name": "tier1 resnet18 1-node", "account": "<account>", "node_hours": null}]}
 Node-hours = NNodes x Elapsed hours per job (the allocation is charged per node, not per GPU).
 Use --sacct-file to feed saved `sacct -P -n -X --format=JobID,JobName,Account,Elapsed,NNodes,State` output (testing).
 """

@@ -1,6 +1,6 @@
 # What was run, and how (NanoGPT, 1 node, Sat 2026-10-31)
 
-Everything here was run by Aaron on NERSC Perlmutter (account `m4431_g`). Results are in `results/`, summarized in `results/RESULTS.md`.
+Everything here was run by Aaron on NERSC Perlmutter (course allocation). Results are in `results/`, summarized in `results/RESULTS.md`.
 Anything not listed under "Completed" has **not** produced results.
 
 ## Completed

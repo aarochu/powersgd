@@ -1,7 +1,7 @@
 #!/bin/bash
 # NanoGPT, 2 nodes (8 GPUs): does compression help once all-reduce crosses the network?
 # Cost: about 15 to 25 min on 2 nodes, roughly 0.5 to 0.8 node-hours.
-#SBATCH -A m4431_g
+# Allocation is not hard-coded: export SBATCH_ACCOUNT=<your project> before sbatch (or pass -A <project>).
 #SBATCH -C gpu
 #SBATCH -q regular
 #SBATCH -N 2

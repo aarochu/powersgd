@@ -8,7 +8,7 @@
 #   sbatch -q debug -t 00:30:00 --export=ALL,EPOCHS=2 scripts/tier1_resnet18_1node.sbatch   # quick pipeline check
 # NOTE: the time limit and EPOCHS are PLACEHOLDERS until the interactive smoke run gives real step times.
 #       Cost = 1 node-hour per wall-clock hour. Ask before submitting anything > 2 node-hours.
-#SBATCH -A m4431_g
+# Allocation is not hard-coded: export SBATCH_ACCOUNT=<your project> before sbatch (or pass -A <project>).
 #SBATCH -C gpu
 #SBATCH -q regular
 #SBATCH -N 1

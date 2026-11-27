@@ -8,7 +8,7 @@
 #   sbatch -q debug -t 00:30:00 --export=ALL,EPOCHS=2 scripts/tier3_resnet18_2node.sbatch    # pipeline check
 # COST: 2 node-hours per wall-clock hour. The time limit below is a PLACEHOLDER; set it from the measured
 # s/epoch (scripts/time_epoch_1node.sh) and get an OK before submitting anything > 2 node-hours.
-#SBATCH -A m4431_g
+# Allocation is not hard-coded: export SBATCH_ACCOUNT=<your project> before sbatch (or pass -A <project>).
 #SBATCH -C gpu
 #SBATCH -q regular
 #SBATCH -N 2

@@ -3,6 +3,11 @@
 Raw Perlmutter outputs and an organized copy of them. **Start with [`MANIFEST.md`](MANIFEST.md)**: one row per run with its job, nodes, world size, seed, GPU model,
 metrics and a validity label. Everything in it is computed from the files, not from run names.
 
+**Identifiers were redacted in the committed copies.** The cluster user name in paths is written as `$SCRATCH`, and the Slurm account is `<redacted>` in
+`runs.jsonl`, `runs/` and the `_provenance.json` files. The `#SBATCH -A` line in the committed `scripts/*.sbatch` is a comment (set `SBATCH_ACCOUNT`).
+No metric, timing or count was changed. `raw_file_md5` in `_provenance.json` is the md5 of the original raw file, so it will not match the redacted `config.json` copy.
+Re-running `tools/organize_results.py` on the raw folders regenerates the unredacted text; do not commit that output.
+
 ## Layout
 
 | path | what |
