@@ -38,7 +38,7 @@ Full tables, per-run values and curves: [`results/paper_reproduction/table3_resu
 | DDP | 43,183,104 | 1x | 0% |
 | PowerSGD rank 1 | 276,488 | 156x fewer | +4.0% |
 | PowerSGD rank 2 | 430,096 | 100x fewer | +6.8% |
-| PowerSGD rank 4 | 737,312 | 59x fewer | +12.5% |
+| PowerSGD rank 4 | 737,312 | 59x fewer | +12.6% |
 
 - DDP's best validation loss is 1.481 at step 750; it then overfits (2.209 at step 2000).
 - Rank 4 needs about 2500 steps (6000-step run) to reach 1.475, then overfits too (2.135 at step 6000). Rank 2 reaches 1.503 at step 4500.
